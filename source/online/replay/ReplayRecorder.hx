@@ -3,7 +3,6 @@ package online.replay;
 import psychlua.FunkinLua;
 import objects.Note;
 import states.FreeplayState;
-import mobile.input.MobileInputID;
 import flixel.input.gamepad.FlxGamepad;
 import online.network.Leaderboard;
 import haxe.crypto.Md5;
@@ -174,8 +173,8 @@ class ReplayRecorder extends FlxBasic {
 		if(hitbox != null && isHitboxNull)
 		{
 			isHitboxNull = false;
-			hitbox.onButtonDown.add((button:MobileButton, ids:Array<MobileInputID>) -> recordKeyMobileC(Conductor.songPosition, ids, 0));
-			hitbox.onButtonUp.add((button:MobileButton, ids:Array<MobileInputID>) -> recordKeyMobileC(Conductor.songPosition, ids, 1));
+			hitbox.onButtonDown.add((button:MobileButton, ids:Array<String>) -> recordKeyMobileC(Conductor.songPosition, ids, 0));
+			hitbox.onButtonUp.add((button:MobileButton, ids:Array<String>) -> recordKeyMobileC(Conductor.songPosition, ids, 1));
 		}
 		else
 		{
@@ -224,41 +223,41 @@ class ReplayRecorder extends FlxBasic {
 		}
 	}
 
-	function recordKeyMobileC(time:Float, IDs:Array<MobileInputID>, move:Int) {
+	function recordKeyMobileC(time:Float, IDs:Array<String>, move:Int) {
 		if (IDs == null || IDs.length < 0)
 			return;
 
-		if(IDs.length == 1 && !REGISTER_BINDS.contains(IDs[0].toString().toLowerCase()))
+		if(IDs.length == 1 && !REGISTER_BINDS.contains(IDs[0].toLowerCase()))
 		{
 			switch(IDs[0])
 			{
-				case EXTRA_1:
-					if (state.hitbox.buttonExtra1 != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.buttonExtra1.returnedButton.toUpperCase(), move]);
-				case EXTRA_2:
-					if (state.hitbox.buttonExtra2 != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.buttonExtra2.returnedButton.toUpperCase(), move]);
-				case EXTRA_3:
-					if (state.hitbox.buttonExtra3 != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.buttonExtra3.returnedButton.toUpperCase(), move]);
-				case EXTRA_4:
-					if (state.hitbox.buttonExtra4 != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.buttonExtra4.returnedButton.toUpperCase(), move]);
-				case EXTRA_5:
-					if (state.hitbox.buttonExtra5 != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.buttonExtra5.returnedButton.toUpperCase(), move]);
-				case EXTRA_6:
-					if (state.hitbox.buttonExtra6 != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.buttonExtra6.returnedButton.toUpperCase(), move]);
-				case EXTRA_7:
-					if (state.hitbox.buttonExtra7 != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.buttonExtra7.returnedButton.toUpperCase(), move]);
-				case EXTRA_8:
-					if (state.hitbox.buttonExtra8 != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.buttonExtra8.returnedButton.toUpperCase(), move]);
-				case EXTRA_9:
-					if (state.hitbox.buttonExtra9 != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.buttonExtra9.returnedButton.toUpperCase(), move]);
+				case 'EXTRA_1':
+					if (state.hitbox.getButtonFromName.get('buttonExtra1') != null)
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra1').returnedButton.toUpperCase(), move]);
+				case 'EXTRA_2':
+					if (state.hitbox.getButtonFromName.get('buttonExtra2') != null)
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra2').returnedButton.toUpperCase(), move]);
+				case 'EXTRA_3':
+					if (state.hitbox.getButtonFromName.get('buttonExtra3') != null)
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra3').returnedButton.toUpperCase(), move]);
+				case 'EXTRA_4':
+					if (state.hitbox.getButtonFromName.get('buttonExtra4') != null)
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra4').returnedButton.toUpperCase(), move]);
+				case 'EXTRA_5':
+					if (state.hitbox.getButtonFromName.get('buttonExtra5') != null)
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra5').returnedButton.toUpperCase(), move]);
+				case 'EXTRA_6':
+					if (state.hitbox.getButtonFromName.get('buttonExtra6') != null)
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra6').returnedButton.toUpperCase(), move]);
+				case 'EXTRA_7':
+					if (state.hitbox.getButtonFromName.get('buttonExtra7') != null)
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra7').returnedButton.toUpperCase(), move]);
+				case 'EXTRA_8':
+					if (state.hitbox.getButtonFromName.get('buttonExtra8') != null)
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra8').returnedButton.toUpperCase(), move]);
+				case 'EXTRA_9':
+					if (state.hitbox.getButtonFromName.get('buttonExtra9') != null)
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra9').returnedButton.toUpperCase(), move]);
 				default:
 					// nothing
 			}
@@ -267,7 +266,9 @@ class ReplayRecorder extends FlxBasic {
 
 		for (id in IDs)
 		{
-			var idName:String = id.toString().toLowerCase();
+			var idName:String = id.toLowerCase();
+			var buttonCodeStr:String = idName.replace(" ", "");
+			idName = buttonCodeStr.split("=");
 
 			if (idName == null || state.paused || !REGISTER_BINDS.contains(idName))
 				continue;

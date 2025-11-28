@@ -161,9 +161,10 @@
       "url": "https://github.com/FunkinCrew/funkVis"
     },
     {
-      "name": "extension-androidtools",
-      "type": "haxelib",
-      "version": "2.2.2"
+      "name": "basically-mobilecontrols",
+      "type": "git",
+      "ref": "main",
+      "url": "https://github.com/Prohack101010/basically-mobilecontrols"
     }
   ]
 }

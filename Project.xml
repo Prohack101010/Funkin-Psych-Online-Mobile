@@ -126,6 +126,8 @@
 	<haxelib name="flixel" />
 	<haxelib name="flixel-ui" />
 	<haxelib name="flixel-addons" />
+	<!-- Add Mobile Controls (Made by me -ArkoseLabs) -->
+	<haxelib name="basically-mobilecontrols"/>
 
 	<!--Psych stuff needed-->
 	<haxelib name="linc_luajit" if="LUA_ALLOWED" />

@@ -72,12 +72,7 @@ import haxe.ds.StringMap;
 import online.backend.Deflection;
 
 // Mobile Controls
-import mobile.objects.Hitbox;
-import mobile.objects.MobilePad;
-import mobile.objects.MobileButton;
-import mobile.input.MobileInputID;
-import mobile.backend.MobileData;
-import mobile.input.MobileInputManager;
+import mobile.*;
 import mobile.backend.TouchUtil;
 import mobile.backend.PsychJNI;
 import mobile.backend.TouchFunctions;

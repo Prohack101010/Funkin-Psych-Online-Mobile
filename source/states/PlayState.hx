@@ -1995,12 +1995,12 @@ class PlayState extends MusicBeatState
 			hitbox.visible = true;
 		hitbox.forEachAlive((button) ->
 		{
-			if (mobilePad.buttonT != null)
-				button.deadZones.push(mobilePad.buttonT);
-			if (mobilePad.buttonC != null)
-				button.deadZones.push(mobilePad.buttonC);
-			if (mobilePad.buttonP != null)
-				button.deadZones.push(mobilePad.buttonP);
+			if (mobilePad.getButtonFromName.get('buttonT') != null)
+				button.deadZones.push(mobilePad.getButtonFromName.get('buttonT'));
+			if (mobilePad.getButtonFromName.get('buttonC') != null)
+				button.deadZones.push(mobilePad.getButtonFromName.get('buttonC'));
+			if (mobilePad.getButtonFromName.get('buttonP') != null)
+				button.deadZones.push(mobilePad.getButtonFromName.get('buttonP'));
 		});
 
 		if (ClientPrefs.data.VSliceControl) VSliceControls = true;
@@ -5075,41 +5075,31 @@ class PlayState extends MusicBeatState
 		return -1;
 	}
 
-	private function onButtonPress(button:MobileButton, ids:Array<MobileInputID>):Void
+	private function onButtonPress(button:MobileButton, ids:Array<String>):Void
 	{
-		if (ids.filter(id -> id.toString().startsWith("NOTE")).length > 0 || ids.filter(id -> id.toString().startsWith("HITBOX")).length > 0 || ids.filter(id -> id.toString().startsWith("EXTRA")).length > 0)
+		if (ids.filter(id -> id.startsWith("NOTE")).length > 0 || ids.filter(id -> id.startsWith("HITBOX")).length > 0 || ids.filter(id -> id.startsWith("EXTRA")).length > 0)
 		{
-			var itsExtra:Bool = false;
-			var buttonCode:Int = (ids[0].toString().startsWith('NOTE')) ? ids[0] : ids[1];
-			if (ids[0].toString().startsWith('EXTRA')) {
-				buttonCode = ids[0] - 53; //Fixes the hold notes (now you can actually use extra buttons as note key)
-				itsExtra = true;
-			}
+			var buttonCodeStr:String = ids[0];
+			var buttonCodeStrFixed = StringTools.replace(buttonCodeStr, " ", "");
+			var buttonCode:Int = Std.parseInt(buttonCodeStrFixed.split("=")[1]);
 
-			if (itsExtra && buttonCode >= 0 || !itsExtra) {
-				callOnScripts('onButtonPressPre', [buttonCode]);
-				if (button.justPressed) keyPressed(buttonCode);
-				callOnScripts('onButtonPress', [buttonCode]);
-			}
+			callOnScripts('onButtonPressPre', [buttonCode]);
+			if (button.justPressed) keyPressed(buttonCode);
+			callOnScripts('onButtonPress', [buttonCode]);
 		}
 	}
 
-	private function onButtonRelease(button:MobileButton, ids:Array<MobileInputID>):Void
+	private function onButtonRelease(button:MobileButton, ids:Array<String>):Void
 	{
-		if (ids.filter(id -> id.toString().startsWith("NOTE")).length > 0 || ids.filter(id -> id.toString().startsWith("HITBOX")).length > 0 || ids.filter(id -> id.toString().startsWith("EXTRA")).length > 0)
+		if (ids.filter(id -> id.startsWith("NOTE")).length > 0 || ids.filter(id -> id.startsWith("HITBOX")).length > 0 || ids.filter(id -> id.startsWith("EXTRA")).length > 0)
 		{
-			var itsExtra:Bool = false;
-			var buttonCode:Int = (ids[0].toString().startsWith('NOTE')) ? ids[0] : ids[1];
-			if (ids[0].toString().startsWith('EXTRA')) {
-				buttonCode = ids[0] - 53; //Fixes the hold notes (now you can actually use extra buttons as note key)
-				itsExtra = true;
-			}
+			var buttonCodeStr:String = ids[0];
+			var buttonCodeStrFixed = StringTools.replace(buttonCodeStr, " ", "");
+			var buttonCode:Int = Std.parseInt(buttonCodeStrFixed.split("=")[1]);
 
-			if (itsExtra && buttonCode >= 0 || !itsExtra) {
-				callOnScripts('onButtonReleasePre', [buttonCode]);
-				if(buttonCode > -1) keyReleased(buttonCode);
-				callOnScripts('onButtonRelease', [buttonCode]);
-			}
+			callOnScripts('onButtonReleasePre', [buttonCode]);
+			if(buttonCode > -1) keyReleased(buttonCode);
+			callOnScripts('onButtonRelease', [buttonCode]);
 		}
 	}
 
@@ -6660,12 +6650,12 @@ class PlayState extends MusicBeatState
 		}
 		hitbox.forEachAlive((button) ->
 		{
-			if (mobilePad.buttonT != null)
-				button.deadZones.push(mobilePad.buttonT);
-			if (mobilePad.buttonC != null)
-				button.deadZones.push(mobilePad.buttonC);
-			if (mobilePad.buttonP != null)
-				button.deadZones.push(mobilePad.buttonP);
+			if (mobilePad.getButtonFromName.get('buttonT') != null)
+				button.deadZones.push(mobilePad.getButtonFromName.get('buttonT'));
+			if (mobilePad.getButtonFromName.get('buttonC') != null)
+				button.deadZones.push(mobilePad.getButtonFromName.get('buttonC'));
+			if (mobilePad.getButtonFromName.get('buttonP') != null)
+				button.deadZones.push(mobilePad.getButtonFromName.get('buttonP'));
 		});
 	}
 
