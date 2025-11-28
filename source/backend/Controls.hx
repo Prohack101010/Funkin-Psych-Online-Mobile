@@ -201,7 +201,7 @@ class Controls
 	private function mobilePadPressed(keys:Array<String>):Bool
 	{
 		if (keys != null && requestedInstance.mobilePad != null)
-			if (requestedInstance.mobilePad.anyPressed(keys) == true)
+			if (requestedInstance.mobilePad.buttonPressed(keys) == true)
 				return true;
 
 		return false;
@@ -210,7 +210,7 @@ class Controls
 	private function mobilePadJustPressed(keys:Array<String>):Bool
 	{
 		if (keys != null && requestedInstance.mobilePad != null)
-			if (requestedInstance.mobilePad.anyJustPressed(keys) == true)
+			if (requestedInstance.mobilePad.buttonJustPressed(keys) == true)
 				return true;
 
 		return false;
@@ -219,7 +219,7 @@ class Controls
 	private function mobilePadJustReleased(keys:Array<String>):Bool
 	{
 		if (keys != null && requestedInstance.mobilePad != null)
-			if (requestedInstance.mobilePad.anyJustReleased(keys) == true)
+			if (requestedInstance.mobilePad.buttonJustReleased(keys) == true)
 				return true;
 
 		return false;
@@ -228,7 +228,7 @@ class Controls
 	private function hitboxPressed(keys:Array<String>):Bool
 	{
 		if (keys != null && requestedHitbox != null)
-			if (requestedHitbox.anyPressed(keys))
+			if (requestedHitbox.buttonPressed(keys))
 				return true;
 
 		return false;
@@ -237,7 +237,7 @@ class Controls
 	private function hitboxJustPressed(keys:Array<String>):Bool
 	{
 		if (keys != null && requestedHitbox != null)
-			if (requestedHitbox.anyJustPressed(keys))
+			if (requestedHitbox.buttonJustPressed(keys))
 				return true;
 
 		return false;
@@ -246,7 +246,7 @@ class Controls
 	private function hitboxJustReleased(keys:Array<String>):Bool
 	{
 		if (keys != null && requestedHitbox != null)
-			if (requestedHitbox.anyJustReleased(keys))
+			if (requestedHitbox.buttonJustReleased(keys))
 				return true;
 
 		return false;

@@ -36,7 +36,7 @@ class MusicBeatSubstate extends FlxSubState
 
 	public function addMobilePad(DPad:String, Action:String)
 	{
-		mobilePad = new MobilePad(DPad, Action);
+		mobilePad = new MobilePad(DPad, Action, ClientPrefs.data.mobilePadAlpha);
 		add(mobilePad);
 	}
 

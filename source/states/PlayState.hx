@@ -2190,25 +2190,25 @@ class PlayState extends MusicBeatState
 
 	public function fixHitboxPos(strumGroup:FlxTypedGroup<StrumNote>, ?keyCountIsDefault:Bool) {
 		if (keyCountIsDefault) {
-			hitbox.buttonLeft.x = Std.int(strumGroup.members[0].x) - 20;
-			hitbox.buttonDown.x = Std.int(strumGroup.members[1].x) - 20;
-			hitbox.buttonUp.x = Std.int(strumGroup.members[2].x) - 20;
-			hitbox.buttonRight.x = Std.int(strumGroup.members[3].x) - 20;
+			hitbox.getButtonFromName.get('buttonLeft').x = Std.int(strumGroup.members[0].x) - 20;
+			hitbox.getButtonFromName.get('buttonDown').x = Std.int(strumGroup.members[1].x) - 20;
+			hitbox.getButtonFromName.get('buttonUp').x = Std.int(strumGroup.members[2].x) - 20;
+			hitbox.getButtonFromName.get('buttonRight').x = Std.int(strumGroup.members[3].x) - 20;
 		} else {
 			var hitboxFixPos:Float = 10;
 			if (Note.maniaKeys == 7) hitboxFixPos = 13;
 			if (Note.maniaKeys == 8) hitboxFixPos = 12.5;
 			if (Note.maniaKeys == 9) hitboxFixPos = 15;
 
-			if (Note.maniaKeys >= 1) hitbox.buttonLeft.x = strumGroup.members[0].x - hitboxFixPos;
-			if (Note.maniaKeys >= 2) hitbox.buttonDown.x = strumGroup.members[1].x - hitboxFixPos;
-			if (Note.maniaKeys >= 3) hitbox.buttonUp.x = strumGroup.members[2].x - hitboxFixPos;
-			if (Note.maniaKeys >= 4) hitbox.buttonRight.x = strumGroup.members[3].x - hitboxFixPos;
-			if (Note.maniaKeys >= 5) hitbox.buttonNote5.x = strumGroup.members[4].x - hitboxFixPos;
-			if (Note.maniaKeys >= 6) hitbox.buttonNote6.x = strumGroup.members[5].x - hitboxFixPos;
-			if (Note.maniaKeys >= 7) hitbox.buttonNote7.x = strumGroup.members[6].x - hitboxFixPos;
-			if (Note.maniaKeys >= 8) hitbox.buttonNote8.x = strumGroup.members[7].x - hitboxFixPos;
-			if (Note.maniaKeys == 9) hitbox.buttonNote9.x = strumGroup.members[8].x - hitboxFixPos;
+			if (Note.maniaKeys >= 1) hitbox.getButtonFromName.get('buttonLeft').x = strumGroup.members[0].x - hitboxFixPos;
+			if (Note.maniaKeys >= 2) hitbox.getButtonFromName.get('buttonDown').x = strumGroup.members[1].x - hitboxFixPos;
+			if (Note.maniaKeys >= 3) hitbox.getButtonFromName.get('buttonUp').x = strumGroup.members[2].x - hitboxFixPos;
+			if (Note.maniaKeys >= 4) hitbox.getButtonFromName.get('buttonRight').x = strumGroup.members[3].x - hitboxFixPos;
+			if (Note.maniaKeys >= 5) hitbox.getButtonFromName.get('buttonNote5').x = strumGroup.members[4].x - hitboxFixPos;
+			if (Note.maniaKeys >= 6) hitbox.getButtonFromName.get('buttonNote6').x = strumGroup.members[5].x - hitboxFixPos;
+			if (Note.maniaKeys >= 7) hitbox.getButtonFromName.get('buttonNote7').x = strumGroup.members[6].x - hitboxFixPos;
+			if (Note.maniaKeys >= 8) hitbox.getButtonFromName.get('buttonNote8').x = strumGroup.members[7].x - hitboxFixPos;
+			if (Note.maniaKeys == 9) hitbox.getButtonFromName.get('buttonNote9').x = strumGroup.members[8].x - hitboxFixPos;
 		}
 	}
 

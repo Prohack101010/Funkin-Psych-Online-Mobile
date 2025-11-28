@@ -212,7 +212,7 @@ class NotesSubState extends MusicBeatSubstate
 	}
 
 	override function update(elapsed:Float) {
-		if (controls.BACK || mobilePad?.buttonB?.justPressed) {
+		if (controls.BACK || mobilePad?.getButtonFromName.get('buttonB')?.justPressed) {
 			if (GameClient.isConnected()) {
 				GameClient.send('updateArrColors', ClientPrefs.getArrowRGBCompleteMaps());
 			}

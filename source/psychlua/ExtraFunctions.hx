@@ -347,7 +347,7 @@ class ExtraFunctions
 		for (num in 1...31) {
 			if (MusicBeatState.getState().hitbox != null) {
 				var hitbox:Dynamic = Reflect.getProperty(MusicBeatState.getState().hitbox, 'buttonExtra' + num);
-				if (key.toUpperCase() == Reflect.field(hitbox, 'returnedButton')) {
+				if (key.toUpperCase() == Reflect.field(hitbox, 'returnedKey')) {
 					if (Reflect.getProperty(hitbox, type)) {
 						return true;
 					}
@@ -359,7 +359,7 @@ class ExtraFunctions
 		for (num in 1...31) {
 			if (MusicBeatState.getState().mobilePad != null) {
 				var hitbox:Dynamic = Reflect.getProperty(MusicBeatState.getState().mobilePad, 'buttonExtra' + num);
-				if (key.toUpperCase() == Reflect.field(hitbox, 'returnedButton')) {
+				if (key.toUpperCase() == Reflect.field(hitbox, 'returnedKey')) {
 					if (Reflect.getProperty(hitbox, type)) {
 						return true;
 					}

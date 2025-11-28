@@ -233,31 +233,31 @@ class ReplayRecorder extends FlxBasic {
 			{
 				case 'EXTRA_1':
 					if (state.hitbox.getButtonFromName.get('buttonExtra1') != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra1').returnedButton.toUpperCase(), move]);
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra1').returnedKey.toUpperCase(), move]);
 				case 'EXTRA_2':
 					if (state.hitbox.getButtonFromName.get('buttonExtra2') != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra2').returnedButton.toUpperCase(), move]);
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra2').returnedKey.toUpperCase(), move]);
 				case 'EXTRA_3':
 					if (state.hitbox.getButtonFromName.get('buttonExtra3') != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra3').returnedButton.toUpperCase(), move]);
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra3').returnedKey.toUpperCase(), move]);
 				case 'EXTRA_4':
 					if (state.hitbox.getButtonFromName.get('buttonExtra4') != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra4').returnedButton.toUpperCase(), move]);
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra4').returnedKey.toUpperCase(), move]);
 				case 'EXTRA_5':
 					if (state.hitbox.getButtonFromName.get('buttonExtra5') != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra5').returnedButton.toUpperCase(), move]);
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra5').returnedKey.toUpperCase(), move]);
 				case 'EXTRA_6':
 					if (state.hitbox.getButtonFromName.get('buttonExtra6') != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra6').returnedButton.toUpperCase(), move]);
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra6').returnedKey.toUpperCase(), move]);
 				case 'EXTRA_7':
 					if (state.hitbox.getButtonFromName.get('buttonExtra7') != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra7').returnedButton.toUpperCase(), move]);
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra7').returnedKey.toUpperCase(), move]);
 				case 'EXTRA_8':
 					if (state.hitbox.getButtonFromName.get('buttonExtra8') != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra8').returnedButton.toUpperCase(), move]);
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra8').returnedKey.toUpperCase(), move]);
 				case 'EXTRA_9':
 					if (state.hitbox.getButtonFromName.get('buttonExtra9') != null)
-						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra9').returnedButton.toUpperCase(), move]);
+						data.inputs.push([time, 'KEY:' + state.hitbox.getButtonFromName.get('buttonExtra9').returnedKey.toUpperCase(), move]);
 				default:
 					// nothing
 			}

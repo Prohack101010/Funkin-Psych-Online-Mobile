@@ -73,6 +73,7 @@ import online.backend.Deflection;
 
 // Mobile Controls
 import mobile.*;
+import mobile.MobilePadExtended as MobilePad;
 import mobile.backend.TouchUtil;
 import mobile.backend.PsychJNI;
 import mobile.backend.TouchFunctions;
