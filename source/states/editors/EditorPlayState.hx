@@ -755,7 +755,7 @@ class EditorPlayState extends MusicBeatSubstate
 		}
 	}
 
-	private function onButtonPress(button:MobileButton, ids:Array<MobileInputID>):Void
+	private function onButtonPress(button:MobileButton, ids:Array<String>):Void
 	{
 		if (ids.filter(id -> id.startsWith("NOTE")).length > 0 || ids.filter(id -> id.startsWith("HITBOX")).length > 0 || ids.filter(id -> id.startsWith("EXTRA")).length > 0)
 		{
@@ -766,7 +766,7 @@ class EditorPlayState extends MusicBeatSubstate
 		}
 	}
 
-	private function onButtonRelease(button:MobileButton, ids:Array<MobileInputID>):Void
+	private function onButtonRelease(button:MobileButton, ids:Array<String>):Void
 	{
 		if (ids.filter(id -> id.startsWith("NOTE")).length > 0 || ids.filter(id -> id.startsWith("HITBOX")).length > 0 || ids.filter(id -> id.startsWith("EXTRA")).length > 0)
 		{

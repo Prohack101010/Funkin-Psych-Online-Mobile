@@ -3107,7 +3107,7 @@ class PlayState extends MusicBeatState
 			// }
 
 			if (cpuControlled) {
-				var shiftMult = (mobilePad.buttonX.pressed || FlxG.keys.pressed.SHIFT) ? 3 : 1;
+				var shiftMult = (mobilePad.getButtonFromName.get('buttonX').pressed || FlxG.keys.pressed.SHIFT) ? 3 : 1;
 				if (controls.UI_LEFT) {
 					if (playbackRate - elapsed * 0.25 * shiftMult > 0)
 						playbackRate -= elapsed * 0.25 * shiftMult;
@@ -3123,7 +3123,7 @@ class PlayState extends MusicBeatState
 					}
 					botplayTxt.text = "BOTPLAY\n" + '(${CoolUtil.floorDecimal(playbackRate, 2)}x)';
 				}
-				else if (mobilePad.buttonY.justPressed || controls.RESET) {
+				else if (mobilePad.getButtonFromName.get('buttonY').justPressed || controls.RESET) {
 					playbackRate = 1;
 					botplayTxt.text = "BOTPLAY";
 				}

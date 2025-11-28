@@ -425,7 +425,7 @@ class ClientPrefs {
 		'reset'			=> ['NONE'],
 		'taunt'			=> ['T']
 	];
-	public static var defaultMobileBinds:Map<String, Array<MobileInputID>> = null;
+	public static var defaultMobileBinds:Map<String, Array<String>> = null;
 	public static var defaultKeys:Map<String, Array<FlxKey>> = null;
 	public static var defaultButtons:Map<String, Array<FlxGamepadInputID>> = null;
 
@@ -452,7 +452,7 @@ class ClientPrefs {
 	public static function clearInvalidKeys(key:String) {
 		var keyBind:Array<FlxKey> = keyBinds.get(key);
 		var gamepadBind:Array<FlxGamepadInputID> = gamepadBinds.get(key);
-		var mobileBind:Array<MobileInputID> = mobileBinds.get(key);
+		var mobileBind:Array<String> = mobileBinds.get(key);
 		while(keyBind != null && keyBind.contains(NONE)) keyBind.remove(NONE);
 		while(gamepadBind != null && gamepadBind.contains(NONE)) gamepadBind.remove(NONE);
 		while(mobileBind != null && mobileBind.contains(NONE)) mobileBind.remove(NONE);
@@ -559,7 +559,7 @@ class ClientPrefs {
 				}
 			}
 			if(save.data.mobile != null) {
-				var loadedControls:Map<String, Array<MobileInputID>> = save.data.mobile;
+				var loadedControls:Map<String, Array<String>> = save.data.mobile;
 				for (control => keys in loadedControls)
 					/*if(mobileBinds.exists(control))*/ mobileBinds.set(control, keys);
 			}

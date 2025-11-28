@@ -2271,7 +2271,7 @@ class ChartingState extends MusicBeatState
 
 			if (FlxG.keys.justPressed.D || mobilePad.getButtonFromName.get('buttonRight').justPressed)
 				changeSection(curSec + shiftThing);
-			if (FlxG.keys.justPressed.A || mobilePad.getButtonFromName.get('buttonUp').justPressed) {
+			if (FlxG.keys.justPressed.A || mobilePad.getButtonFromName.get('buttonLeft').justPressed) {
 				if(curSec <= 0) {
 					changeSection(_song.notes.length-1);
 				} else {
