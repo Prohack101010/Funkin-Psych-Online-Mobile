@@ -2000,6 +2000,8 @@ class PlayState extends MusicBeatState
 		if (replayData == null) {
 			hitbox.onButtonDown.add(onButtonPress);
 			hitbox.onButtonUp.add(onButtonRelease);
+			hitbox.onButtonDown.add((button:MobileButton, ids:Array<String>) -> replayRecorder.recordKeyMobileC(Conductor.songPosition, ids, 0));
+			hitbox.onButtonUp.add((button:MobileButton, ids:Array<String>) -> replayRecorder.recordKeyMobileC(Conductor.songPosition, ids, 1));
 		}
 		if (replayData == null && !cpuControlled)
 			hitbox.visible = true;
@@ -6670,6 +6672,8 @@ class PlayState extends MusicBeatState
 		if (replayData == null) {
 			hitbox.onButtonDown.add(onButtonPress);
 			hitbox.onButtonUp.add(onButtonRelease);
+			hitbox.onButtonDown.add((button:MobileButton, ids:Array<String>) -> replayRecorder.recordKeyMobileC(Conductor.songPosition, ids, 0));
+			hitbox.onButtonUp.add((button:MobileButton, ids:Array<String>) -> replayRecorder.recordKeyMobileC(Conductor.songPosition, ids, 1));
 		}
 		hitbox.forEachAlive((button) ->
 		{
@@ -6685,8 +6689,12 @@ class PlayState extends MusicBeatState
 	public function addControls(?mode:String)
 	{
 		addMobileControls(mode);
-		hitbox.onButtonDown.add(onButtonPress);
-		hitbox.onButtonUp.add(onButtonRelease);
+		if (replayData == null) {
+			hitbox.onButtonDown.add(onButtonPress);
+			hitbox.onButtonUp.add(onButtonRelease);
+			hitbox.onButtonDown.add((button:MobileButton, ids:Array<String>) -> replayRecorder.recordKeyMobileC(Conductor.songPosition, ids, 0));
+			hitbox.onButtonUp.add((button:MobileButton, ids:Array<String>) -> replayRecorder.recordKeyMobileC(Conductor.songPosition, ids, 1));
+		}
 	}
 
 	public function removeControls()

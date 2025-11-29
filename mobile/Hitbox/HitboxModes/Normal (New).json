@@ -59,7 +59,7 @@
       "color": "0xFFF9393F"
     }
   ],
-  "hints": [
+  "none": [
     {
       "button": "NOTE_1",
       "buttonIDs": ["NOTE_LEFT = 0"],
@@ -97,7 +97,7 @@
       "color": "0xFFF9393F"
     }
   ],
-  "test": [
+  "hints": [
     {
       "button": "NOTE_1",
       "buttonIDs": ["NOTE_LEFT = 0"],

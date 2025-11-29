@@ -72,10 +72,13 @@ import haxe.ds.StringMap;
 import online.backend.Deflection;
 
 // Mobile Controls
+
+// FNF Spesific
+import mobile.FunkinMobilePad as MobilePad;
+import mobile.FunkinHitbox as Hitbox;
+// Others
 import mobile.*;
 import mobile.MobileButton;
-import mobile.MobilePad;
-import mobile.Hitbox;
 import mobile.backend.TouchUtil;
 import mobile.backend.PsychJNI;
 import mobile.backend.TouchFunctions;

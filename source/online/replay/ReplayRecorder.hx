@@ -155,25 +155,8 @@ class ReplayRecorder extends FlxBasic {
 	}
 
 	var _gamepad:FlxGamepad;
-	var hitboxFound:Bool = false;
-	var mobilePadFound:Bool = false;
 	override function update(elapsed:Float) {
 		super.update(elapsed);
-
-		//get Variables on update bc I wanna check them
-		var hitbox:Hitbox = state.hitbox;
-		var mobilePad:MobilePad = state.mobilePad;
-
-		if(hitbox != null && !hitboxFound)
-		{
-			hitboxFound = true;
-			hitbox.onButtonDown.add((button:MobileButton, ids:Array<String>) -> recordKeyMobileC(Conductor.songPosition, ids, 0));
-			hitbox.onButtonUp.add((button:MobileButton, ids:Array<String>) -> recordKeyMobileC(Conductor.songPosition, ids, 1));
-		}
-		else
-		{
-			trace("Tried to init replay recorder for mobile controls but failed.");
-		}
 
 		if (FlxG.gamepads.numActiveGamepads > 0) {
 			if (_gamepad == null || !_gamepad.connected)
@@ -217,7 +200,7 @@ class ReplayRecorder extends FlxBasic {
 		}
 	}
 
-	function recordKeyMobileC(time:Float, IDs:Array<String>, move:Int) {
+	public function recordKeyMobileC(time:Float, IDs:Array<String>, move:Int) {
 		if (IDs == null || IDs.length < 0)
 			return;
 
