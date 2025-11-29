@@ -4,6 +4,10 @@ class MobilePadExtended extends MobilePad {
 	public var onButtonDown:FlxTypedSignal<(MobileButton, Array<String>) -> Void> = new FlxTypedSignal<(MobileButton, Array<String>) -> Void>();
 	public var onButtonUp:FlxTypedSignal<(MobileButton, Array<String>) -> Void> = new FlxTypedSignal<(MobileButton, Array<String>) -> Void>();
 
+	public function new(DPad:String, Action:String, globalAlpha:Float = 0.7) {
+		super(DPad, Action, globalAlpha);
+	}
+
 	override public function createVirtualButton(buttonIDs:Array<String>, x:Float, y:Float, framePath:String, ?scale:Float = 1, ?ColorS:Int = 0xFFFFFF):MobileButton {
 		var frames:FlxGraphic;
 

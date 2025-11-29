@@ -1,6 +1,6 @@
 package mobile;
 
-class MobilePadExtended extends MobilePad
+class HitboxExtended extends Hitbox
 {
 	public var extraKey1 = ClientPrefs.data.extraKeyReturn1.toUpperCase();
 	public var extraKey2 = ClientPrefs.data.extraKeyReturn2.toUpperCase();
