@@ -2200,25 +2200,38 @@ class PlayState extends MusicBeatState
 
 	public function fixHitboxPos(strumGroup:FlxTypedGroup<StrumNote>, ?keyCountIsDefault:Bool) {
 		if (keyCountIsDefault) {
-			hitbox.getButtonFromName('NOTE_1').x = Std.int(strumGroup.members[0].x) - 20;
-			hitbox.getButtonFromName('NOTE_2').x = Std.int(strumGroup.members[1].x) - 20;
-			hitbox.getButtonFromName('NOTE_3').x = Std.int(strumGroup.members[2].x) - 20;
-			hitbox.getButtonFromName('NOTE_4').x = Std.int(strumGroup.members[3].x) - 20;
+			if (hitbox.getButtonFromName('NOTE_1') != null)
+				hitbox.getButtonFromName('NOTE_1').x = Std.int(strumGroup.members[0].x) - 20;
+			if (hitbox.getButtonFromName('NOTE_2') != null)
+				hitbox.getButtonFromName('NOTE_2').x = Std.int(strumGroup.members[1].x) - 20;
+			if (hitbox.getButtonFromName('NOTE_3') != null)
+				hitbox.getButtonFromName('NOTE_3').x = Std.int(strumGroup.members[2].x) - 20;
+			if (hitbox.getButtonFromName('NOTE_4') != null)
+				hitbox.getButtonFromName('NOTE_4').x = Std.int(strumGroup.members[3].x) - 20;
 		} else {
 			var hitboxFixPos:Float = 10;
 			if (Note.maniaKeys == 7) hitboxFixPos = 13;
 			if (Note.maniaKeys == 8) hitboxFixPos = 12.5;
 			if (Note.maniaKeys == 9) hitboxFixPos = 15;
 
-			if (Note.maniaKeys >= 1) hitbox.getButtonFromName('NOTE_1').x = strumGroup.members[0].x - hitboxFixPos;
-			if (Note.maniaKeys >= 2) hitbox.getButtonFromName('NOTE_2').x = strumGroup.members[1].x - hitboxFixPos;
-			if (Note.maniaKeys >= 3) hitbox.getButtonFromName('NOTE_3').x = strumGroup.members[2].x - hitboxFixPos;
-			if (Note.maniaKeys >= 4) hitbox.getButtonFromName('NOTE_4').x = strumGroup.members[3].x - hitboxFixPos;
-			if (Note.maniaKeys >= 5) hitbox.getButtonFromName('NOTE_5').x = strumGroup.members[4].x - hitboxFixPos;
-			if (Note.maniaKeys >= 6) hitbox.getButtonFromName('NOTE_6').x = strumGroup.members[5].x - hitboxFixPos;
-			if (Note.maniaKeys >= 7) hitbox.getButtonFromName('NOTE_7').x = strumGroup.members[6].x - hitboxFixPos;
-			if (Note.maniaKeys >= 8) hitbox.getButtonFromName('NOTE_8').x = strumGroup.members[7].x - hitboxFixPos;
-			if (Note.maniaKeys == 9) hitbox.getButtonFromName('NOTE_9').x = strumGroup.members[8].x - hitboxFixPos;
+			if (Note.maniaKeys >= 1 && hitbox.getButtonFromName('NOTE_1') != null)
+				hitbox.getButtonFromName('NOTE_1').x = strumGroup.members[0].x - hitboxFixPos;
+			if (Note.maniaKeys >= 2 && hitbox.getButtonFromName('NOTE_2') != null)
+				hitbox.getButtonFromName('NOTE_2').x = strumGroup.members[1].x - hitboxFixPos;
+			if (Note.maniaKeys >= 3 && hitbox.getButtonFromName('NOTE_3') != null)
+				hitbox.getButtonFromName('NOTE_3').x = strumGroup.members[2].x - hitboxFixPos;
+			if (Note.maniaKeys >= 4 && hitbox.getButtonFromName('NOTE_4') != null)
+				hitbox.getButtonFromName('NOTE_4').x = strumGroup.members[3].x - hitboxFixPos;
+			if (Note.maniaKeys >= 5 && hitbox.getButtonFromName('NOTE_5') != null)
+				hitbox.getButtonFromName('NOTE_5').x = strumGroup.members[4].x - hitboxFixPos;
+			if (Note.maniaKeys >= 6 && hitbox.getButtonFromName('NOTE_6') != null)
+				hitbox.getButtonFromName('NOTE_6').x = strumGroup.members[5].x - hitboxFixPos;
+			if (Note.maniaKeys >= 7 && hitbox.getButtonFromName('NOTE_7') != null)
+				hitbox.getButtonFromName('NOTE_7').x = strumGroup.members[6].x - hitboxFixPos;
+			if (Note.maniaKeys >= 8 && hitbox.getButtonFromName('NOTE_8') != null)
+				hitbox.getButtonFromName('NOTE_8').x = strumGroup.members[7].x - hitboxFixPos;
+			if (Note.maniaKeys == 9 && hitbox.getButtonFromName('NOTE_9') != null)
+				hitbox.getButtonFromName('NOTE_9').x = strumGroup.members[8].x - hitboxFixPos;
 		}
 	}
 
@@ -5087,7 +5100,7 @@ class PlayState extends MusicBeatState
 
 	private function onButtonPress(button:MobileButton, ids:Array<String>):Void
 	{
-		if (ids.filter(id -> id.startsWith("NOTE")).length > 0 || ids.filter(id -> id.startsWith("HITBOX")).length > 0 || ids.filter(id -> id.startsWith("EXTRA")).length > 0)
+		if (ids.filter(id -> id.startsWith("NOTE")).length > 0 || ids.filter(id -> id.startsWith(Note.maniaKeys + "K_NOTE")).length > 0)
 		{
 			var buttonCodeStr:String = ids[0];
 			var buttonCodeStrFixed = StringTools.replace(buttonCodeStr, " ", "");
@@ -5101,7 +5114,7 @@ class PlayState extends MusicBeatState
 
 	private function onButtonRelease(button:MobileButton, ids:Array<String>):Void
 	{
-		if (ids.filter(id -> id.startsWith("NOTE")).length > 0 || ids.filter(id -> id.startsWith("HITBOX")).length > 0 || ids.filter(id -> id.startsWith("EXTRA")).length > 0)
+		if (ids.filter(id -> id.startsWith("NOTE")).length > 0 || ids.filter(id -> id.startsWith(Note.maniaKeys + "K_NOTE")).length > 0)
 		{
 			var buttonCodeStr:String = ids[0];
 			var buttonCodeStrFixed = StringTools.replace(buttonCodeStr, " ", "");

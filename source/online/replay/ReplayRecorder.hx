@@ -155,8 +155,8 @@ class ReplayRecorder extends FlxBasic {
 	}
 
 	var _gamepad:FlxGamepad;
-	var isHitboxNull:Bool = true;
-	var isMobilePadNull:Bool = true;
+	var hitboxFound:Bool = true;
+	var mobilePadFound:Bool = true;
 	override function update(elapsed:Float) {
 		super.update(elapsed);
 
@@ -164,15 +164,9 @@ class ReplayRecorder extends FlxBasic {
 		var hitbox:Hitbox = state.hitbox;
 		var mobilePad:MobilePad = state.mobilePad;
 
-		//Null Check
-		if (hitbox == null)
-			isHitboxNull = true;
-		if (mobilePad == null)
-			isMobilePadNull = true;
-
-		if(hitbox != null && isHitboxNull)
+		if(hitbox != null && !hitboxFound)
 		{
-			isHitboxNull = false;
+			hitboxFound = true;
 			hitbox.onButtonDown.add((button:MobileButton, ids:Array<String>) -> recordKeyMobileC(Conductor.songPosition, ids, 0));
 			hitbox.onButtonUp.add((button:MobileButton, ids:Array<String>) -> recordKeyMobileC(Conductor.songPosition, ids, 1));
 		}
