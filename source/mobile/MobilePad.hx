@@ -62,6 +62,8 @@ class MobilePad extends MobileInputHandler {
 			if (!MobileInputHandler.dpadModes.exists(DPad))
 				throw 'The mobilePad dpadMode "$DPad" doesn\'t exists.';
 
+			CoolUtil.showPopUp(MobileInputHandler.dpadModes);
+
 			var countedIndex:Int = 0;
 			for (buttonData in MobileInputHandler.dpadModes.get(DPad).buttons)
 			{
@@ -88,6 +90,8 @@ class MobilePad extends MobileInputHandler {
 		{
 			if (!MobileInputHandler.actionModes.exists(Action))
 				throw 'The mobilePad actionMode "$Action" doesn\'t exists.';
+
+			CoolUtil.showPopUp(MobileInputHandler.actionModes);
 
 			var countedIndex:Int = 0;
 			for (buttonData in MobileInputHandler.actionModes.get(Action).buttons)
@@ -118,7 +122,7 @@ class MobilePad extends MobileInputHandler {
 		instance = this;
 	}
 
-	override public function createVirtualButton(buttonIDs:Array<String>, x:Float, y:Float, framePath:String, ?scale:Float = 1, ?ColorS:Int = 0xFFFFFF):MobileButton {
+	public function createVirtualButton(buttonIDs:Array<String>, x:Float, y:Float, framePath:String, ?scale:Float = 1, ?ColorS:Int = 0xFFFFFF):MobileButton {
 		var frames:FlxGraphic;
 
 		final path:String = MobileInputHandler.mobileFolderPath + 'MobilePad/Textures/$framePath.png';
