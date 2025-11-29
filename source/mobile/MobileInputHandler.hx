@@ -51,10 +51,22 @@ class MobileInputHandler extends FlxTypedSpriteGroup<MobileButton>
 			switch (modes[intNumber]) {
 				case ACTION:
 					readDirectoryPart1(mobileFolderPath + i, actionModes, ACTION);
+					#if MODS_ALLOWED
+					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'MobilePad/'))
+						readDirectory(Path.join([folder, 'DPadModes']), actionModes);
+					#end
 				case DPAD:
 					readDirectoryPart1(mobileFolderPath + i, dpadModes, DPAD);
+					#if MODS_ALLOWED
+					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'MobilePad/'))
+						readDirectory(Path.join([folder, 'DPadModes']), dpadModes);
+					#end
 				case HITBOX:
 					readDirectoryPart1(mobileFolderPath + i, hitboxModes, HITBOX);
+					#if MODS_ALLOWED
+					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'Hitbox/'))
+						readDirectory(Path.join([folder, 'DPadModes']), hitboxModes);
+					#end
 			}
 		}
 	}
@@ -243,5 +255,5 @@ typedef ButtonsData =
 	y:Float, // the button's Y position on screen.
 	color:String, // the button color, default color is white.
 	bg:String, // the button background for MobilePad, default background is `bg`.
-	scale:Float // the button scale, default scale is 1.
+	scale:Null<Float> // the button scale, default scale is 1.
 }

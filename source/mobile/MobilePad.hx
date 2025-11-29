@@ -62,12 +62,10 @@ class MobilePad extends MobileInputHandler {
 			if (!MobileInputHandler.dpadModes.exists(DPad))
 				throw 'The mobilePad dpadMode "$DPad" doesn\'t exists.';
 
-			CoolUtil.showPopUp('Line 75', 'huh');
-
 			var countedIndex:Int = 0;
 			for (buttonData in MobileInputHandler.dpadModes.get(DPad).buttons)
 			{
-				CoolUtil.showPopUp(buttonData.button, "Test");
+				if (buttonData.scale == null) buttonData.scale = 1.0;
 				var buttonName:String = buttonData.button;
 				var buttonIDs:Array<String> = buttonData.buttonIDs;
 				var buttonGraphic:String = buttonData.graphic;
@@ -92,12 +90,10 @@ class MobilePad extends MobileInputHandler {
 			if (!MobileInputHandler.actionModes.exists(Action))
 				throw 'The mobilePad actionMode "$Action" doesn\'t exists.';
 
-			CoolUtil.showPopUp('Line 95', 'huh');
-
 			var countedIndex:Int = 0;
 			for (buttonData in MobileInputHandler.actionModes.get(Action).buttons)
 			{
-				CoolUtil.showPopUp(buttonData.button, "Test");
+				if (buttonData.scale == null) buttonData.scale = 1.0;
 				var buttonName:String = buttonData.button;
 				var buttonIDs:Array<String> = buttonData.buttonIDs;
 				var buttonGraphic:String = buttonData.graphic;
@@ -107,7 +103,6 @@ class MobilePad extends MobileInputHandler {
 				var buttonY:Float = buttonData.y;
 
 				var button:MobileButton = new MobileButton(0, 0);
-				CoolUtil.showPopUp('Line 110', "Test");
 				button = createVirtualButton(buttonIDs, buttonX, buttonY, buttonGraphic, buttonScale, Util.colorFromString(buttonColor));
 				button.name = buttonName;
 				Actions.push(button);
@@ -125,7 +120,7 @@ class MobilePad extends MobileInputHandler {
 		instance = this;
 	}
 
-	public function createVirtualButton(buttonIDs:Array<String>, x:Float, y:Float, framePath:String, ?scale:Float = 1, ?ColorS:Int = 0xFFFFFF):MobileButton {
+	public function createVirtualButton(buttonIDs:Array<String>, x:Float, y:Float, framePath:String, ?scale:Float = 1.0, ?ColorS:Int = 0xFFFFFF):MobileButton {
 		var frames:FlxGraphic;
 
 		final path:String = MobileInputHandler.mobileFolderPath + 'MobilePad/Textures/$framePath.png';
@@ -137,12 +132,10 @@ class MobilePad extends MobileInputHandler {
 			frames = FlxGraphic.fromBitmapData(Assets.getBitmapData(path));
 		else
 			frames = FlxGraphic.fromBitmapData(Assets.getBitmapData(MobileInputHandler.mobileFolderPath + 'MobilePad/Textures/default.png'));
-		CoolUtil.showPopUp('FrameShit ' + frames, "Test");
 
 		var button = new MobileButton(x, y);
 		button.scale.set(scale, scale);
 		button.frames = FlxTileFrames.fromGraphic(frames, FlxPoint.get(Std.int(frames.width / 2), frames.height));
-		CoolUtil.showPopUp('Line 146', "Test");
 
 		button.updateHitbox();
 		button.updateLabelPosition();
@@ -159,7 +152,6 @@ class MobilePad extends MobileInputHandler {
 		button.IDs = buttonIDs;
 		button.onDown.callback = () -> onButtonDown.dispatch(button, buttonIDs);
 		button.onOut.callback = button.onUp.callback = () -> onButtonUp.dispatch(button, buttonIDs);
-		CoolUtil.showPopUp('Line 163', "Test");
 		return button;
 	}
 
