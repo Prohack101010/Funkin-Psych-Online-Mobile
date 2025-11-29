@@ -36,9 +36,9 @@ class MobileButtonExtended extends TypedMobileButton<FlxSprite>
 	public var tag:String;
 
 	/**
-	 * The `MobileInputID` that are assigned to this button.
+	 * The `String` that are assigned to this button.
 	**/
-	public var IDs:Array<MobileInputID> = [];
+	public var IDs:Array<String> = [];
 
 	/**
 	 * The `String` that are assigned to this button. (used for extra controls bc they're doesn't have a number)
@@ -59,7 +59,7 @@ class MobileButtonExtended extends TypedMobileButton<FlxSprite>
 	 * @param   IDs        The button's IDs(used for input handling so be careful).
 	 * @param   strNames       The button's strNames(used for input handling so be careful & do not use this with IDs, otherwise buttons can be broken).
 	 */
-	public function new(X:Float = 0, Y:Float = 0, ?IDs:Array<MobileInputID> = null, ?strName:String):Void
+	public function new(X:Float = 0, Y:Float = 0, ?IDs:Array<String> = null, ?strName:String):Void
 	{
 		super(X, Y);
 
