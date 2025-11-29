@@ -155,8 +155,8 @@ class ReplayRecorder extends FlxBasic {
 	}
 
 	var _gamepad:FlxGamepad;
-	var hitboxFound:Bool = true;
-	var mobilePadFound:Bool = true;
+	var hitboxFound:Bool = false;
+	var mobilePadFound:Bool = false;
 	override function update(elapsed:Float) {
 		super.update(elapsed);
 
