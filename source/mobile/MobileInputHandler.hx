@@ -53,21 +53,21 @@ class MobileInputHandler extends FlxTypedSpriteGroup<MobileButton>
 					readDirectoryPart1(mobileFolderPath + i, actionModes, ACTION);
 					#if MODS_ALLOWED
 					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'MobilePad/')) {
-						readDirectoryPart1(Path.join([folder, 'DPadModes']), actionModes);
+						readDirectoryPart1(Path.join([folder, 'DPadModes']), actionModes, ACTION);
 					}
 					#end
 				case DPAD:
 					readDirectoryPart1(mobileFolderPath + i, dpadModes, DPAD);
 					#if MODS_ALLOWED
 					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'MobilePad/')) {
-						readDirectoryPart1(Path.join([folder, 'DPadModes']), dpadModes);
+						readDirectoryPart1(Path.join([folder, 'DPadModes']), dpadModes, DPAD);
 					}
 					#end
 				case HITBOX:
 					readDirectoryPart1(mobileFolderPath + i, hitboxModes, HITBOX);
 					#if MODS_ALLOWED
 					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'Hitbox/')) {
-						readDirectoryPart1(Path.join([folder, 'DPadModes']), hitboxModes);
+						readDirectoryPart1(Path.join([folder, 'DPadModes']), hitboxModes, HITBOX);
 					}
 					#end
 			}
