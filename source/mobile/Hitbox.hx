@@ -63,7 +63,7 @@ class Hitbox extends MobileInputHandler
 		super();
 		this.globalAlpha = globalAlpha;
 
-		if (!disableCreation && Mode != null)
+		if (!disableCreation)
 		{
 			if ((ClientPrefs.data.hitboxmode == 'V Slice' && Mode == null) || Mode == 'V Slice')
 			{
