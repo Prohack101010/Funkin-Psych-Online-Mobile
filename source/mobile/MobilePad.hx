@@ -62,11 +62,12 @@ class MobilePad extends MobileInputHandler {
 			if (!MobileInputHandler.dpadModes.exists(DPad))
 				throw 'The mobilePad dpadMode "$DPad" doesn\'t exists.';
 
-			CoolUtil.showPopUp(MobileInputHandler.dpadModes.get(DPad));
+			CoolUtil.showPopUp('Line 75', 'huh');
 
 			var countedIndex:Int = 0;
-			for (buttonData in MobileInputHandler.dpadModes.get(DPad).buttons.button)
+			for (buttonData in MobileInputHandler.dpadModes.get(DPad).buttons)
 			{
+				CoolUtil.showPopUp(buttonData.button, "Test");
 				var buttonName:String = buttonData.button;
 				var buttonIDs:Array<String> = buttonData.buttonIDs;
 				var buttonGraphic:String = buttonData.graphic;
@@ -91,11 +92,12 @@ class MobilePad extends MobileInputHandler {
 			if (!MobileInputHandler.actionModes.exists(Action))
 				throw 'The mobilePad actionMode "$Action" doesn\'t exists.';
 
-			CoolUtil.showPopUp(MobileInputHandler.actionModes.get(DPad).buttons.button);
+			CoolUtil.showPopUp('Line 95', 'huh');
 
 			var countedIndex:Int = 0;
 			for (buttonData in MobileInputHandler.actionModes.get(Action).buttons)
 			{
+				CoolUtil.showPopUp(buttonData.button, "Test");
 				var buttonName:String = buttonData.button;
 				var buttonIDs:Array<String> = buttonData.buttonIDs;
 				var buttonGraphic:String = buttonData.graphic;
