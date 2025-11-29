@@ -1,6 +1,8 @@
 package mobile;
 
-class FunkinHitbox extends Hitbox {
+import mobile.Hitbox as OGHitbox;
+
+class FunkinHitbox extends OGHitbox {
 	public var extraKey1 = ClientPrefs.data.extraKeyReturn1.toUpperCase();
 	public var extraKey2 = ClientPrefs.data.extraKeyReturn2.toUpperCase();
 	public var extraKey3 = ClientPrefs.data.extraKeyReturn3.toUpperCase();

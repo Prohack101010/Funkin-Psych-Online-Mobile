@@ -1,8 +1,8 @@
 package mobile;
 
-import mobile.MobilePad;
+import mobile.MobilePad as OGMobilePad;
 
-class FunkinMobilePad extends MobilePad {
+class FunkinMobilePad extends OGMobilePad {
 	override public function createVirtualButton(buttonIDs:Array<String>, x:Float, y:Float, framePath:String, ?scale:Float = 1.0, ?ColorS:Int = 0xFFFFFF):MobileButton {
 		var frames:FlxGraphic;
 
