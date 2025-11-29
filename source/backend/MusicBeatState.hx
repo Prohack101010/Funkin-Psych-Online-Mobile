@@ -57,7 +57,7 @@ class MusicBeatState extends FlxUIState
 		hitboxCam = new FlxCamera();
 		hitboxCam.bgColor.alpha = 0;
 		FlxG.cameras.add(hitboxCam, defaultDrawTarget);
-		hitbox.cameras = [hitboxCam];
+		hitbox.buttonCameras = [hitboxCam];
 
 		add(hitbox);
 	}
@@ -85,7 +85,7 @@ class MusicBeatState extends FlxUIState
 			mobilePadCam = new FlxCamera();
 			mobilePadCam.bgColor.alpha = 0;
 			FlxG.cameras.add(mobilePadCam, defaultDrawTarget);
-			mobilePad.cameras = [mobilePadCam];
+			mobilePad.buttonCameras = [mobilePadCam];
 		}
 	}
 

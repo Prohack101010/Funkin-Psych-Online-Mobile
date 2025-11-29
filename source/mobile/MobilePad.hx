@@ -107,9 +107,12 @@ class MobilePad extends MobileInputHandler {
 				var buttonY:Float = buttonData.y;
 
 				var button:MobileButton = new MobileButton(0, 0);
+				CoolUtil.showPopUp('Line 110', "Test");
 				button = createVirtualButton(buttonIDs, buttonX, buttonY, buttonGraphic, buttonScale, Util.colorFromString(buttonColor));
+				CoolUtil.showPopUp('Line 112', "Test");
 				button.name = buttonName;
 				Actions.push(button);
+				CoolUtil.showPopUp('Line 115' + Actions, "Test");
 				add(button);
 				getButtonFromName.set(buttonName, button);
 				getButtonIndexFromName.set(buttonName, countedIndex);
@@ -140,6 +143,7 @@ class MobilePad extends MobileInputHandler {
 		var button = new MobileButton(x, y);
 		button.scale.set(scale, scale);
 		button.frames = FlxTileFrames.fromGraphic(frames, FlxPoint.get(Std.int(frames.width / 2), frames.height));
+		CoolUtil.showPopUp('Line 146', "Test");
 
 		button.updateHitbox();
 		button.updateLabelPosition();
@@ -156,6 +160,7 @@ class MobilePad extends MobileInputHandler {
 		button.IDs = buttonIDs;
 		button.onDown.callback = () -> onButtonDown.dispatch(button, buttonIDs);
 		button.onOut.callback = button.onUp.callback = () -> onButtonUp.dispatch(button, buttonIDs);
+		CoolUtil.showPopUp('Line 163', "Test");
 		return button;
 	}
 
