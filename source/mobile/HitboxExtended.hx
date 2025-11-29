@@ -29,169 +29,6 @@ class HitboxExtended extends Hitbox
 		instance = this;
 		super(CustomMode, globalAlpha);
 
-		if ((ClientPrefs.data.hitboxmode == 'V Slice' && CustomMode == null) || CustomMode == 'V Slice'){
-			if (Note.maniaKeys == 4) {
-				add(buttonLeft = createHint(0, 0, 140, Std.int(FlxG.height * 1), 0xFFC24B99, null, 'buttonLeft'));
-				add(buttonDown = createHint(0, 0, 140, Std.int(FlxG.height * 1), 0xFF00FFFF, null, 'buttonDown'));
-				add(buttonUp = createHint(0, 0, 140, Std.int(FlxG.height * 1), 0xFF12FA05, null, 'buttonUp'));
-				add(buttonRight = createHint(0, 0, 140, Std.int(FlxG.height * 1), 0xFFF9393F, null, 'buttonRight'));
-			} else {
-				if (Note.maniaKeys >= 1) add(buttonLeft = createHint(0, 0, 110, Std.int(FlxG.height * 1), 0xFFFFFFFF, null, 'buttonLeft'));
-				if (Note.maniaKeys >= 2) add(buttonDown = createHint(0, 0, 110, Std.int(FlxG.height * 1), 0xFFFFFFFF, null, 'buttonDown'));
-				if (Note.maniaKeys >= 3) add(buttonUp = createHint(0, 0, 110, Std.int(FlxG.height * 1), 0xFFFFFFFF, null, 'buttonUp'));
-				if (Note.maniaKeys >= 4) add(buttonRight = createHint(0, 0, 110, Std.int(FlxG.height * 1), 0xFFFFFFFF, null, 'buttonRight'));
-				if (Note.maniaKeys >= 5) add(buttonNote5 = createHint(0, 0, 110, Std.int(FlxG.height * 1), 0xFFFFFFFF, null, 'buttonNote5'));
-				if (Note.maniaKeys >= 6) add(buttonNote6 = createHint(0, 0, 110, Std.int(FlxG.height * 1), 0xFFFFFFFF, null, 'buttonNote6'));
-				if (Note.maniaKeys >= 7) add(buttonNote7 = createHint(0, 0, 110, Std.int(FlxG.height * 1), 0xFFFFFFFF, null, 'buttonNote7'));
-				if (Note.maniaKeys >= 8) add(buttonNote8 = createHint(0, 0, 110, Std.int(FlxG.height * 1), 0xFFFFFFFF, null, 'buttonNote8'));
-				if (Note.maniaKeys >= 9) add(buttonNote9 = createHint(0, 0, 110, Std.int(FlxG.height * 1), 0xFFFFFFFF, null, 'buttonNote9'));
-			}
-		}
-		else if ((ClientPrefs.data.hitboxmode != 'Classic' && CustomMode == null) || CustomMode != null){
-			var Custom:String = CustomMode != null ? CustomMode : ClientPrefs.data.hitboxmode;
-			if (!MobileInputHandler.hitboxModes.exists(Custom))
-				throw 'The Custom Hitbox File doesn\'t exists.';
-
-			var currentHint = MobileInputHandler.hitboxModes.get(Custom).hints;
-			if (MobileInputHandler.hitboxModes.get(Custom).none != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).none;
-			if (ClientPrefs.data.extraKeys == 1 && MobileInputHandler.hitboxModes.get(Custom).single != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).single;
-			if (ClientPrefs.data.extraKeys == 2 && MobileInputHandler.hitboxModes.get(Custom).double != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).double;
-			if (ClientPrefs.data.extraKeys == 3 && MobileInputHandler.hitboxModes.get(Custom).triple != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).triple;
-			if (ClientPrefs.data.extraKeys == 4 && MobileInputHandler.hitboxModes.get(Custom).quad != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).quad;
-			if (ClientPrefs.data.extraKeys != 0 && MobileInputHandler.hitboxModes.get(Custom).test != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).test;
-
-			//Extra Key Stuff
-			if (Note.maniaKeys == 1 && MobileInputHandler.hitboxModes.get(Custom).mania1 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania1;
-			if (Note.maniaKeys == 2 && MobileInputHandler.hitboxModes.get(Custom).mania2 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania2;
-			if (Note.maniaKeys == 3 && MobileInputHandler.hitboxModes.get(Custom).mania3 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania3;
-			if (Note.maniaKeys == 4 && MobileInputHandler.hitboxModes.get(Custom).mania4 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania4;
-			if (Note.maniaKeys == 5 && MobileInputHandler.hitboxModes.get(Custom).mania5 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania5;
-			if (Note.maniaKeys == 6 && MobileInputHandler.hitboxModes.get(Custom).mania6 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania6;
-			if (Note.maniaKeys == 7 && MobileInputHandler.hitboxModes.get(Custom).mania7 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania7;
-			if (Note.maniaKeys == 8 && MobileInputHandler.hitboxModes.get(Custom).mania8 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania8;
-			if (Note.maniaKeys == 9 && MobileInputHandler.hitboxModes.get(Custom).mania9 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania9;
-			if (Note.maniaKeys == 20 && MobileInputHandler.hitboxModes.get(Custom).mania20 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania20;
-			if (Note.maniaKeys == 55 && MobileInputHandler.hitboxModes.get(Custom).mania55 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania55;
-
-			for (buttonData in currentHint)
-			{
-				var buttonX:Float = 0;
-				var buttonY:Float = 0;
-				var buttonXString:String = null;
-				var buttonYString:String = null;
-				if (buttonData.x is String) buttonXString = buttonData.x;
-				else buttonX = buttonData.x;
-				if (buttonData.y is String) buttonYString = buttonData.y;
-				else buttonY = buttonData.y;
-
-				var buttonWidth:Int = 0;
-				var buttonHeight:Int = 0;
-				var buttonWidthString:String = null;
-				var buttonHeightString:String = null;
-				if (buttonData.width is String) buttonWidthString = buttonData.width;
-				else buttonWidth = buttonData.width;
-				if (buttonData.height is String) buttonHeightString = buttonData.height;
-				else buttonHeight = buttonData.height;
-
-				var buttonColor = buttonData.color;
-				var customReturn = buttonData.returnKey;
-				var location = ClientPrefs.data.hitboxLocation;
-				var addButton:Bool = false;
-
-				switch (location) {
-					case 'Top':
-						//Position
-						if (buttonData.topX != null && buttonData.topX is String) buttonXString = buttonData.topX;
-						else if (buttonData.topX != null) buttonX = buttonData.topX;
-						if (buttonData.topY != null && buttonData.topY is String) buttonYString = buttonData.topY;
-						else if (buttonData.topY != null) buttonY = buttonData.topY;
-
-						//Size
-						if (buttonData.topWidth != null && buttonData.topWidth is String) buttonWidthString = buttonData.topWidth;
-						else if (buttonData.topWidth != null) buttonWidth = buttonData.topWidth;
-						if (buttonData.topHeight != null && buttonData.topHeight is String) buttonHeightString = buttonData.topHeight;
-						else if (buttonData.topWidth != null) buttonHeight = buttonData.topHeight;
-
-						if (buttonData.topColor != null) buttonColor = buttonData.topColor;
-						if (buttonData.topReturnKey != null) customReturn = buttonData.topReturnKey;
-					case 'Middle':
-						if (buttonData.middleX != null && buttonData.middleX is String) buttonXString = buttonData.middleX;
-						else if (buttonData.middleX != null) buttonX = buttonData.middleX;
-						if (buttonData.middleY != null && buttonData.middleY is String) buttonYString = buttonData.middleY;
-						else if (buttonData.middleY != null) buttonY = buttonData.middleY;
-
-						//Size
-						if (buttonData.middleWidth != null && buttonData.middleWidth is String) buttonWidthString = buttonData.middleWidth;
-						else if (buttonData.middleWidth != null) buttonWidth = buttonData.middleWidth;
-						if (buttonData.middleHeight != null && buttonData.middleHeight is String) buttonHeightString = buttonData.middleHeight;
-						else if (buttonData.middleHeight != null) buttonHeight = buttonData.middleHeight;
-
-						if (buttonData.middleColor != null) buttonColor = buttonData.middleColor;
-						if (buttonData.middleReturnKey != null) customReturn = buttonData.middleReturnKey;
-					case 'Bottom':
-						if (buttonData.bottomX != null && buttonData.bottomX is String) buttonXString = buttonData.bottomX;
-						else if (buttonData.bottomX != null) buttonX = buttonData.bottomX;
-						if (buttonData.bottomY != null && buttonData.bottomY is String) buttonYString = buttonData.bottomY;
-						else if (buttonData.bottomY != null) buttonY = buttonData.bottomY;
-
-						//Size
-						if (buttonData.bottomWidth != null && buttonData.bottomWidth is String) buttonWidthString = buttonData.bottomWidth;
-						else if (buttonData.bottomWidth != null) buttonWidth = buttonData.bottomWidth;
-						if (buttonData.bottomHeight != null && buttonData.bottomHeight is String) buttonHeightString = buttonData.bottomHeight;
-						else if (buttonData.bottomWidth != null) buttonHeight = buttonData.bottomHeight;
-
-						if (buttonData.bottomColor != null) buttonColor = buttonData.bottomColor;
-						if (buttonData.bottomReturnKey != null) customReturn = buttonData.bottomReturnKey;
-				}
-				//A little optimization for customReturns, also better than old messy code
-				for (i in 1...9) {
-					var button = Reflect.getProperty(ClientPrefs.data, 'extraKeyReturn${i}');
-					if (customReturn == null && buttonData.button == 'buttonExtra${i}') customReturn = button.toUpperCase();
-				}
-
-				if (ClientPrefs.data.extraKeys == 0 && buttonData.extraKeyMode == 0 ||
-				   ClientPrefs.data.extraKeys == 1 && buttonData.extraKeyMode == 1 ||
-				   ClientPrefs.data.extraKeys == 2 && buttonData.extraKeyMode == 2 ||
-				   ClientPrefs.data.extraKeys == 3 && buttonData.extraKeyMode == 3 ||
-				   ClientPrefs.data.extraKeys == 4 && buttonData.extraKeyMode == 4)
-				{
-					addButton = true;
-				}
-				else if(buttonData.extraKeyMode == null)
-					addButton = true;
-
-				//If buttons doesn't have a customReturn, set it from ClientPrefs
-				for (i in 1...10) {
-					var buttonString = 'buttonExtra${i}';
-					if (buttonData.button == buttonString && customReturn == null)
-						customReturn = Reflect.getProperty(ClientPrefs.data, 'extraKeyReturn${i}');
-				}
-
-				if (addButton) {
-					Reflect.setField(this, buttonData.button,
-						createHint(buttonX, buttonY, buttonWidth, buttonHeight, CoolUtil.colorFromString(buttonColor), customReturn, buttonData.button));
-					add(Reflect.field(this, buttonData.button));
-				}
-			}
-		}
-
 		scrollFactor.set();
 		updateTrackedButtons();
 
@@ -250,7 +87,7 @@ class HitboxExtended extends Hitbox
 		return bitmap;
 	}
 
-	override private function createHint(X:Float, Y:Float, Width:Int, Height:Int, Color:Int = 0xFFFFFF, ?customReturn:String, ?mapKeys:Array<String>):MobileButton
+	override private function createHint(Name:Array<String>, X:Float, Y:Float, Width:Int, Height:Int, Color:Int = 0xFFFFFF, ?Return:String, ?Map:String):MobileButton
 	{
 		var hint:MobileButton = new MobileButton(X, Y);
 		hint.loadGraphic(createHintGraphic(Width, Height, Color));
@@ -276,21 +113,22 @@ class HitboxExtended extends Hitbox
 		hint.immovable = true;
 		hint.scrollFactor.set();
 		hint.alpha = 0.00001;
+		hint.IDs = Name;
 		hint.onDown.callback = function()
 		{
-			onButtonDown.dispatch(hint, mapKeys);
-			if (hint.alpha != ClientPrefs.data.hitboxalpha)
-				hint.alpha = ClientPrefs.data.hitboxalpha;
+			onButtonDown.dispatch(hint, Name);
+			if (hint.alpha != globalAlpha)
+				hint.alpha = globalAlpha;
 			if ((hint.hintUp?.alpha != 0.00001 || hint.hintDown?.alpha != 0.00001) && hint.hintUp != null && hint.hintDown != null)
 				hint.hintUp.alpha = hint.hintDown.alpha = 0.00001;
 		}
 		hint.onOut.callback = hint.onUp.callback = function()
 		{
-			onButtonUp.dispatch(hint, mapKeys);
+			onButtonUp.dispatch(hint, Name);
 			if (hint.alpha != 0.00001)
 				hint.alpha = 0.00001;
-			if ((hint.hintUp?.alpha != ClientPrefs.data.hitboxalpha || hint.hintDown?.alpha != ClientPrefs.data.hitboxalpha) && hint.hintUp != null && hint.hintDown != null)
-				hint.hintUp.alpha = hint.hintDown.alpha = ClientPrefs.data.hitboxalpha;
+			if ((hint.hintUp?.alpha != globalAlpha || hint.hintDown?.alpha != globalAlpha) && hint.hintUp != null && hint.hintDown != null)
+				hint.hintUp.alpha = hint.hintDown.alpha = globalAlpha;
 		}
 		#if FLX_DEBUG
 		hint.ignoreDrawDebug = true;
