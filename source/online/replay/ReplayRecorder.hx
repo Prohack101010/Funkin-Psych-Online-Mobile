@@ -69,6 +69,7 @@ class ReplayRecorder extends FlxBasic {
     var state:PlayState;
 
 	var keyboardIds:Map<FlxKey, Array<String>> = [];
+	var mobileIds:Map<FlxKey, Array<String>> = [];
 	var controllerIds:Map<FlxGamepadInputID, Array<String>> = [];
 
 	public function new(state:PlayState) {
@@ -103,6 +104,18 @@ class ReplayRecorder extends FlxBasic {
 							keyboardIds.get(bind).push(id);
 						else
 							keyboardIds.set(bind, [id]);
+					}
+				}
+		}
+
+		for (id => binds in state.controls.mobileBinds) {
+			if (binds != null)
+				for (bind in binds) {
+					if (REGISTER_BINDS.contains(id)) {
+						if (mobileIds.exists(bind))
+							mobileIds.get(bind).push(id);
+						else
+							mobileIds.set(bind, [id]);
 					}
 				}
 		}
@@ -268,7 +281,7 @@ class ReplayRecorder extends FlxBasic {
 		{
 			var idName:String = id.toLowerCase();
 			var buttonCodeStr:String = idName.replace(" ", "");
-			idName = buttonCodeStr.split("=")[1];
+			idName = buttonCodeStr.split("=")[0];
 
 			if (idName == null || state.paused || !REGISTER_BINDS.contains(idName))
 				continue;

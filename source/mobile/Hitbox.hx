@@ -64,29 +64,115 @@ class Hitbox extends MobileInputHandler
 
 		if (!disableCreation && Mode != null)
 		{
-			if (!MobileInputHandler.hitboxModes.exists(Mode))
-				throw 'The Hitbox File doesn\'t exists.';
-
-			var countedIndex:Int = 0;
-			for (buttonData in MobileInputHandler.hitboxModes.get(Mode).hints)
+			if ((ClientPrefs.data.hitboxmode == 'V Slice' && Mode == null) || Mode == 'V Slice')
 			{
-				var buttonName:String = buttonData.button;
-				var buttonIDs:Array<String> = buttonData.buttonIDs;
-				var buttonX:Float = buttonData.x;
-				var buttonY:Float = buttonData.y;
-
-				var buttonWidth:Int = buttonData.width;
-				var buttonHeight:Int = buttonData.height;
-
-				var buttonColor = buttonData.color;
-				var buttonReturn = buttonData.returnKey;
-
-				var hint = createHint(buttonIDs, buttonX, buttonY, buttonWidth, buttonHeight, Util.colorFromString(buttonColor), buttonReturn);
-				Hints.push(hint);
-				add(hint);
-				buttonFromName.set(buttonName, hint);
-				buttonIndexFromName.set(buttonName, countedIndex);
-				countedIndex++;
+				if (Note.maniaKeys == 4) {
+					addHint('buttonLeft', ["NOTE_1 = 0"], 0, 0, 140, Std.int(FlxG.height), 0xFFC24B99);
+					addHint('buttonDown', ["NOTE_2 = 1"], 0, 0, 140, Std.int(FlxG.height), 0xFF00FFFF);
+					addHint('buttonUp', ["NOTE_3 = 2"], 0, 0, 140, Std.int(FlxG.height), 0xFF12FA05);
+					addHint('buttonRight', ["NOTE_4 = 3"], 0, 0, 140, Std.int(FlxG.height), 0xFFF9393F);
+				} else {
+					if (Note.maniaKeys >= 1) addHint('buttonLeft', ["NOTE_1 = 0"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+					if (Note.maniaKeys >= 2) addHint('buttonDown', ["NOTE_2 = 1"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+					if (Note.maniaKeys >= 3) addHint('buttonUp', ["NOTE_3 = 2"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+					if (Note.maniaKeys >= 4) addHint('buttonRight', ["NOTE_4 = 3"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+					if (Note.maniaKeys >= 5) addHint('buttonNote5', ["NOTE_5 = 4"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+					if (Note.maniaKeys >= 6) addHint('buttonNote6', ["NOTE_6 = 5"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+					if (Note.maniaKeys >= 7) addHint('buttonNote7', ["NOTE_7 = 6"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+					if (Note.maniaKeys >= 8) addHint('buttonNote8', ["NOTE_8 = 7"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+					if (Note.maniaKeys >= 9) addHint('buttonNote9', ["NOTE_9 = 8"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+				}
+			}
+			else
+			{
+				var Custom:String = Mode != null ? Mode : ClientPrefs.data.hitboxmode;
+				if (!MobileData.hitboxModes.exists(Custom))
+					throw 'The Custom Hitbox File doesn\'t exists.';
+	
+				var currentHint = MobileData.hitboxModes.get(Custom).hints;
+				if (MobileData.hitboxModes.get(Custom).none != null)
+					currentHint = MobileData.hitboxModes.get(Custom).none;
+				if (ClientPrefs.data.extraKeys == 1 && MobileData.hitboxModes.get(Custom).single != null)
+					currentHint = MobileData.hitboxModes.get(Custom).single;
+				if (ClientPrefs.data.extraKeys == 2 && MobileData.hitboxModes.get(Custom).double != null)
+					currentHint = MobileData.hitboxModes.get(Custom).double;
+				if (ClientPrefs.data.extraKeys == 3 && MobileData.hitboxModes.get(Custom).triple != null)
+					currentHint = MobileData.hitboxModes.get(Custom).triple;
+				if (ClientPrefs.data.extraKeys == 4 && MobileData.hitboxModes.get(Custom).quad != null)
+					currentHint = MobileData.hitboxModes.get(Custom).quad;
+				if (ClientPrefs.data.extraKeys != 0 && MobileData.hitboxModes.get(Custom).test != null)
+					currentHint = MobileData.hitboxModes.get(Custom).test;
+	
+				//Extra Key Stuff
+				if (Note.maniaKeys == 1 && MobileData.hitboxModes.get(Custom).mania1 != null)
+					currentHint = MobileData.hitboxModes.get(Custom).mania1;
+				if (Note.maniaKeys == 2 && MobileData.hitboxModes.get(Custom).mania2 != null)
+					currentHint = MobileData.hitboxModes.get(Custom).mania2;
+				if (Note.maniaKeys == 3 && MobileData.hitboxModes.get(Custom).mania3 != null)
+					currentHint = MobileData.hitboxModes.get(Custom).mania3;
+				if (Note.maniaKeys == 4 && MobileData.hitboxModes.get(Custom).mania4 != null)
+					currentHint = MobileData.hitboxModes.get(Custom).mania4;
+				if (Note.maniaKeys == 5 && MobileData.hitboxModes.get(Custom).mania5 != null)
+					currentHint = MobileData.hitboxModes.get(Custom).mania5;
+				if (Note.maniaKeys == 6 && MobileData.hitboxModes.get(Custom).mania6 != null)
+					currentHint = MobileData.hitboxModes.get(Custom).mania6;
+				if (Note.maniaKeys == 7 && MobileData.hitboxModes.get(Custom).mania7 != null)
+					currentHint = MobileData.hitboxModes.get(Custom).mania7;
+				if (Note.maniaKeys == 8 && MobileData.hitboxModes.get(Custom).mania8 != null)
+					currentHint = MobileData.hitboxModes.get(Custom).mania8;
+				if (Note.maniaKeys == 9 && MobileData.hitboxModes.get(Custom).mania9 != null)
+					currentHint = MobileData.hitboxModes.get(Custom).mania9;
+				if (Note.maniaKeys == 20 && MobileData.hitboxModes.get(Custom).mania20 != null)
+					currentHint = MobileData.hitboxModes.get(Custom).mania20;
+				if (Note.maniaKeys == 55 && MobileData.hitboxModes.get(Custom).mania55 != null)
+					currentHint = MobileData.hitboxModes.get(Custom).mania55;
+	
+				for (buttonData in currentHint)
+				{
+					var buttonX:Float = buttonData.x;
+					var buttonY:Float = buttonData.y;
+	
+					var buttonWidth:Int = buttonData.width;
+					var buttonHeight:Int = buttonData.height;
+					buttonWidth = buttonData.width;
+					buttonHeight = ;
+	
+					var buttonColor = buttonData.color;
+					var buttonReturn = buttonData.returnKey;
+					var location = ClientPrefs.data.hitboxLocation;
+	
+					switch (location) {
+						case 'Top':
+							if (buttonData.topX != null) buttonX = buttonData.topX;
+							if (buttonData.topY != null) buttonY = buttonData.topY;
+							if (buttonData.topWidth != null) buttonWidth = buttonData.topWidth;
+							if (buttonData.topHeight != null) buttonHeight = buttonData.topHeight;
+							if (buttonData.topColor != null) buttonColor = buttonData.topColor;
+							if (buttonData.topReturnKey != null) buttonReturn = buttonData.topReturnKey;
+						case 'Middle':
+							if (buttonData.middleX != null) buttonX = buttonData.middleX;
+							if (buttonData.middleY != null) buttonY = buttonData.middleY;
+							if (buttonData.middleWidth != null) buttonWidth = buttonData.middleWidth;
+							if (buttonData.middleHeight != null) buttonHeight = buttonData.middleHeight;
+							if (buttonData.middleColor != null) buttonColor = buttonData.middleColor;
+							if (buttonData.middleReturnKey != null) buttonReturn = buttonData.middleReturnKey;
+						case 'Bottom':
+							if (buttonData.bottomX != null) buttonX = buttonData.bottomX;
+							if (buttonData.bottomY != null) buttonY = buttonData.bottomY;
+							if (buttonData.bottomWidth != null) buttonWidth = buttonData.bottomWidth;
+							if (buttonData.bottomHeight != null) buttonHeight = buttonData.bottomHeight;
+							if (buttonData.bottomColor != null) buttonColor = buttonData.bottomColor;
+							if (buttonData.bottomReturnKey != null) buttonReturn = buttonData.bottomReturnKey;
+					}
+	
+					for (i in 1...9) {
+						var buttonString = 'buttonExtra${i}';
+						if (buttonData.button == buttonString && buttonReturn == null)
+							buttonReturn = Reflect.getProperty(ClientPrefs.data, 'extraKeyReturn${i}');
+					}
+	
+					addHint(buttonData.button, buttonIDs, buttonX, buttonY, buttonWidth, buttonHeight, Util.colorFromString(buttonColor), buttonReturn);
+				}
 			}
 		}
 
@@ -94,6 +180,17 @@ class Hitbox extends MobileInputHandler
 		updateTrackedButtons();
 
 		instance = this;
+	}
+
+	var countedIndex:Int = 0;
+	function addHint(Name:String, IDs:Array<String>, X:Float, Y:Float, Width:Int, Height:Int, Color:Int = 0xFFFFFF, ?buttonReturn:String)
+	{
+		var hint = createHint(IDs, X, Y, Width, Height, Color, buttonReturn);
+		Hints.push(hint);
+		add(hint);
+		buttonFromName.set(Name, hint);
+		buttonIndexFromName.set(Name, countedIndex);
+		countedIndex++;
 	}
 
 	function createHintGraphic(Width:Int, Height:Int, Color:Int = 0xFFFFFF, ?isLane:Bool = false):BitmapData
@@ -134,7 +231,7 @@ class Hitbox extends MobileInputHandler
 		return bitmap;
 	}
 
-	private function createHint(Name:Array<String>, X:Float, Y:Float, Width:Int, Height:Int, Color:Int = 0xFFFFFF, ?Return:String, ?Map:String):MobileButton
+	private function createHint(Name:Array<String>, X:Float, Y:Float, Width:Int, Height:Int, Color:Int = 0xFFFFFF, ?Return:String):MobileButton
 	{
 		var hint:MobileButton = new MobileButton(X, Y);
 		hint.loadGraphic(createHintGraphic(Width, Height, Color));
