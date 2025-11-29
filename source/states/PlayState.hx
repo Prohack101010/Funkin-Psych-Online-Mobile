@@ -2005,12 +2005,12 @@ class PlayState extends MusicBeatState
 			hitbox.visible = true;
 		hitbox.forEachAlive((button) ->
 		{
-			if (mobilePad.getButtonFromName.get('buttonT') != null)
-				button.deadZones.push(mobilePad.getButtonFromName.get('buttonT'));
-			if (mobilePad.getButtonFromName.get('buttonC') != null)
-				button.deadZones.push(mobilePad.getButtonFromName.get('buttonC'));
-			if (mobilePad.getButtonFromName.get('buttonP') != null)
-				button.deadZones.push(mobilePad.getButtonFromName.get('buttonP'));
+			if (mobilePad.getButtonFromName('buttonT') != null)
+				button.deadZones.push(mobilePad.getButtonFromName('buttonT'));
+			if (mobilePad.getButtonFromName('buttonC') != null)
+				button.deadZones.push(mobilePad.getButtonFromName('buttonC'));
+			if (mobilePad.getButtonFromName('buttonP') != null)
+				button.deadZones.push(mobilePad.getButtonFromName('buttonP'));
 		});
 
 		if (ClientPrefs.data.VSliceControl) VSliceControls = true;
@@ -2200,25 +2200,25 @@ class PlayState extends MusicBeatState
 
 	public function fixHitboxPos(strumGroup:FlxTypedGroup<StrumNote>, ?keyCountIsDefault:Bool) {
 		if (keyCountIsDefault) {
-			hitbox.getButtonFromName.get('buttonLeft').x = Std.int(strumGroup.members[0].x) - 20;
-			hitbox.getButtonFromName.get('buttonDown').x = Std.int(strumGroup.members[1].x) - 20;
-			hitbox.getButtonFromName.get('buttonUp').x = Std.int(strumGroup.members[2].x) - 20;
-			hitbox.getButtonFromName.get('buttonRight').x = Std.int(strumGroup.members[3].x) - 20;
+			hitbox.getButtonFromName('buttonLeft').x = Std.int(strumGroup.members[0].x) - 20;
+			hitbox.getButtonFromName('buttonDown').x = Std.int(strumGroup.members[1].x) - 20;
+			hitbox.getButtonFromName('buttonUp').x = Std.int(strumGroup.members[2].x) - 20;
+			hitbox.getButtonFromName('buttonRight').x = Std.int(strumGroup.members[3].x) - 20;
 		} else {
 			var hitboxFixPos:Float = 10;
 			if (Note.maniaKeys == 7) hitboxFixPos = 13;
 			if (Note.maniaKeys == 8) hitboxFixPos = 12.5;
 			if (Note.maniaKeys == 9) hitboxFixPos = 15;
 
-			if (Note.maniaKeys >= 1) hitbox.getButtonFromName.get('buttonLeft').x = strumGroup.members[0].x - hitboxFixPos;
-			if (Note.maniaKeys >= 2) hitbox.getButtonFromName.get('buttonDown').x = strumGroup.members[1].x - hitboxFixPos;
-			if (Note.maniaKeys >= 3) hitbox.getButtonFromName.get('buttonUp').x = strumGroup.members[2].x - hitboxFixPos;
-			if (Note.maniaKeys >= 4) hitbox.getButtonFromName.get('buttonRight').x = strumGroup.members[3].x - hitboxFixPos;
-			if (Note.maniaKeys >= 5) hitbox.getButtonFromName.get('buttonNote5').x = strumGroup.members[4].x - hitboxFixPos;
-			if (Note.maniaKeys >= 6) hitbox.getButtonFromName.get('buttonNote6').x = strumGroup.members[5].x - hitboxFixPos;
-			if (Note.maniaKeys >= 7) hitbox.getButtonFromName.get('buttonNote7').x = strumGroup.members[6].x - hitboxFixPos;
-			if (Note.maniaKeys >= 8) hitbox.getButtonFromName.get('buttonNote8').x = strumGroup.members[7].x - hitboxFixPos;
-			if (Note.maniaKeys == 9) hitbox.getButtonFromName.get('buttonNote9').x = strumGroup.members[8].x - hitboxFixPos;
+			if (Note.maniaKeys >= 1) hitbox.getButtonFromName('buttonLeft').x = strumGroup.members[0].x - hitboxFixPos;
+			if (Note.maniaKeys >= 2) hitbox.getButtonFromName('buttonDown').x = strumGroup.members[1].x - hitboxFixPos;
+			if (Note.maniaKeys >= 3) hitbox.getButtonFromName('buttonUp').x = strumGroup.members[2].x - hitboxFixPos;
+			if (Note.maniaKeys >= 4) hitbox.getButtonFromName('buttonRight').x = strumGroup.members[3].x - hitboxFixPos;
+			if (Note.maniaKeys >= 5) hitbox.getButtonFromName('buttonNote5').x = strumGroup.members[4].x - hitboxFixPos;
+			if (Note.maniaKeys >= 6) hitbox.getButtonFromName('buttonNote6').x = strumGroup.members[5].x - hitboxFixPos;
+			if (Note.maniaKeys >= 7) hitbox.getButtonFromName('buttonNote7').x = strumGroup.members[6].x - hitboxFixPos;
+			if (Note.maniaKeys >= 8) hitbox.getButtonFromName('buttonNote8').x = strumGroup.members[7].x - hitboxFixPos;
+			if (Note.maniaKeys == 9) hitbox.getButtonFromName('buttonNote9').x = strumGroup.members[8].x - hitboxFixPos;
 		}
 	}
 
@@ -3117,7 +3117,7 @@ class PlayState extends MusicBeatState
 			// }
 
 			if (cpuControlled) {
-				var shiftMult = (mobilePad.getButtonFromName.get('buttonX').pressed || FlxG.keys.pressed.SHIFT) ? 3 : 1;
+				var shiftMult = (mobilePad.getButtonFromName('buttonX').pressed || FlxG.keys.pressed.SHIFT) ? 3 : 1;
 				if (controls.UI_LEFT) {
 					if (playbackRate - elapsed * 0.25 * shiftMult > 0)
 						playbackRate -= elapsed * 0.25 * shiftMult;
@@ -3133,7 +3133,7 @@ class PlayState extends MusicBeatState
 					}
 					botplayTxt.text = "BOTPLAY\n" + '(${CoolUtil.floorDecimal(playbackRate, 2)}x)';
 				}
-				else if (mobilePad.getButtonFromName.get('buttonY').justPressed || controls.RESET) {
+				else if (mobilePad.getButtonFromName('buttonY').justPressed || controls.RESET) {
 					playbackRate = 1;
 					botplayTxt.text = "BOTPLAY";
 				}
@@ -6660,12 +6660,12 @@ class PlayState extends MusicBeatState
 		}
 		hitbox.forEachAlive((button) ->
 		{
-			if (mobilePad.getButtonFromName.get('buttonT') != null)
-				button.deadZones.push(mobilePad.getButtonFromName.get('buttonT'));
-			if (mobilePad.getButtonFromName.get('buttonC') != null)
-				button.deadZones.push(mobilePad.getButtonFromName.get('buttonC'));
-			if (mobilePad.getButtonFromName.get('buttonP') != null)
-				button.deadZones.push(mobilePad.getButtonFromName.get('buttonP'));
+			if (mobilePad.getButtonFromName('buttonT') != null)
+				button.deadZones.push(mobilePad.getButtonFromName('buttonT'));
+			if (mobilePad.getButtonFromName('buttonC') != null)
+				button.deadZones.push(mobilePad.getButtonFromName('buttonC'));
+			if (mobilePad.getButtonFromName('buttonP') != null)
+				button.deadZones.push(mobilePad.getButtonFromName('buttonP'));
 		});
 	}
 

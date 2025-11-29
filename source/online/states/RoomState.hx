@@ -558,7 +558,7 @@ class RoomState extends MusicBeatState #if interpret implements interpret.Interp
 	override function update(elapsed:Float) {
 		super.update(elapsed);
 
-		mobilePad.getButtonFromName.get('buttonLeft').visible = mobilePad.getButtonFromName.get('buttonRight').visible = mobilePad.getButtonFromName.get('buttonUp').visible = mobilePad.getButtonFromName.get('buttonDown').visible = mobilePad.getButtonFromName.get('buttonT').visible = mobilePad.getButtonFromName.get('buttonM').visible = mobilePad.getButtonFromName.get('buttonY').pressed;
+		mobilePad.getButtonFromName('buttonLeft').visible = mobilePad.getButtonFromName('buttonRight').visible = mobilePad.getButtonFromName('buttonUp').visible = mobilePad.getButtonFromName('buttonDown').visible = mobilePad.getButtonFromName('buttonT').visible = mobilePad.getButtonFromName('buttonM').visible = mobilePad.getButtonFromName('buttonY').pressed;
 
 		if (FlxG.keys.justPressed.F11) {
 			GameClient.reconnect();
@@ -677,18 +677,18 @@ class RoomState extends MusicBeatState #if interpret implements interpret.Interp
 
 			// trace('playerHold = ' + playerHold + ', oppHold = ' + oppHold);
 
-			if (mobilePad.getButtonFromName.get('buttonY').pressed || FlxG.keys.pressed.ALT) { // useless, but why not?
-				var suffix = (mobilePad.getButtonFromName.get('buttonM').pressed || FlxG.keys.pressed.CONTROL) ? 'miss' : '';
-				if (mobilePad.getButtonFromName.get('buttonLeft').justPressed || controls.NOTE_LEFT_P) {
+			if (mobilePad.getButtonFromName('buttonY').pressed || FlxG.keys.pressed.ALT) { // useless, but why not?
+				var suffix = (mobilePad.getButtonFromName('buttonM').pressed || FlxG.keys.pressed.CONTROL) ? 'miss' : '';
+				if (mobilePad.getButtonFromName('buttonLeft').justPressed || controls.NOTE_LEFT_P) {
 					playerAnim('singLEFT' + suffix);
 				}
-				if (mobilePad.getButtonFromName.get('buttonRight').justPressed || controls.NOTE_RIGHT_P) {
+				if (mobilePad.getButtonFromName('buttonRight').justPressed || controls.NOTE_RIGHT_P) {
 					playerAnim('singRIGHT' + suffix);
 				}
-				if (mobilePad.getButtonFromName.get('buttonUp').justPressed || controls.NOTE_UP_P) {
+				if (mobilePad.getButtonFromName('buttonUp').justPressed || controls.NOTE_UP_P) {
 					playerAnim('singUP' + suffix);
 				}
-				if (mobilePad.getButtonFromName.get('buttonDown').justPressed || controls.NOTE_DOWN_P) {
+				if (mobilePad.getButtonFromName('buttonDown').justPressed || controls.NOTE_DOWN_P) {
 					playerAnim('singDOWN' + suffix);
 				}
 				if (controls.TAUNT) {
@@ -718,7 +718,7 @@ class RoomState extends MusicBeatState #if interpret implements interpret.Interp
 				}
 			}
 			
-			if (((!FlxG.keys.pressed.ALT || !mobilePad.getButtonFromName.get('buttonY').pressed) && controls.ACCEPT) || FlxG.mouse.justPressed) {
+			if (((!FlxG.keys.pressed.ALT || !mobilePad.getButtonFromName('buttonY').pressed) && controls.ACCEPT) || FlxG.mouse.justPressed) {
 				switch (curSelected) {
 					case 0:
 						openSubState(new RoomSettingsSubstate());

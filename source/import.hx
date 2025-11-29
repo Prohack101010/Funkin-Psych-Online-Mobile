@@ -75,7 +75,7 @@ import online.backend.Deflection;
 import mobile.*;
 import mobile.MobileButton;
 import mobile.MobilePad;
-import mobile.HitboxExtended as Hitbox;
+import mobile.Hitbox;
 import mobile.backend.TouchUtil;
 import mobile.backend.PsychJNI;
 import mobile.backend.TouchFunctions;

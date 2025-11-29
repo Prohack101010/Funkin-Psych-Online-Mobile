@@ -1,7 +1,5 @@
 package mobile;
 
-import mobile.Hitbox;
-
 import flixel.util.FlxSignal.FlxTypedSignal;
 import flixel.graphics.FlxGraphic;
 import openfl.display.BitmapData;
@@ -9,9 +7,14 @@ import openfl.display.Shape;
 import openfl.geom.Matrix;
 import flixel.util.FlxColor;
 import flixel.FlxCamera;
-import objects.Note;
 
-class HitboxExtended extends Hitbox
+/**
+ * A zone with custom hint's (A hitbox).
+ * It's really easy to customize the layout.
+ *
+ * @author KralOyuncu 2010x (ArkoseLabs)
+ */
+class Hitbox extends MobileInputHandler
 {
 	public var extraKey1 = ClientPrefs.data.extraKeyReturn1.toUpperCase();
 	public var extraKey2 = ClientPrefs.data.extraKeyReturn2.toUpperCase();
@@ -21,13 +24,71 @@ class HitboxExtended extends Hitbox
 	public var onButtonDown:FlxTypedSignal<(MobileButton, Array<String>) -> Void> = new FlxTypedSignal<(MobileButton, Array<String>) -> Void>();
 	public var onButtonUp:FlxTypedSignal<(MobileButton, Array<String>) -> Void> = new FlxTypedSignal<(MobileButton, Array<String>) -> Void>();
 
+	public var instance:MobileInputHandler;
+	public var Hints:Array<MobileButton> = [];
+	public var buttonIndexFromName:Map<String, Int> = [];
+	public var buttonFromName:Map<String, MobileButton> = [];
+	public var globalAlpha:Float = 0.7;
+	public var buttonCameras(get, set):Array<FlxCamera>;
+
+	public function getButtonIndexFromName(btnName:String)
+		return buttonIndexFromName.get(btnName);
+
+	public function getButtonFromName(btnName:String)
+		return buttonFromName.get(btnName);
+
+	@:noCompletion
+	function get_buttonCameras():Array<FlxCamera>
+	{
+		return cameras;
+	}
+
+	@:noCompletion
+	function set_buttonCameras(Value:Array<FlxCamera>):Array<FlxCamera>
+	{
+		cameras = Value;
+		for (button in Hints) {
+			button._cameras = Value;
+		}
+		return Value;
+	}
+
 	/**
 	 * Create the zone.
 	 */
-	public function new(?CustomMode:String, ?globalAlpha:Float = 0.7):Void
+	public function new(Mode:String, globalAlpha:Float = 0.7, ?disableCreation:Bool):Void
 	{
 		instance = this;
-		super(CustomMode, globalAlpha);
+		super();
+		this.globalAlpha = globalAlpha;
+
+		if (!disableCreation)
+		{
+			if (!MobileInputHandler.hitboxModes.exists(Mode))
+				throw 'The Hitbox File doesn\'t exists.';
+
+			var countedIndex:Int = 0;
+			for (buttonData in MobileInputHandler.hitboxModes.get(Mode).hints)
+			{
+				var buttonName:String = buttonData.button;
+				var buttonIDs:Array<String> = buttonData.buttonIDs;
+				var buttonX:Float = buttonData.x;
+				var buttonY:Float = buttonData.y;
+
+				var buttonWidth:Int = buttonData.width;
+				var buttonHeight:Int = buttonData.height;
+
+				var buttonColor = buttonData.color;
+				var buttonReturn = buttonData.returnKey;
+
+				var hint = createHint(buttonIDs, buttonX, buttonY, buttonWidth, buttonHeight, Util.colorFromString(buttonColor), buttonReturn);
+				Hints.push(hint);
+				add(hint);
+				buttonFromName.set(buttonName, hint);
+				buttonIndexFromName.set(buttonName, countedIndex);
+				countedIndex++;
+			}
+		}
 
 		scrollFactor.set();
 		updateTrackedButtons();
@@ -35,23 +96,9 @@ class HitboxExtended extends Hitbox
 		instance = this;
 	}
 
-	/**
-	 * Clean up memory.
-	 */
-	override function destroy():Void
+	function createHintGraphic(Width:Int, Height:Int, Color:Int = 0xFFFFFF, ?isLane:Bool = false):BitmapData
 	{
-		super.destroy();
-		onButtonUp.destroy();
-		onButtonDown.destroy();
-
-		for (field in Reflect.fields(this))
-			if (Std.isOfType(Reflect.field(this, field), MobileButton))
-				Reflect.setField(this, field, FlxDestroyUtil.destroy(Reflect.field(this, field)));
-	}
-
-	override function createHintGraphic(Width:Int, Height:Int, Color:Int = 0xFFFFFF, ?isLane:Bool = false):BitmapData
-	{
-		var guh:Float = ClientPrefs.data.hitboxalpha;
+		var guh:Float = globalAlpha;
 		var shape:Shape = new Shape();
 		shape.graphics.beginFill(Color);
 		switch (ClientPrefs.data.hitboxtype) {
@@ -87,7 +134,7 @@ class HitboxExtended extends Hitbox
 		return bitmap;
 	}
 
-	override private function createHint(Name:Array<String>, X:Float, Y:Float, Width:Int, Height:Int, Color:Int = 0xFFFFFF, ?Return:String, ?Map:String):MobileButton
+	private function createHint(Name:Array<String>, X:Float, Y:Float, Width:Int, Height:Int, Color:Int = 0xFFFFFF, ?Return:String, ?Map:String):MobileButton
 	{
 		var hint:MobileButton = new MobileButton(X, Y);
 		hint.loadGraphic(createHintGraphic(Width, Height, Color));
@@ -135,5 +182,22 @@ class HitboxExtended extends Hitbox
 		#end
 		if (Return != null) hint.returnedKey = Return;
 		return hint;
+	}
+
+	/**
+	 * Clean up memory.
+	 */
+	override function destroy():Void
+	{
+		super.destroy();
+		onButtonUp.destroy();
+		onButtonDown.destroy();
+
+		for (fieldName in Reflect.fields(this))
+		{
+			var field = Reflect.field(this, fieldName);
+			if (Std.isOfType(field, MobileButton))
+				Reflect.setField(this, fieldName, FlxDestroyUtil.destroy(field));
+		}
 	}
 }

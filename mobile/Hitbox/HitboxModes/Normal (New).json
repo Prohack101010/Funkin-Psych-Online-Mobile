@@ -2,6 +2,7 @@
   "mania1": [
     {
       "button": "buttonLeft",
+      "buttonIDs": ["NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 1280,
@@ -12,6 +13,7 @@
   "mania2": [
     {
       "button": "buttonLeft",
+      "buttonIDs": ["NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 640,
@@ -20,6 +22,7 @@
     },
     {
       "button": "buttonDown",
+      "buttonIDs": ["NOTE_2 = 1"],
       "x": 640,
       "y": 0,
       "width": 640,
@@ -30,6 +33,7 @@
   "mania3": [
     {
       "button": "buttonLeft",
+      "buttonIDs": ["NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 427,
@@ -38,6 +42,7 @@
     },
     {
       "button": "buttonDown",
+      "buttonIDs": ["NOTE_2 = 1"],
       "x": 427,
       "y": 0,
       "width": 426,
@@ -46,6 +51,7 @@
     },
     {
       "button": "buttonUp",
+      "buttonIDs": ["NOTE_3 = 2"],
       "x": 853,
       "y": 0,
       "width": 427,
@@ -94,6 +100,7 @@
   "test": [
     {
       "button": "buttonLeft",
+      "buttonIDs": ["NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "topY": 144,
@@ -105,6 +112,7 @@
     },
     {
       "button": "buttonDown",
+      "buttonIDs": ["NOTE_2 = 1"],
       "x": 320,
       "middleX": 256,
       "y": 0,
@@ -117,6 +125,7 @@
     },
     {
       "button": "buttonUp",
+      "buttonIDs": ["NOTE_3 = 2"],
       "x": 640,
       "middleX": 768,
       "y": 0,
@@ -129,6 +138,7 @@
     },
     {
       "button": "buttonRight",
+      "buttonIDs": ["NOTE_4 = 3"],
       "x": 960,
       "middleX": 1024,
       "y": 0,
@@ -141,6 +151,7 @@
     },
     {
       "button": "buttonExtra1",
+      "buttonIDs": ["EXTRA_10 = 9"],
       "x": 0,
       "middleX": 512,
       "y": 576,
@@ -155,6 +166,7 @@
     },
     {
       "button": "buttonExtra1",
+      "buttonIDs": ["EXTRA_10 = 9"],
       "x": 0,
       "middleX": 512,
       "y": 576,
@@ -169,6 +181,7 @@
     },
     {
       "button": "buttonExtra2",
+      "buttonIDs": ["EXTRA_11 = 10"],
       "x": 640,
       "middleX": 512,
       "y": 576,
@@ -183,6 +196,7 @@
     },
     {
       "button": "buttonExtra1",
+      "buttonIDs": ["EXTRA_10 = 9"],
       "x": 0,
       "middleX": 512,
       "y": 576,
@@ -197,6 +211,7 @@
     },
     {
       "button": "buttonExtra2",
+      "buttonIDs": ["EXTRA_11 = 10"],
       "x": 427,
       "middleX": 512,
       "y": 576,
@@ -211,6 +226,7 @@
     },
     {
       "button": "buttonExtra3",
+      "buttonIDs": ["EXTRA_12 = 11"],
       "x": 853,
       "middleX": 512,
       "y": 576,
@@ -225,6 +241,7 @@
     },
     {
       "button": "buttonExtra1",
+      "buttonIDs": ["EXTRA_10 = 9"],
       "x": 0,
       "middleX": 512,
       "y": 576,
@@ -239,6 +256,7 @@
     },
     {
       "button": "buttonExtra2",
+      "buttonIDs": ["EXTRA_11 = 10"],
       "x": 320,
       "middleX": 512,
       "y": 576,
@@ -253,6 +271,7 @@
     },
     {
       "button": "buttonExtra3",
+      "buttonIDs": ["EXTRA_12 = 11"],
       "x": 640,
       "middleX": 512,
       "y": 576,
@@ -267,6 +286,7 @@
     },
     {
       "button": "buttonExtra4",
+      "buttonIDs": ["EXTRA_13 = 12"],
       "x": 960,
       "middleX": 512,
       "y": 576,
@@ -283,6 +303,7 @@
   "mania5": [
     {
       "button": "buttonLeft",
+      "buttonIDs": ["NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 256,
@@ -291,6 +312,7 @@
     },
     {
       "button": "buttonDown",
+      "buttonIDs": ["NOTE_2 = 1"],
       "x": 256,
       "y": 0,
       "width": 256,
@@ -299,6 +321,7 @@
     },
     {
       "button": "buttonUp",
+      "buttonIDs": ["NOTE_3 = 2"],
       "x": 512,
       "y": 0,
       "width": 256,
@@ -307,6 +330,7 @@
     },
     {
       "button": "buttonRight",
+      "buttonIDs": ["NOTE_4 = 3"],
       "x": 768,
       "y": 0,
       "width": 256,
@@ -315,6 +339,7 @@
     },
     {
       "button": "buttonNote5",
+      "buttonIDs": ["NOTE_5 = 4"],
       "x": 1024,
       "y": 0,
       "width": 256,
@@ -325,6 +350,7 @@
   "mania6": [
     {
       "button": "buttonLeft",
+      "buttonIDs": ["NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 213,
@@ -333,6 +359,7 @@
     },
     {
       "button": "buttonDown",
+      "buttonIDs": ["NOTE_2 = 1"],
       "x": 213,
       "y": 0,
       "width": 213,
@@ -341,6 +368,7 @@
     },
     {
       "button": "buttonUp",
+      "buttonIDs": ["NOTE_3 = 2"],
       "x": 426,
       "y": 0,
       "width": 213,
@@ -351,6 +379,7 @@
     },
     {
       "button": "buttonRight",
+      "buttonIDs": ["NOTE_4 = 3"],
       "x": 639,
       "y": 0,
       "width": 213,
@@ -359,6 +388,7 @@
     },
     {
       "button": "buttonNote5",
+      "buttonIDs": ["NOTE_5 = 4"],
       "x": 852,
       "y": 0,
       "width": 213,
@@ -367,6 +397,7 @@
     },
     {
       "button": "buttonNote6",
+      "buttonIDs": ["NOTE_6 = 5"],
       "x": 1065,
       "y": 0,
       "width": 215,
@@ -377,6 +408,7 @@
   "mania7": [
     {
       "button": "buttonLeft",
+      "buttonIDs": ["NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 183,
@@ -385,6 +417,7 @@
     },
     {
       "button": "buttonDown",
+      "buttonIDs": ["NOTE_2 = 1"],
       "x": 183,
       "y": 0,
       "width": 183,
@@ -393,6 +426,7 @@
     },
     {
       "button": "buttonUp",
+      "buttonIDs": ["NOTE_3 = 2"],
       "x": 366,
       "y": 0,
       "width": 183,
@@ -401,6 +435,7 @@
     },
     {
       "button": "buttonRight",
+      "buttonIDs": ["NOTE_4 = 3"],
       "x": 549,
       "y": 0,
       "width": 183,
@@ -409,6 +444,7 @@
     },
     {
       "button": "buttonNote5",
+      "buttonIDs": ["NOTE_5 = 4"],
       "x": 732,
       "y": 0,
       "width": 183,
@@ -417,6 +453,7 @@
     },
     {
       "button": "buttonNote6",
+      "buttonIDs": ["NOTE_6 = 5"],
       "x": 915,
       "y": 0,
       "width": 183,
@@ -425,6 +462,7 @@
     },
     {
       "button": "buttonNote7",
+      "buttonIDs": ["NOTE_7 = 6"],
       "x": 1098,
       "y": 0,
       "width": 183,
@@ -435,6 +473,7 @@
   "mania8": [
     {
       "button": "buttonLeft",
+      "buttonIDs": ["NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 160,
@@ -443,6 +482,7 @@
     },
     {
       "button": "buttonDown",
+      "buttonIDs": ["NOTE_2 = 1"],
       "x": 160,
       "y": 0,
       "width": 160,
@@ -451,6 +491,7 @@
     },
     {
       "button": "buttonUp",
+      "buttonIDs": ["NOTE_3 = 2"],
       "x": 320,
       "y": 0,
       "width": 160,
@@ -459,6 +500,7 @@
     },
     {
       "button": "buttonRight",
+      "buttonIDs": ["NOTE_4 = 3"],
       "x": 480,
       "y": 0,
       "width": 160,
@@ -467,6 +509,7 @@
     },
     {
       "button": "buttonNote5",
+      "buttonIDs": ["NOTE_5 = 4"],
       "x": 640,
       "y": 0,
       "width": 160,
@@ -475,6 +518,7 @@
     },
     {
       "button": "buttonNote6",
+      "buttonIDs": ["NOTE_6 = 5"],
       "x": 800,
       "y": 0,
       "width": 160,
@@ -483,6 +527,7 @@
     },
     {
       "button": "buttonNote7",
+      "buttonIDs": ["NOTE_7 = 6"],
       "x": 960,
       "y": 0,
       "width": 160,
@@ -491,6 +536,7 @@
     },
     {
       "button": "buttonNote8",
+      "buttonIDs": ["NOTE_8 = 7"],
       "x": 1120,
       "y": 0,
       "width": 160,
@@ -501,6 +547,7 @@
   "mania9": [
     {
       "button": "buttonLeft",
+      "buttonIDs": ["NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 142,
@@ -509,6 +556,7 @@
     },
     {
       "button": "buttonDown",
+      "buttonIDs": ["NOTE_2 = 1"],
       "x": 142,
       "y": 0,
       "width": 142,
@@ -517,6 +565,7 @@
     },
     {
       "button": "buttonUp",
+      "buttonIDs": ["NOTE_3 = 2"],
       "x": 284,
       "y": 0,
       "width": 142,
@@ -525,6 +574,7 @@
     },
     {
       "button": "buttonRight",
+      "buttonIDs": ["NOTE_4 = 3"],
       "x": 426,
       "y": 0,
       "width": 142,
@@ -533,6 +583,7 @@
     },
     {
       "button": "buttonNote5",
+      "buttonIDs": ["NOTE_5 = 4"],
       "x": 568,
       "y": 0,
       "width": 142,
@@ -541,6 +592,7 @@
     },
     {
       "button": "buttonNote6",
+      "buttonIDs": ["NOTE_6 = 5"],
       "x": 710,
       "y": 0,
       "width": 142,
@@ -549,6 +601,7 @@
     },
     {
       "button": "buttonNote7",
+      "buttonIDs": ["NOTE_7 = 6"],
       "x": 852,
       "y": 0,
       "width": 142,
@@ -557,6 +610,7 @@
     },
     {
       "button": "buttonNote8",
+      "buttonIDs": ["NOTE_8 = 7"],
       "x": 994,
       "y": 0,
       "width": 142,
@@ -565,6 +619,7 @@
     },
     {
       "button": "buttonNote9",
+      "buttonIDs": ["NOTE_9 = 8"],
       "x": 1136,
       "y": 0,
       "width": 143,
@@ -575,6 +630,7 @@
   "mania20": [
     {
       "button": "buttonLeft",
+      "buttonIDs": ["NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 64,
@@ -583,6 +639,7 @@
     },
     {
       "button": "buttonDown",
+      "buttonIDs": ["NOTE_2 = 1"],
       "x": 64,
       "y": 0,
       "width": 64,
@@ -591,6 +648,7 @@
     },
     {
       "button": "buttonUp",
+      "buttonIDs": ["NOTE_3 = 2"],
       "x": 128,
       "y": 0,
       "width": 64,
@@ -599,6 +657,7 @@
     },
     {
       "button": "buttonRight",
+      "buttonIDs": ["NOTE_4 = 3"],
       "x": 192,
       "y": 0,
       "width": 64,
@@ -607,6 +666,7 @@
     },
     {
       "button": "buttonNote5",
+      "buttonIDs": ["NOTE_5 = 4"],
       "x": 256,
       "y": 0,
       "width": 64,
@@ -615,6 +675,7 @@
     },
     {
       "button": "buttonNote6",
+      "buttonIDs": ["NOTE_6 = 5"],
       "x": 320,
       "y": 0,
       "width": 64,
@@ -623,6 +684,7 @@
     },
     {
       "button": "buttonNote7",
+      "buttonIDs": ["NOTE_7 = 6"],
       "x": 384,
       "y": 0,
       "width": 64,
@@ -631,6 +693,7 @@
     },
     {
       "button": "buttonNote8",
+      "buttonIDs": ["NOTE_8 = 7"],
       "x": 448,
       "y": 0,
       "width": 64,
@@ -639,6 +702,7 @@
     },
     {
       "button": "buttonNote9",
+      "buttonIDs": ["NOTE_9 = 8"],
       "x": 512,
       "y": 0,
       "width": 64,
@@ -647,6 +711,7 @@
     },
     {
       "button": "buttonExtra10",
+      "buttonIDs": ["EXTRA_10 = 9"],
       "x": 576,
       "y": 0,
       "width": 64,
@@ -655,6 +720,7 @@
     },
     {
       "button": "buttonExtra11",
+      "buttonIDs": ["EXTRA_11 = 10"],
       "x": 640,
       "y": 0,
       "width": 64,
@@ -663,6 +729,7 @@
     },
     {
       "button": "buttonExtra12",
+      "buttonIDs": ["EXTRA_12 = 11"],
       "x": 704,
       "y": 0,
       "width": 64,
@@ -671,6 +738,7 @@
     },
     {
       "button": "buttonExtra13",
+      "buttonIDs": ["EXTRA_13 = 12"],
       "x": 768,
       "y": 0,
       "width": 64,
@@ -679,6 +747,7 @@
     },
     {
       "button": "buttonExtra14",
+      "buttonIDs": ["EXTRA_14 = 13"],
       "x": 832,
       "y": 0,
       "width": 64,
@@ -687,6 +756,7 @@
     },
     {
       "button": "buttonExtra15",
+      "buttonIDs": ["EXTRA_15 = 14"],
       "x": 896,
       "y": 0,
       "width": 64,
@@ -695,6 +765,7 @@
     },
     {
       "button": "buttonExtra16",
+      "buttonIDs": ["EXTRA_16 = 15"],
       "x": 960,
       "y": 0,
       "width": 64,
@@ -703,6 +774,7 @@
     },
     {
       "button": "buttonExtra17",
+      "buttonIDs": ["EXTRA_17 = 16"],
       "x": 1024,
       "y": 0,
       "width": 64,
@@ -711,6 +783,7 @@
     },
     {
       "button": "buttonExtra18",
+      "buttonIDs": ["EXTRA_18 = 17"],
       "x": 1088,
       "y": 0,
       "width": 64,
@@ -719,6 +792,7 @@
     },
     {
       "button": "buttonExtra19",
+      "buttonIDs": ["EXTRA_19 = 18"],
       "x": 1152,
       "y": 0,
       "width": 64,
@@ -727,6 +801,7 @@
     },
     {
       "button": "buttonExtra20",
+      "buttonIDs": ["EXTRA_20 = 19"],
       "x": 1216,
       "y": 0,
       "width": 64,
@@ -737,6 +812,7 @@
   "mania55": [
     {
       "button": "buttonLeft",
+      "buttonIDs": ["NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 23,
@@ -745,6 +821,7 @@
     },
     {
       "button": "buttonDown",
+      "buttonIDs": ["NOTE_2 = 1"],
       "x": 23,
       "y": 0,
       "width": 23,
@@ -753,6 +830,7 @@
     },
     {
       "button": "buttonUp",
+      "buttonIDs": ["NOTE_3 = 2"],
       "x": 46,
       "y": 0,
       "width": 23,
@@ -761,6 +839,7 @@
     },
     {
       "button": "buttonRight",
+      "buttonIDs": ["NOTE_4 = 3"],
       "x": 69,
       "y": 0,
       "width": 23,
@@ -769,6 +848,7 @@
     },
     {
       "button": "buttonNote5",
+      "buttonIDs": ["NOTE_5 = 4"],
       "x": 92,
       "y": 0,
       "width": 23,
@@ -777,6 +857,7 @@
     },
     {
       "button": "buttonNote6",
+      "buttonIDs": ["NOTE_6 = 5"],
       "x": 115,
       "y": 0,
       "width": 23,
@@ -785,6 +866,7 @@
     },
     {
       "button": "buttonNote7",
+      "buttonIDs": ["NOTE_7 = 6"],
       "x": 138,
       "y": 0,
       "width": 23,
@@ -793,6 +875,7 @@
     },
     {
       "button": "buttonNote8",
+      "buttonIDs": ["NOTE_8 = 7"],
       "x": 161,
       "y": 0,
       "width": 23,
@@ -801,6 +884,7 @@
     },
     {
       "button": "buttonNote9",
+      "buttonIDs": ["NOTE_9 = 8"],
       "x": 184,
       "y": 0,
       "width": 23,
@@ -809,6 +893,7 @@
     },
     {
       "button": "buttonExtra10",
+      "buttonIDs": ["EXTRA_10 = 9"],
       "x": 207,
       "y": 0,
       "width": 23,
@@ -817,6 +902,7 @@
     },
     {
       "button": "buttonExtra11",
+      "buttonIDs": ["EXTRA_11 = 10"],
       "x": 230,
       "y": 0,
       "width": 23,
@@ -825,6 +911,7 @@
     },
     {
       "button": "buttonExtra12",
+      "buttonIDs": ["EXTRA_12 = 11"],
       "x": 253,
       "y": 0,
       "width": 23,
@@ -833,6 +920,7 @@
     },
     {
       "button": "buttonExtra13",
+      "buttonIDs": ["EXTRA_13 = 12"],
       "x": 276,
       "y": 0,
       "width": 23,
@@ -841,6 +929,7 @@
     },
     {
       "button": "buttonExtra14",
+      "buttonIDs": ["EXTRA_14 = 13"],
       "x": 299,
       "y": 0,
       "width": 23,
@@ -849,6 +938,7 @@
     },
     {
       "button": "buttonExtra15",
+      "buttonIDs": ["EXTRA_15 = 14"],
       "x": 322,
       "y": 0,
       "width": 23,
@@ -857,6 +947,7 @@
     },
     {
       "button": "buttonExtra16",
+      "buttonIDs": ["EXTRA_16 = 15"],
       "x": 345,
       "y": 0,
       "width": 23,
@@ -865,6 +956,7 @@
     },
     {
       "button": "buttonExtra17",
+      "buttonIDs": ["EXTRA_17 = 16"],
       "x": 368,
       "y": 0,
       "width": 23,
@@ -873,6 +965,7 @@
     },
     {
       "button": "buttonExtra18",
+      "buttonIDs": ["EXTRA_18 = 17"],
       "x": 391,
       "y": 0,
       "width": 23,
@@ -881,6 +974,7 @@
     },
     {
       "button": "buttonExtra19",
+      "buttonIDs": ["EXTRA_19 = 18"],
       "x": 414,
       "y": 0,
       "width": 23,
@@ -889,6 +983,7 @@
     },
     {
       "button": "buttonExtra20",
+      "buttonIDs": ["EXTRA_20 = 19"],
       "x": 437,
       "y": 0,
       "width": 23,
@@ -897,6 +992,7 @@
     },
     {
       "button": "buttonExtra21",
+      "buttonIDs": ["EXTRA_21 = 20"],
       "x": 460,
       "y": 0,
       "width": 23,
@@ -905,6 +1001,7 @@
     },
     {
       "button": "buttonExtra22",
+      "buttonIDs": ["EXTRA_22 = 21"],
       "x": 483,
       "y": 0,
       "width": 23,
@@ -913,6 +1010,7 @@
     },
     {
       "button": "buttonExtra23",
+      "buttonIDs": ["EXTRA_23 = 22"],
       "x": 506,
       "y": 0,
       "width": 23,
@@ -921,6 +1019,7 @@
     },
     {
       "button": "buttonExtra24",
+      "buttonIDs": ["EXTRA_24 = 23"],
       "x": 529,
       "y": 0,
       "width": 23,
@@ -929,6 +1028,7 @@
     },
     {
       "button": "buttonExtra25",
+      "buttonIDs": ["EXTRA_25 = 24"],
       "x": 552,
       "y": 0,
       "width": 23,
@@ -937,6 +1037,7 @@
     },
     {
       "button": "buttonExtra26",
+      "buttonIDs": ["EXTRA_26 = 25"],
       "x": 575,
       "y": 0,
       "width": 23,
@@ -945,6 +1046,7 @@
     },
     {
       "button": "buttonExtra27",
+      "buttonIDs": ["EXTRA_27 = 26"],
       "x": 598,
       "y": 0,
       "width": 23,
@@ -953,6 +1055,7 @@
     },
     {
       "button": "buttonExtra28",
+      "buttonIDs": ["EXTRA_28 = 27"],
       "x": 621,
       "y": 0,
       "width": 23,
@@ -961,6 +1064,7 @@
     },
     {
       "button": "buttonExtra29",
+      "buttonIDs": ["EXTRA_29 = 28"],
       "x": 644,
       "y": 0,
       "width": 23,
@@ -969,6 +1073,7 @@
     },
     {
       "button": "buttonExtra30",
+      "buttonIDs": ["EXTRA_30 = 29"],
       "x": 667,
       "y": 0,
       "width": 23,
@@ -977,6 +1082,7 @@
     },
     {
       "button": "buttonExtra31",
+      "buttonIDs": ["EXTRA_31 = 30"],
       "x": 690,
       "y": 0,
       "width": 23,
@@ -985,6 +1091,7 @@
     },
     {
       "button": "buttonExtra32",
+      "buttonIDs": ["EXTRA_32 = 31"],
       "x": 713,
       "y": 0,
       "width": 23,
@@ -993,6 +1100,7 @@
     },
     {
       "button": "buttonExtra33",
+      "buttonIDs": ["EXTRA_33 = 32"],
       "x": 736,
       "y": 0,
       "width": 23,
@@ -1001,6 +1109,7 @@
     },
     {
       "button": "buttonExtra34",
+      "buttonIDs": ["EXTRA_34 = 33"],
       "x": 759,
       "y": 0,
       "width": 23,
@@ -1009,6 +1118,7 @@
     },
     {
       "button": "buttonExtra35",
+      "buttonIDs": ["EXTRA_35 = 34"],
       "x": 782,
       "y": 0,
       "width": 23,
@@ -1017,6 +1127,7 @@
     },
     {
       "button": "buttonExtra36",
+      "buttonIDs": ["EXTRA_36 = 35"],
       "x": 805,
       "y": 0,
       "width": 23,
@@ -1025,6 +1136,7 @@
     },
     {
       "button": "buttonExtra37",
+      "buttonIDs": ["EXTRA_37 = 36"],
       "x": 828,
       "y": 0,
       "width": 23,
@@ -1033,6 +1145,7 @@
     },
     {
       "button": "buttonExtra38",
+      "buttonIDs": ["EXTRA_38 = 37"],
       "x": 851,
       "y": 0,
       "width": 23,
@@ -1041,6 +1154,7 @@
     },
     {
       "button": "buttonExtra39",
+      "buttonIDs": ["EXTRA_39 = 38"],
       "x": 874,
       "y": 0,
       "width": 23,
@@ -1049,6 +1163,7 @@
     },
     {
       "button": "buttonExtra40",
+      "buttonIDs": ["EXTRA_40 = 39"],
       "x": 897,
       "y": 0,
       "width": 23,
@@ -1057,6 +1172,7 @@
     },
     {
       "button": "buttonExtra41",
+      "buttonIDs": ["EXTRA_41 = 40"],
       "x": 920,
       "y": 0,
       "width": 23,
@@ -1065,6 +1181,7 @@
     },
     {
       "button": "buttonExtra42",
+      "buttonIDs": ["EXTRA_42 = 41"],
       "x": 943,
       "y": 0,
       "width": 23,
@@ -1073,6 +1190,7 @@
     },
     {
       "button": "buttonExtra43",
+      "buttonIDs": ["EXTRA_43 = 42"],
       "x": 966,
       "y": 0,
       "width": 23,
@@ -1081,6 +1199,7 @@
     },
     {
       "button": "buttonExtra44",
+      "buttonIDs": ["EXTRA_44 = 43"],
       "x": 989,
       "y": 0,
       "width": 23,
@@ -1089,6 +1208,7 @@
     },
     {
       "button": "buttonExtra45",
+      "buttonIDs": ["EXTRA_45 = 44"],
       "x": 1012,
       "y": 0,
       "width": 23,
@@ -1097,6 +1217,7 @@
     },
     {
       "button": "buttonExtra46",
+      "buttonIDs": ["EXTRA_46 = 45"],
       "x": 1035,
       "y": 0,
       "width": 23,
@@ -1105,6 +1226,7 @@
     },
     {
       "button": "buttonExtra47",
+      "buttonIDs": ["EXTRA_47 = 46"],
       "x": 1058,
       "y": 0,
       "width": 23,
@@ -1113,6 +1235,7 @@
     },
     {
       "button": "buttonExtra48",
+      "buttonIDs": ["EXTRA_48 = 47"],
       "x": 1081,
       "y": 0,
       "width": 23,
@@ -1121,6 +1244,7 @@
     },
     {
       "button": "buttonExtra49",
+      "buttonIDs": ["EXTRA_49 = 48"],
       "x": 1104,
       "y": 0,
       "width": 23,
@@ -1129,6 +1253,7 @@
     },
     {
       "button": "buttonExtra50",
+      "buttonIDs": ["EXTRA_50 = 49"],
       "x": 1127,
       "y": 0,
       "width": 23,
@@ -1137,6 +1262,7 @@
     },
     {
       "button": "buttonExtra51",
+      "buttonIDs": ["EXTRA_51 = 50"],
       "x": 1150,
       "y": 0,
       "width": 23,
@@ -1145,6 +1271,7 @@
     },
     {
       "button": "buttonExtra52",
+      "buttonIDs": ["EXTRA_52 = 51"],
       "x": 1173,
       "y": 0,
       "width": 23,
@@ -1153,6 +1280,7 @@
     },
     {
       "button": "buttonExtra53",
+      "buttonIDs": ["EXTRA_53 = 52"],
       "x": 1196,
       "y": 0,
       "width": 23,
@@ -1161,6 +1289,7 @@
     },
     {
       "button": "buttonExtra54",
+      "buttonIDs": ["EXTRA_54 = 53"],
       "x": 1219,
       "y": 0,
       "width": 23,
@@ -1169,9 +1298,10 @@
     },
     {
       "button": "buttonExtra55",
+      "buttonIDs": ["EXTRA_55 = 54"],
       "x": 1242,
       "y": 0,
-      "width": 35,
+      "width": 23,
       "height": 720,
       "color": "0xFFFFE600"
     }

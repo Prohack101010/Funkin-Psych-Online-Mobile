@@ -22,10 +22,16 @@ class MobilePad extends MobileInputHandler {
 
 	public var DPads:Array<MobileButton> = [];
 	public var Actions:Array<MobileButton> = [];
-	public var getButtonIndexFromName:Map<String, Int> = [];
-	public var getButtonFromName:Map<String, MobileButton> = [];
+	public var buttonIndexFromName:Map<String, Int> = [];
+	public var buttonFromName:Map<String, MobileButton> = [];
 	public var instance:MobileInputHandler;
 	public var buttonCameras(get, set):Array<FlxCamera>;
+
+	public function getButtonIndexFromName(btnName:String)
+		return buttonIndexFromName.get(btnName);
+
+	public function getButtonFromName(btnName:String)
+		return buttonFromName.get(btnName);
 	
 	@:noCompletion
 	function get_buttonCameras():Array<FlxCamera>
@@ -79,8 +85,8 @@ class MobilePad extends MobileInputHandler {
 				button.name = buttonName;
 				DPads.push(button);
 				add(button);
-				getButtonFromName.set(buttonName, button);
-				getButtonIndexFromName.set(buttonName, countedIndex);
+				buttonFromName.set(buttonName, button);
+				buttonIndexFromName.set(buttonName, countedIndex);
 				countedIndex++;
 			}
 		}
@@ -107,8 +113,8 @@ class MobilePad extends MobileInputHandler {
 				button.name = buttonName;
 				Actions.push(button);
 				add(button);
-				getButtonFromName.set(buttonName, button);
-				getButtonIndexFromName.set(buttonName, countedIndex);
+				buttonFromName.set(buttonName, button);
+				buttonIndexFromName.set(buttonName, countedIndex);
 				countedIndex++;
 			}
 		}
