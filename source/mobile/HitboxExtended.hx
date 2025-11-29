@@ -17,8 +17,8 @@ class HitboxExtended extends Hitbox
 	public var extraKey3 = ClientPrefs.data.extraKeyReturn3.toUpperCase();
 	public var extraKey4 = ClientPrefs.data.extraKeyReturn4.toUpperCase();
 
-	public var onButtonDown:FlxTypedSignal<(MobileButton, Array<MobileInputID>) -> Void> = new FlxTypedSignal<(MobileButton, Array<MobileInputID>) -> Void>();
-	public var onButtonUp:FlxTypedSignal<(MobileButton, Array<MobileInputID>) -> Void> = new FlxTypedSignal<(MobileButton, Array<MobileInputID>) -> Void>();
+	public var onButtonDown:FlxTypedSignal<(MobileButton, Array<String>) -> Void> = new FlxTypedSignal<(MobileButton, Array<String>) -> Void>();
+	public var onButtonUp:FlxTypedSignal<(MobileButton, Array<String>) -> Void> = new FlxTypedSignal<(MobileButton, Array<String>) -> Void>();
 
 	/**
 	 * Create the zone.
