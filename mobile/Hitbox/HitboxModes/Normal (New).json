@@ -1,8 +1,8 @@
 {
   "mania1": [
     {
-      "button": "buttonLeft",
-      "buttonIDs": ["NOTE_1 = 0"],
+      "button": "NOTE_1",
+      "buttonIDs": ["1K_NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 1280,
@@ -12,8 +12,8 @@
   ],
   "mania2": [
     {
-      "button": "buttonLeft",
-      "buttonIDs": ["NOTE_1 = 0"],
+      "button": "NOTE_1",
+      "buttonIDs": ["2K_NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 640,
@@ -21,8 +21,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonDown",
-      "buttonIDs": ["NOTE_2 = 1"],
+      "button": "NOTE_2",
+      "buttonIDs": ["2K_NOTE_2 = 1"],
       "x": 640,
       "y": 0,
       "width": 640,
@@ -32,8 +32,8 @@
   ],
   "mania3": [
     {
-      "button": "buttonLeft",
-      "buttonIDs": ["NOTE_1 = 0"],
+      "button": "NOTE_1",
+      "buttonIDs": ["3K_NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 427,
@@ -41,8 +41,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonDown",
-      "buttonIDs": ["NOTE_2 = 1"],
+      "button": "NOTE_2",
+      "buttonIDs": ["3K_NOTE_2 = 1"],
       "x": 427,
       "y": 0,
       "width": 426,
@@ -50,8 +50,8 @@
       "color": "0xFFFF00"
     },
     {
-      "button": "buttonUp",
-      "buttonIDs": ["NOTE_3 = 2"],
+      "button": "NOTE_3",
+      "buttonIDs": ["3K_NOTE_3 = 2"],
       "x": 853,
       "y": 0,
       "width": 427,
@@ -61,8 +61,8 @@
   ],
   "hints": [
     {
-      "button": "buttonLeft",
-      "buttonIDs": ["NOTE_1 = 0"],
+      "button": "NOTE_1",
+      "buttonIDs": ["NOTE_LEFT = 0"],
       "x": 0,
       "y": 0,
       "width": 320,
@@ -70,8 +70,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonDown",
-      "buttonIDs": ["NOTE_2 = 1"],
+      "button": "NOTE_2",
+      "buttonIDs": ["NOTE_DOWN = 1"],
       "x": 320,
       "y": 0,
       "width": 320,
@@ -79,8 +79,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonUp",
-      "buttonIDs": ["NOTE_3 = 2"],
+      "button": "NOTE_3",
+      "buttonIDs": ["NOTE_UP = 2"],
       "x": 640,
       "y": 0,
       "width": 320,
@@ -88,8 +88,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonRight",
-      "buttonIDs": ["NOTE_4 = 3"],
+      "button": "NOTE_4",
+      "buttonIDs": ["NOTE_RIGHT = 3"],
       "x": 960,
       "y": 0,
       "width": 320,
@@ -99,8 +99,8 @@
   ],
   "test": [
     {
-      "button": "buttonLeft",
-      "buttonIDs": ["NOTE_1 = 0"],
+      "button": "NOTE_1",
+      "buttonIDs": ["NOTE_LEFT = 0"],
       "x": 0,
       "y": 0,
       "topY": 144,
@@ -111,8 +111,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonDown",
-      "buttonIDs": ["NOTE_2 = 1"],
+      "button": "NOTE_2",
+      "buttonIDs": ["NOTE_DOWN = 1"],
       "x": 320,
       "middleX": 256,
       "y": 0,
@@ -124,8 +124,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonUp",
-      "buttonIDs": ["NOTE_3 = 2"],
+      "button": "NOTE_3",
+      "buttonIDs": ["NOTE_UP = 2"],
       "x": 640,
       "middleX": 768,
       "y": 0,
@@ -137,8 +137,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonRight",
-      "buttonIDs": ["NOTE_4 = 3"],
+      "button": "NOTE_4",
+      "buttonIDs": ["NOTE_RIGHT = 3"],
       "x": 960,
       "middleX": 1024,
       "y": 0,
@@ -150,8 +150,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonExtra1",
-      "buttonIDs": ["EXTRA_10 = 9"],
+      "button": "EXTRA_1",
+      "buttonIDs": ["EXTRA_1 = 9"],
       "x": 0,
       "middleX": 512,
       "y": 576,
@@ -165,8 +165,8 @@
       "extraKeyMode": 1
     },
     {
-      "button": "buttonExtra1",
-      "buttonIDs": ["EXTRA_10 = 9"],
+      "button": "EXTRA_1",
+      "buttonIDs": ["EXTRA_1 = 9"],
       "x": 0,
       "middleX": 512,
       "y": 576,
@@ -180,8 +180,8 @@
       "extraKeyMode": 2
     },
     {
-      "button": "buttonExtra2",
-      "buttonIDs": ["EXTRA_11 = 10"],
+      "button": "EXTRA_2",
+      "buttonIDs": ["EXTRA_2 = 10"],
       "x": 640,
       "middleX": 512,
       "y": 576,
@@ -195,8 +195,8 @@
       "extraKeyMode": 2
     },
     {
-      "button": "buttonExtra1",
-      "buttonIDs": ["EXTRA_10 = 9"],
+      "button": "EXTRA_1",
+      "buttonIDs": ["EXTRA_1 = 9"],
       "x": 0,
       "middleX": 512,
       "y": 576,
@@ -210,8 +210,8 @@
       "extraKeyMode": 3
     },
     {
-      "button": "buttonExtra2",
-      "buttonIDs": ["EXTRA_11 = 10"],
+      "button": "EXTRA_2",
+      "buttonIDs": ["EXTRA_2 = 10"],
       "x": 427,
       "middleX": 512,
       "y": 576,
@@ -225,8 +225,8 @@
       "extraKeyMode": 3
     },
     {
-      "button": "buttonExtra3",
-      "buttonIDs": ["EXTRA_12 = 11"],
+      "button": "EXTRA_3",
+      "buttonIDs": ["EXTRA_3 = 11"],
       "x": 853,
       "middleX": 512,
       "y": 576,
@@ -240,8 +240,8 @@
       "extraKeyMode": 3
     },
     {
-      "button": "buttonExtra1",
-      "buttonIDs": ["EXTRA_10 = 9"],
+      "button": "EXTRA_1",
+      "buttonIDs": ["EXTRA_1 = 9"],
       "x": 0,
       "middleX": 512,
       "y": 576,
@@ -255,8 +255,8 @@
       "extraKeyMode": 4
     },
     {
-      "button": "buttonExtra2",
-      "buttonIDs": ["EXTRA_11 = 10"],
+      "button": "EXTRA_2",
+      "buttonIDs": ["EXTRA_2 = 10"],
       "x": 320,
       "middleX": 512,
       "y": 576,
@@ -270,8 +270,8 @@
       "extraKeyMode": 4
     },
     {
-      "button": "buttonExtra3",
-      "buttonIDs": ["EXTRA_12 = 11"],
+      "button": "EXTRA_3",
+      "buttonIDs": ["EXTRA_3 = 11"],
       "x": 640,
       "middleX": 512,
       "y": 576,
@@ -285,8 +285,8 @@
       "extraKeyMode": 4
     },
     {
-      "button": "buttonExtra4",
-      "buttonIDs": ["EXTRA_13 = 12"],
+      "button": "EXTRA_4",
+      "buttonIDs": ["EXTRA_4 = 12"],
       "x": 960,
       "middleX": 512,
       "y": 576,
@@ -302,8 +302,8 @@
   ],
   "mania5": [
     {
-      "button": "buttonLeft",
-      "buttonIDs": ["NOTE_1 = 0"],
+      "button": "NOTE_1",
+      "buttonIDs": ["5K_NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 256,
@@ -311,8 +311,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonDown",
-      "buttonIDs": ["NOTE_2 = 1"],
+      "button": "NOTE_2",
+      "buttonIDs": ["5K_NOTE_2 = 1"],
       "x": 256,
       "y": 0,
       "width": 256,
@@ -320,8 +320,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonUp",
-      "buttonIDs": ["NOTE_3 = 2"],
+      "button": "NOTE_3",
+      "buttonIDs": ["5K_NOTE_3 = 2"],
       "x": 512,
       "y": 0,
       "width": 256,
@@ -329,8 +329,8 @@
       "color": "0xFFFFE600"
     },
     {
-      "button": "buttonRight",
-      "buttonIDs": ["NOTE_4 = 3"],
+      "button": "NOTE_4",
+      "buttonIDs": ["5K_NOTE_4 = 3"],
       "x": 768,
       "y": 0,
       "width": 256,
@@ -338,8 +338,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonNote5",
-      "buttonIDs": ["NOTE_5 = 4"],
+      "button": "NOTE_5",
+      "buttonIDs": ["5K_NOTE_5 = 4"],
       "x": 1024,
       "y": 0,
       "width": 256,
@@ -349,8 +349,8 @@
   ],
   "mania6": [
     {
-      "button": "buttonLeft",
-      "buttonIDs": ["NOTE_1 = 0"],
+      "button": "NOTE_1",
+      "buttonIDs": ["6K_NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 213,
@@ -358,8 +358,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonDown",
-      "buttonIDs": ["NOTE_2 = 1"],
+      "button": "NOTE_2",
+      "buttonIDs": ["6K_NOTE_2 = 1"],
       "x": 213,
       "y": 0,
       "width": 213,
@@ -367,8 +367,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonUp",
-      "buttonIDs": ["NOTE_3 = 2"],
+      "button": "NOTE_3",
+      "buttonIDs": ["6K_NOTE_3 = 2"],
       "x": 426,
       "y": 0,
       "width": 213,
@@ -378,8 +378,8 @@
       "tempTwoY": -350
     },
     {
-      "button": "buttonRight",
-      "buttonIDs": ["NOTE_4 = 3"],
+      "button": "NOTE_4",
+      "buttonIDs": ["6K_NOTE_4 = 3"],
       "x": 639,
       "y": 0,
       "width": 213,
@@ -387,8 +387,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonNote5",
-      "buttonIDs": ["NOTE_5 = 4"],
+      "button": "NOTE_5",
+      "buttonIDs": ["6K_NOTE_5 = 4"],
       "x": 852,
       "y": 0,
       "width": 213,
@@ -396,8 +396,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonNote6",
-      "buttonIDs": ["NOTE_6 = 5"],
+      "button": "NOTE_6",
+      "buttonIDs": ["6K_NOTE_6 = 5"],
       "x": 1065,
       "y": 0,
       "width": 215,
@@ -407,8 +407,8 @@
   ],
   "mania7": [
     {
-      "button": "buttonLeft",
-      "buttonIDs": ["NOTE_1 = 0"],
+      "button": "NOTE_1",
+      "buttonIDs": ["7K_NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 183,
@@ -416,8 +416,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonDown",
-      "buttonIDs": ["NOTE_2 = 1"],
+      "button": "NOTE_2",
+      "buttonIDs": ["7K_NOTE_2 = 1"],
       "x": 183,
       "y": 0,
       "width": 183,
@@ -425,8 +425,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonUp",
-      "buttonIDs": ["NOTE_3 = 2"],
+      "button": "NOTE_3",
+      "buttonIDs": ["7K_NOTE_3 = 2"],
       "x": 366,
       "y": 0,
       "width": 183,
@@ -434,8 +434,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonRight",
-      "buttonIDs": ["NOTE_4 = 3"],
+      "button": "NOTE_4",
+      "buttonIDs": ["7K_NOTE_4 = 3"],
       "x": 549,
       "y": 0,
       "width": 183,
@@ -443,8 +443,8 @@
       "color": "0xFFFFE600"
     },
     {
-      "button": "buttonNote5",
-      "buttonIDs": ["NOTE_5 = 4"],
+      "button": "NOTE_5",
+      "buttonIDs": ["7K_NOTE_5 = 4"],
       "x": 732,
       "y": 0,
       "width": 183,
@@ -452,8 +452,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonNote6",
-      "buttonIDs": ["NOTE_6 = 5"],
+      "button": "NOTE_6",
+      "buttonIDs": ["7K_NOTE_6 = 5"],
       "x": 915,
       "y": 0,
       "width": 183,
@@ -461,8 +461,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonNote7",
-      "buttonIDs": ["NOTE_7 = 6"],
+      "button": "NOTE_7",
+      "buttonIDs": ["7K_NOTE_7 = 6"],
       "x": 1098,
       "y": 0,
       "width": 183,
@@ -472,8 +472,8 @@
   ],
   "mania8": [
     {
-      "button": "buttonLeft",
-      "buttonIDs": ["NOTE_1 = 0"],
+      "button": "NOTE_1",
+      "buttonIDs": ["8K_NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 160,
@@ -481,8 +481,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonDown",
-      "buttonIDs": ["NOTE_2 = 1"],
+      "button": "NOTE_2",
+      "buttonIDs": ["8K_NOTE_2 = 1"],
       "x": 160,
       "y": 0,
       "width": 160,
@@ -490,8 +490,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonUp",
-      "buttonIDs": ["NOTE_3 = 2"],
+      "button": "NOTE_3",
+      "buttonIDs": ["8K_NOTE_3 = 2"],
       "x": 320,
       "y": 0,
       "width": 160,
@@ -499,8 +499,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonRight",
-      "buttonIDs": ["NOTE_4 = 3"],
+      "button": "NOTE_4",
+      "buttonIDs": ["8K_NOTE_4 = 3"],
       "x": 480,
       "y": 0,
       "width": 160,
@@ -508,8 +508,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonNote5",
-      "buttonIDs": ["NOTE_5 = 4"],
+      "button": "NOTE_5",
+      "buttonIDs": ["8K_NOTE_5 = 4"],
       "x": 640,
       "y": 0,
       "width": 160,
@@ -517,8 +517,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonNote6",
-      "buttonIDs": ["NOTE_6 = 5"],
+      "button": "NOTE_6",
+      "buttonIDs": ["8K_NOTE_6 = 5"],
       "x": 800,
       "y": 0,
       "width": 160,
@@ -526,8 +526,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonNote7",
-      "buttonIDs": ["NOTE_7 = 6"],
+      "button": "NOTE_7",
+      "buttonIDs": ["8K_NOTE_7 = 6"],
       "x": 960,
       "y": 0,
       "width": 160,
@@ -535,8 +535,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonNote8",
-      "buttonIDs": ["NOTE_8 = 7"],
+      "button": "NOTE_8",
+      "buttonIDs": ["8K_NOTE_8 = 7"],
       "x": 1120,
       "y": 0,
       "width": 160,
@@ -546,8 +546,8 @@
   ],
   "mania9": [
     {
-      "button": "buttonLeft",
-      "buttonIDs": ["NOTE_1 = 0"],
+      "button": "NOTE_1",
+      "buttonIDs": ["9K_NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 142,
@@ -555,8 +555,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonDown",
-      "buttonIDs": ["NOTE_2 = 1"],
+      "button": "NOTE_2",
+      "buttonIDs": ["9K_NOTE_2 = 1"],
       "x": 142,
       "y": 0,
       "width": 142,
@@ -564,8 +564,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonUp",
-      "buttonIDs": ["NOTE_3 = 2"],
+      "button": "NOTE_3",
+      "buttonIDs": ["9K_NOTE_3 = 2"],
       "x": 284,
       "y": 0,
       "width": 142,
@@ -573,8 +573,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonRight",
-      "buttonIDs": ["NOTE_4 = 3"],
+      "button": "NOTE_4",
+      "buttonIDs": ["9K_NOTE_4 = 3"],
       "x": 426,
       "y": 0,
       "width": 142,
@@ -582,8 +582,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonNote5",
-      "buttonIDs": ["NOTE_5 = 4"],
+      "button": "NOTE_5",
+      "buttonIDs": ["9K_NOTE_5 = 4"],
       "x": 568,
       "y": 0,
       "width": 142,
@@ -591,8 +591,8 @@
       "color": "0xFFFFE600"
     },
     {
-      "button": "buttonNote6",
-      "buttonIDs": ["NOTE_6 = 5"],
+      "button": "NOTE_6",
+      "buttonIDs": ["9K_NOTE_6 = 5"],
       "x": 710,
       "y": 0,
       "width": 142,
@@ -600,8 +600,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonNote7",
-      "buttonIDs": ["NOTE_7 = 6"],
+      "button": "NOTE_7",
+      "buttonIDs": ["9K_NOTE_7 = 6"],
       "x": 852,
       "y": 0,
       "width": 142,
@@ -609,8 +609,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonNote8",
-      "buttonIDs": ["NOTE_8 = 7"],
+      "button": "NOTE_8",
+      "buttonIDs": ["9K_NOTE_8 = 7"],
       "x": 994,
       "y": 0,
       "width": 142,
@@ -618,8 +618,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonNote9",
-      "buttonIDs": ["NOTE_9 = 8"],
+      "button": "NOTE_9",
+      "buttonIDs": ["9K_NOTE_9 = 8"],
       "x": 1136,
       "y": 0,
       "width": 143,
@@ -629,8 +629,8 @@
   ],
   "mania20": [
     {
-      "button": "buttonLeft",
-      "buttonIDs": ["NOTE_1 = 0"],
+      "button": "NOTE_1",
+      "buttonIDs": ["20K_NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 64,
@@ -638,8 +638,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonDown",
-      "buttonIDs": ["NOTE_2 = 1"],
+      "button": "NOTE_2",
+      "buttonIDs": ["20K_NOTE_2 = 1"],
       "x": 64,
       "y": 0,
       "width": 64,
@@ -647,8 +647,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonUp",
-      "buttonIDs": ["NOTE_3 = 2"],
+      "button": "NOTE_3",
+      "buttonIDs": ["20K_NOTE_3 = 2"],
       "x": 128,
       "y": 0,
       "width": 64,
@@ -656,8 +656,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonRight",
-      "buttonIDs": ["NOTE_4 = 3"],
+      "button": "NOTE_4",
+      "buttonIDs": ["20K_NOTE_4 = 3"],
       "x": 192,
       "y": 0,
       "width": 64,
@@ -665,8 +665,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonNote5",
-      "buttonIDs": ["NOTE_5 = 4"],
+      "button": "NOTE_5",
+      "buttonIDs": ["20K_NOTE_5 = 4"],
       "x": 256,
       "y": 0,
       "width": 64,
@@ -674,8 +674,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonNote6",
-      "buttonIDs": ["NOTE_6 = 5"],
+      "button": "NOTE_6",
+      "buttonIDs": ["20K_NOTE_6 = 5"],
       "x": 320,
       "y": 0,
       "width": 64,
@@ -683,8 +683,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonNote7",
-      "buttonIDs": ["NOTE_7 = 6"],
+      "button": "NOTE_7",
+      "buttonIDs": ["20K_NOTE_7 = 6"],
       "x": 384,
       "y": 0,
       "width": 64,
@@ -692,8 +692,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonNote8",
-      "buttonIDs": ["NOTE_8 = 7"],
+      "button": "NOTE_8",
+      "buttonIDs": ["20K_NOTE_8 = 7"],
       "x": 448,
       "y": 0,
       "width": 64,
@@ -701,8 +701,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonNote9",
-      "buttonIDs": ["NOTE_9 = 8"],
+      "button": "NOTE_9",
+      "buttonIDs": ["20K_NOTE_9 = 8"],
       "x": 512,
       "y": 0,
       "width": 64,
@@ -710,8 +710,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonExtra10",
-      "buttonIDs": ["EXTRA_10 = 9"],
+      "button": "NOTE_10",
+      "buttonIDs": ["20K_NOTE_10 = 9"],
       "x": 576,
       "y": 0,
       "width": 64,
@@ -719,8 +719,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonExtra11",
-      "buttonIDs": ["EXTRA_11 = 10"],
+      "button": "NOTE_11",
+      "buttonIDs": ["20K_NOTE_11 = 10"],
       "x": 640,
       "y": 0,
       "width": 64,
@@ -728,8 +728,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonExtra12",
-      "buttonIDs": ["EXTRA_12 = 11"],
+      "button": "NOTE_12",
+      "buttonIDs": ["20K_NOTE_12 = 11"],
       "x": 704,
       "y": 0,
       "width": 64,
@@ -737,8 +737,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonExtra13",
-      "buttonIDs": ["EXTRA_13 = 12"],
+      "button": "NOTE_13",
+      "buttonIDs": ["20K_NOTE_13 = 12"],
       "x": 768,
       "y": 0,
       "width": 64,
@@ -746,8 +746,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonExtra14",
-      "buttonIDs": ["EXTRA_14 = 13"],
+      "button": "NOTE_14",
+      "buttonIDs": ["20K_NOTE_14 = 13"],
       "x": 832,
       "y": 0,
       "width": 64,
@@ -755,8 +755,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonExtra15",
-      "buttonIDs": ["EXTRA_15 = 14"],
+      "button": "NOTE_15",
+      "buttonIDs": ["20K_NOTE_15 = 14"],
       "x": 896,
       "y": 0,
       "width": 64,
@@ -764,8 +764,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonExtra16",
-      "buttonIDs": ["EXTRA_16 = 15"],
+      "button": "NOTE_16",
+      "buttonIDs": ["20K_NOTE_16 = 15"],
       "x": 960,
       "y": 0,
       "width": 64,
@@ -773,8 +773,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonExtra17",
-      "buttonIDs": ["EXTRA_17 = 16"],
+      "button": "NOTE_17",
+      "buttonIDs": ["20K_NOTE_17 = 16"],
       "x": 1024,
       "y": 0,
       "width": 64,
@@ -782,8 +782,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonExtra18",
-      "buttonIDs": ["EXTRA_18 = 17"],
+      "button": "NOTE_18",
+      "buttonIDs": ["20K_NOTE_18 = 17"],
       "x": 1088,
       "y": 0,
       "width": 64,
@@ -791,8 +791,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonExtra19",
-      "buttonIDs": ["EXTRA_19 = 18"],
+      "button": "NOTE_19",
+      "buttonIDs": ["20K_NOTE_19 = 18"],
       "x": 1152,
       "y": 0,
       "width": 64,
@@ -800,8 +800,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonExtra20",
-      "buttonIDs": ["EXTRA_20 = 19"],
+      "button": "NOTE_20",
+      "buttonIDs": ["20K_NOTE_20 = 19"],
       "x": 1216,
       "y": 0,
       "width": 64,
@@ -811,8 +811,8 @@
   ],
   "mania55": [
     {
-      "button": "buttonLeft",
-      "buttonIDs": ["NOTE_1 = 0"],
+      "button": "NOTE_1",
+      "buttonIDs": ["55K_NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 23,
@@ -820,8 +820,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonDown",
-      "buttonIDs": ["NOTE_2 = 1"],
+      "button": "NOTE_2",
+      "buttonIDs": ["55K_NOTE_2 = 1"],
       "x": 23,
       "y": 0,
       "width": 23,
@@ -829,8 +829,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonUp",
-      "buttonIDs": ["NOTE_3 = 2"],
+      "button": "NOTE_3",
+      "buttonIDs": ["55K_NOTE_3 = 2"],
       "x": 46,
       "y": 0,
       "width": 23,
@@ -838,8 +838,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonRight",
-      "buttonIDs": ["NOTE_4 = 3"],
+      "button": "NOTE_4",
+      "buttonIDs": ["55K_NOTE_4 = 3"],
       "x": 69,
       "y": 0,
       "width": 23,
@@ -847,8 +847,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonNote5",
-      "buttonIDs": ["NOTE_5 = 4"],
+      "button": "NOTE_5",
+      "buttonIDs": ["55K_NOTE_5 = 4"],
       "x": 92,
       "y": 0,
       "width": 23,
@@ -856,8 +856,8 @@
       "color": "0xFFFFE600"
     },
     {
-      "button": "buttonNote6",
-      "buttonIDs": ["NOTE_6 = 5"],
+      "button": "NOTE_6",
+      "buttonIDs": ["55K_NOTE_6 = 5"],
       "x": 115,
       "y": 0,
       "width": 23,
@@ -865,8 +865,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonNote7",
-      "buttonIDs": ["NOTE_7 = 6"],
+      "button": "NOTE_7",
+      "buttonIDs": ["55K_NOTE_7 = 6"],
       "x": 138,
       "y": 0,
       "width": 23,
@@ -874,8 +874,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonNote8",
-      "buttonIDs": ["NOTE_8 = 7"],
+      "button": "NOTE_8",
+      "buttonIDs": ["55K_NOTE_8 = 7"],
       "x": 161,
       "y": 0,
       "width": 23,
@@ -883,8 +883,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonNote9",
-      "buttonIDs": ["NOTE_9 = 8"],
+      "button": "NOTE_9",
+      "buttonIDs": ["55K_NOTE_9 = 8"],
       "x": 184,
       "y": 0,
       "width": 23,
@@ -892,8 +892,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonExtra10",
-      "buttonIDs": ["EXTRA_10 = 9"],
+      "button": "NOTE_10",
+      "buttonIDs": ["55K_NOTE_10 = 9"],
       "x": 207,
       "y": 0,
       "width": 23,
@@ -901,8 +901,8 @@
       "color": "0xFFFFE600"
     },
     {
-      "button": "buttonExtra11",
-      "buttonIDs": ["EXTRA_11 = 10"],
+      "button": "NOTE_11",
+      "buttonIDs": ["55K_NOTE_11 = 10"],
       "x": 230,
       "y": 0,
       "width": 23,
@@ -910,8 +910,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonExtra12",
-      "buttonIDs": ["EXTRA_12 = 11"],
+      "button": "NOTE_12",
+      "buttonIDs": ["55K_NOTE_12 = 11"],
       "x": 253,
       "y": 0,
       "width": 23,
@@ -919,8 +919,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonExtra13",
-      "buttonIDs": ["EXTRA_13 = 12"],
+      "button": "NOTE_13",
+      "buttonIDs": ["55K_NOTE_13 = 12"],
       "x": 276,
       "y": 0,
       "width": 23,
@@ -928,8 +928,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonExtra14",
-      "buttonIDs": ["EXTRA_14 = 13"],
+      "button": "NOTE_14",
+      "buttonIDs": ["55K_NOTE_14 = 13"],
       "x": 299,
       "y": 0,
       "width": 23,
@@ -937,8 +937,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonExtra15",
-      "buttonIDs": ["EXTRA_15 = 14"],
+      "button": "NOTE_15",
+      "buttonIDs": ["55K_NOTE_15 = 14"],
       "x": 322,
       "y": 0,
       "width": 23,
@@ -946,8 +946,8 @@
       "color": "0xFFFFE600"
     },
     {
-      "button": "buttonExtra16",
-      "buttonIDs": ["EXTRA_16 = 15"],
+      "button": "NOTE_16",
+      "buttonIDs": ["55K_NOTE_16 = 15"],
       "x": 345,
       "y": 0,
       "width": 23,
@@ -955,8 +955,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonExtra17",
-      "buttonIDs": ["EXTRA_17 = 16"],
+      "button": "NOTE_17",
+      "buttonIDs": ["55K_NOTE_17 = 16"],
       "x": 368,
       "y": 0,
       "width": 23,
@@ -964,8 +964,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonExtra18",
-      "buttonIDs": ["EXTRA_18 = 17"],
+      "button": "NOTE_18",
+      "buttonIDs": ["55K_NOTE_18 = 17"],
       "x": 391,
       "y": 0,
       "width": 23,
@@ -973,8 +973,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonExtra19",
-      "buttonIDs": ["EXTRA_19 = 18"],
+      "button": "NOTE_19",
+      "buttonIDs": ["55K_NOTE_19 = 18"],
       "x": 414,
       "y": 0,
       "width": 23,
@@ -982,8 +982,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonExtra20",
-      "buttonIDs": ["EXTRA_20 = 19"],
+      "button": "NOTE_20",
+      "buttonIDs": ["55K_NOTE_20 = 19"],
       "x": 437,
       "y": 0,
       "width": 23,
@@ -991,8 +991,8 @@
       "color": "0xFFFFE600"
     },
     {
-      "button": "buttonExtra21",
-      "buttonIDs": ["EXTRA_21 = 20"],
+      "button": "NOTE_21",
+      "buttonIDs": ["55K_NOTE_21 = 20"],
       "x": 460,
       "y": 0,
       "width": 23,
@@ -1000,8 +1000,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonExtra22",
-      "buttonIDs": ["EXTRA_22 = 21"],
+      "button": "NOTE_22",
+      "buttonIDs": ["55K_NOTE_22 = 21"],
       "x": 483,
       "y": 0,
       "width": 23,
@@ -1009,8 +1009,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonExtra23",
-      "buttonIDs": ["EXTRA_23 = 22"],
+      "button": "NOTE_23",
+      "buttonIDs": ["55K_NOTE_23 = 22"],
       "x": 506,
       "y": 0,
       "width": 23,
@@ -1018,8 +1018,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonExtra24",
-      "buttonIDs": ["EXTRA_24 = 23"],
+      "button": "NOTE_24",
+      "buttonIDs": ["55K_NOTE_24 = 23"],
       "x": 529,
       "y": 0,
       "width": 23,
@@ -1027,8 +1027,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonExtra25",
-      "buttonIDs": ["EXTRA_25 = 24"],
+      "button": "NOTE_25",
+      "buttonIDs": ["55K_NOTE_25 = 24"],
       "x": 552,
       "y": 0,
       "width": 23,
@@ -1036,8 +1036,8 @@
       "color": "0xFFFFE600"
     },
     {
-      "button": "buttonExtra26",
-      "buttonIDs": ["EXTRA_26 = 25"],
+      "button": "NOTE_26",
+      "buttonIDs": ["55K_NOTE_26 = 25"],
       "x": 575,
       "y": 0,
       "width": 23,
@@ -1045,8 +1045,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonExtra27",
-      "buttonIDs": ["EXTRA_27 = 26"],
+      "button": "NOTE_27",
+      "buttonIDs": ["55K_NOTE_27 = 26"],
       "x": 598,
       "y": 0,
       "width": 23,
@@ -1054,8 +1054,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonExtra28",
-      "buttonIDs": ["EXTRA_28 = 27"],
+      "button": "NOTE_28",
+      "buttonIDs": ["55K_NOTE_28 = 27"],
       "x": 621,
       "y": 0,
       "width": 23,
@@ -1063,8 +1063,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonExtra29",
-      "buttonIDs": ["EXTRA_29 = 28"],
+      "button": "NOTE_29",
+      "buttonIDs": ["55K_NOTE_29 = 28"],
       "x": 644,
       "y": 0,
       "width": 23,
@@ -1072,8 +1072,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonExtra30",
-      "buttonIDs": ["EXTRA_30 = 29"],
+      "button": "NOTE_30",
+      "buttonIDs": ["55K_NOTE_30 = 29"],
       "x": 667,
       "y": 0,
       "width": 23,
@@ -1081,8 +1081,8 @@
       "color": "0xFFFFE600"
     },
     {
-      "button": "buttonExtra31",
-      "buttonIDs": ["EXTRA_31 = 30"],
+      "button": "NOTE_31",
+      "buttonIDs": ["55K_NOTE_31 = 30"],
       "x": 690,
       "y": 0,
       "width": 23,
@@ -1090,8 +1090,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonExtra32",
-      "buttonIDs": ["EXTRA_32 = 31"],
+      "button": "NOTE_32",
+      "buttonIDs": ["55K_NOTE_32 = 31"],
       "x": 713,
       "y": 0,
       "width": 23,
@@ -1099,8 +1099,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonExtra33",
-      "buttonIDs": ["EXTRA_33 = 32"],
+      "button": "NOTE_33",
+      "buttonIDs": ["55K_NOTE_33 = 32"],
       "x": 736,
       "y": 0,
       "width": 23,
@@ -1108,8 +1108,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonExtra34",
-      "buttonIDs": ["EXTRA_34 = 33"],
+      "button": "NOTE_34",
+      "buttonIDs": ["55K_NOTE_34 = 33"],
       "x": 759,
       "y": 0,
       "width": 23,
@@ -1117,8 +1117,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonExtra35",
-      "buttonIDs": ["EXTRA_35 = 34"],
+      "button": "NOTE_35",
+      "buttonIDs": ["55K_NOTE_35 = 34"],
       "x": 782,
       "y": 0,
       "width": 23,
@@ -1126,8 +1126,8 @@
       "color": "0xFFFFE600"
     },
     {
-      "button": "buttonExtra36",
-      "buttonIDs": ["EXTRA_36 = 35"],
+      "button": "NOTE_36",
+      "buttonIDs": ["55K_NOTE_36 = 35"],
       "x": 805,
       "y": 0,
       "width": 23,
@@ -1135,8 +1135,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonExtra37",
-      "buttonIDs": ["EXTRA_37 = 36"],
+      "button": "NOTE_37",
+      "buttonIDs": ["55K_NOTE_37 = 36"],
       "x": 828,
       "y": 0,
       "width": 23,
@@ -1144,8 +1144,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonExtra38",
-      "buttonIDs": ["EXTRA_38 = 37"],
+      "button": "NOTE_38",
+      "buttonIDs": ["55K_NOTE_38 = 37"],
       "x": 851,
       "y": 0,
       "width": 23,
@@ -1153,8 +1153,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonExtra39",
-      "buttonIDs": ["EXTRA_39 = 38"],
+      "button": "NOTE_39",
+      "buttonIDs": ["55K_NOTE_39 = 38"],
       "x": 874,
       "y": 0,
       "width": 23,
@@ -1162,8 +1162,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonExtra40",
-      "buttonIDs": ["EXTRA_40 = 39"],
+      "button": "NOTE_40",
+      "buttonIDs": ["55K_NOTE_40 = 39"],
       "x": 897,
       "y": 0,
       "width": 23,
@@ -1171,8 +1171,8 @@
       "color": "0xFFFFE600"
     },
     {
-      "button": "buttonExtra41",
-      "buttonIDs": ["EXTRA_41 = 40"],
+      "button": "NOTE_41",
+      "buttonIDs": ["55K_NOTE_41 = 40"],
       "x": 920,
       "y": 0,
       "width": 23,
@@ -1180,8 +1180,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonExtra42",
-      "buttonIDs": ["EXTRA_42 = 41"],
+      "button": "NOTE_42",
+      "buttonIDs": ["55K_NOTE_42 = 41"],
       "x": 943,
       "y": 0,
       "width": 23,
@@ -1189,8 +1189,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonExtra43",
-      "buttonIDs": ["EXTRA_43 = 42"],
+      "button": "NOTE_43",
+      "buttonIDs": ["55K_NOTE_43 = 42"],
       "x": 966,
       "y": 0,
       "width": 23,
@@ -1198,8 +1198,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonExtra44",
-      "buttonIDs": ["EXTRA_44 = 43"],
+      "button": "NOTE_44",
+      "buttonIDs": ["55K_NOTE_44 = 43"],
       "x": 989,
       "y": 0,
       "width": 23,
@@ -1207,8 +1207,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonExtra45",
-      "buttonIDs": ["EXTRA_45 = 44"],
+      "button": "NOTE_45",
+      "buttonIDs": ["55K_NOTE_45 = 44"],
       "x": 1012,
       "y": 0,
       "width": 23,
@@ -1216,8 +1216,8 @@
       "color": "0xFFFFE600"
     },
     {
-      "button": "buttonExtra46",
-      "buttonIDs": ["EXTRA_46 = 45"],
+      "button": "NOTE_46",
+      "buttonIDs": ["55K_NOTE_46 = 45"],
       "x": 1035,
       "y": 0,
       "width": 23,
@@ -1225,8 +1225,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonExtra47",
-      "buttonIDs": ["EXTRA_47 = 46"],
+      "button": "NOTE_47",
+      "buttonIDs": ["55K_NOTE_47 = 46"],
       "x": 1058,
       "y": 0,
       "width": 23,
@@ -1234,8 +1234,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonExtra48",
-      "buttonIDs": ["EXTRA_48 = 47"],
+      "button": "NOTE_48",
+      "buttonIDs": ["55K_NOTE_48 = 47"],
       "x": 1081,
       "y": 0,
       "width": 23,
@@ -1243,8 +1243,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonExtra49",
-      "buttonIDs": ["EXTRA_49 = 48"],
+      "button": "NOTE_49",
+      "buttonIDs": ["55K_NOTE_49 = 48"],
       "x": 1104,
       "y": 0,
       "width": 23,
@@ -1252,8 +1252,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonExtra50",
-      "buttonIDs": ["EXTRA_50 = 49"],
+      "button": "NOTE_50",
+      "buttonIDs": ["55K_NOTE_50 = 49"],
       "x": 1127,
       "y": 0,
       "width": 23,
@@ -1261,8 +1261,8 @@
       "color": "0xFFFFE600"
     },
     {
-      "button": "buttonExtra51",
-      "buttonIDs": ["EXTRA_51 = 50"],
+      "button": "NOTE_51",
+      "buttonIDs": ["55K_NOTE_51 = 50"],
       "x": 1150,
       "y": 0,
       "width": 23,
@@ -1270,8 +1270,8 @@
       "color": "0xFFC24B99"
     },
     {
-      "button": "buttonExtra52",
-      "buttonIDs": ["EXTRA_52 = 51"],
+      "button": "NOTE_52",
+      "buttonIDs": ["55K_NOTE_52 = 51"],
       "x": 1173,
       "y": 0,
       "width": 23,
@@ -1279,8 +1279,8 @@
       "color": "0xFF00FFFF"
     },
     {
-      "button": "buttonExtra53",
-      "buttonIDs": ["EXTRA_53 = 52"],
+      "button": "NOTE_53",
+      "buttonIDs": ["55K_NOTE_53 = 52"],
       "x": 1196,
       "y": 0,
       "width": 23,
@@ -1288,8 +1288,8 @@
       "color": "0xFF12FA05"
     },
     {
-      "button": "buttonExtra54",
-      "buttonIDs": ["EXTRA_54 = 53"],
+      "button": "NOTE_54",
+      "buttonIDs": ["55K_NOTE_54 = 53"],
       "x": 1219,
       "y": 0,
       "width": 23,
@@ -1297,8 +1297,8 @@
       "color": "0xFFF9393F"
     },
     {
-      "button": "buttonExtra55",
-      "buttonIDs": ["EXTRA_55 = 54"],
+      "button": "NOTE_55",
+      "buttonIDs": ["55K_NOTE_55 = 54"],
       "x": 1242,
       "y": 0,
       "width": 23,

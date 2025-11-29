@@ -131,16 +131,12 @@ class Hitbox extends MobileInputHandler
 				{
 					var buttonX:Float = buttonData.x;
 					var buttonY:Float = buttonData.y;
-	
 					var buttonWidth:Int = buttonData.width;
 					var buttonHeight:Int = buttonData.height;
-					buttonWidth = buttonData.width;
-					buttonHeight = ;
-	
 					var buttonColor = buttonData.color;
 					var buttonReturn = buttonData.returnKey;
 					var location = ClientPrefs.data.hitboxLocation;
-	
+
 					switch (location) {
 						case 'Top':
 							if (buttonData.topX != null) buttonX = buttonData.topX;
@@ -164,13 +160,12 @@ class Hitbox extends MobileInputHandler
 							if (buttonData.bottomColor != null) buttonColor = buttonData.bottomColor;
 							if (buttonData.bottomReturnKey != null) buttonReturn = buttonData.bottomReturnKey;
 					}
-	
+
 					for (i in 1...9) {
 						var buttonString = 'buttonExtra${i}';
 						if (buttonData.button == buttonString && buttonReturn == null)
 							buttonReturn = Reflect.getProperty(ClientPrefs.data, 'extraKeyReturn${i}');
 					}
-	
 					addHint(buttonData.button, buttonIDs, buttonX, buttonY, buttonWidth, buttonHeight, Util.colorFromString(buttonColor), buttonReturn);
 				}
 			}
