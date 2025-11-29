@@ -12,7 +12,7 @@ class FunkinHitbox extends OGHitbox {
 	public var extraKey2 = ClientPrefs.data.extraKeyReturn2.toUpperCase();
 	public var extraKey3 = ClientPrefs.data.extraKeyReturn3.toUpperCase();
 	public var extraKey4 = ClientPrefs.data.extraKeyReturn4.toUpperCase();
-	public function new(Mode:String, globalAlpha:Float = 0.7, ?disableCreation:Bool = false):Void
+	public function new(?Mode:String, ?globalAlpha:Float = 0.7):Void
 	{
 		super(Mode, globalAlpha, true);
 		if ((ClientPrefs.data.hitboxmode == 'V Slice' && Mode == null) || Mode == 'V Slice')

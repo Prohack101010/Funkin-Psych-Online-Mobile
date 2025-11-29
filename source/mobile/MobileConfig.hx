@@ -120,28 +120,73 @@ typedef MobileButtonsData =
 
 typedef CustomHitboxData =
 {
-	hints:Array<HitboxData>
+	hints:Array<HitboxData>, //support old jsons
+	//Shitty but works (as said, if it works don't touch)
+	none:Array<HitboxData>,
+	single:Array<HitboxData>,
+	double:Array<HitboxData>,
+	triple:Array<HitboxData>,
+	quad:Array<HitboxData>,
+	mania1:Array<HitboxData>,
+	mania2:Array<HitboxData>,
+	mania3:Array<HitboxData>,
+	mania4:Array<HitboxData>,
+	mania5:Array<HitboxData>,
+	mania6:Array<HitboxData>,
+	mania7:Array<HitboxData>,
+	mania8:Array<HitboxData>,
+	mania9:Array<HitboxData>,
+	mania20:Array<HitboxData>,
+	mania55:Array<HitboxData>,
+	test:Array<HitboxData>
 }
 
 typedef HitboxData =
 {
-	button:String, // the button's name for checking pressed directly.
+	button:String, // what Hitbox Button should be used, must be a valid Hitbox Button var from Hitbox as a string.
 	buttonIDs:Array<String>, // what Hitbox Button Iad should be used, If you're using a the library for PsychEngine 0.7 Versions, This is useful.
+	//if custom ones isn't setted these will be used
 	x:Dynamic, // the button's X position on screen.
 	y:Dynamic, // the button's Y position on screen.
 	width:Dynamic, // the button's Width on screen.
 	height:Dynamic, // the button's Height on screen.
 	color:String, // the button color, default color is white.
-	returnKey:String, // the button return, default return is nothing but If you're game using a lua scripting this will be useful.
+	returnKey:String, // the button return, default return is nothing (please don't add custom return if you don't need).
+	extraKeyMode:Null<Int>,
+	//Top
+	topX:Dynamic,
+	topY:Dynamic,
+	topWidth:Dynamic,
+	topHeight:Dynamic,
+	topColor:String,
+	topReturnKey:String,
+	topExtraKeyMode:Null<Int>,
+	//Middle
+	middleX:Dynamic,
+	middleY:Dynamic,
+	middleWidth:Dynamic,
+	middleHeight:Dynamic,
+	middleColor:String,
+	middleReturnKey:String,
+	middleExtraKeyMode:Null<Int>,
+	//Bottom
+	bottomX:Dynamic,
+	bottomY:Dynamic,
+	bottomWidth:Dynamic,
+	bottomHeight:Dynamic,
+	bottomColor:String,
+	bottomReturnKey:String,
+	bottomExtraKeyMode:Null<Int>
 }
 
 typedef ButtonsData =
 {
-	button:String, // the button's name for checking pressed directly.
+	button:String, // what MobileButton should be used, must be a valid MobileButton var from MobilePad as a string.
 	buttonIDs:Array<String>, // what MobileButton Button Iad should be used, If you're using a the library for PsychEngine 0.7 Versions, This is useful.
 	graphic:String, // the graphic of the button, usually can be located in the MobilePad xml.
 	x:Float, // the button's X position on screen.
 	y:Float, // the button's Y position on screen.
 	color:String, // the button color, default color is white.
-	scale:Null<Float> //the button scale, default scale is 1.
+	bg:String, // the button background for MobilePad, default background is `bg`.
+	scale:Null<Float> // the button scale, default scale is 1.
 }
