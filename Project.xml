@@ -161,6 +161,9 @@
 	<haxedef name="HXC_LIBVLC_LOGGING" if="VIDEOS_ALLOWED debug" />
 	<haxedef name="LUMOD_HSCRIPT" />
 
+	<define name="BMS_FILE_SUPPORT" />
+	<haxedef name="BMS_FILE_SUPPORT" />
+
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
 	<!--Enable the Flixel core recording system-->

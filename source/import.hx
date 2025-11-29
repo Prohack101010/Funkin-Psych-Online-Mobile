@@ -74,7 +74,7 @@ import online.backend.Deflection;
 // Mobile Controls
 import mobile.*;
 import mobile.MobileButton;
-import mobile.MobilePadExtended as MobilePad;
+import mobile.MobilePad;
 import mobile.HitboxExtended as Hitbox;
 import mobile.backend.TouchUtil;
 import mobile.backend.PsychJNI;
