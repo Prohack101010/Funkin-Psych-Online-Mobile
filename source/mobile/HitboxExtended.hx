@@ -9,6 +9,7 @@ import openfl.display.Shape;
 import openfl.geom.Matrix;
 import flixel.util.FlxColor;
 import flixel.FlxCamera;
+import objects.Note;
 
 class HitboxExtended extends Hitbox
 {
@@ -23,10 +24,10 @@ class HitboxExtended extends Hitbox
 	/**
 	 * Create the zone.
 	 */
-	public function new(?CustomMode:String):Void
+	public function new(?CustomMode:String, ?globalAlpha:Float = 0.7):Void
 	{
 		instance = this;
-		super();
+		super(CustomMode, globalAlpha);
 
 		if ((ClientPrefs.data.hitboxmode == 'V Slice' && CustomMode == null) || CustomMode == 'V Slice'){
 			if (Note.maniaKeys == 4) {
@@ -48,46 +49,46 @@ class HitboxExtended extends Hitbox
 		}
 		else if ((ClientPrefs.data.hitboxmode != 'Classic' && CustomMode == null) || CustomMode != null){
 			var Custom:String = CustomMode != null ? CustomMode : ClientPrefs.data.hitboxmode;
-			if (!MobileData.hitboxModes.exists(Custom))
+			if (!MobileInputHandler.hitboxModes.exists(Custom))
 				throw 'The Custom Hitbox File doesn\'t exists.';
 
-			var currentHint = MobileData.hitboxModes.get(Custom).hints;
-			if (MobileData.hitboxModes.get(Custom).none != null)
-				currentHint = MobileData.hitboxModes.get(Custom).none;
-			if (ClientPrefs.data.extraKeys == 1 && MobileData.hitboxModes.get(Custom).single != null)
-				currentHint = MobileData.hitboxModes.get(Custom).single;
-			if (ClientPrefs.data.extraKeys == 2 && MobileData.hitboxModes.get(Custom).double != null)
-				currentHint = MobileData.hitboxModes.get(Custom).double;
-			if (ClientPrefs.data.extraKeys == 3 && MobileData.hitboxModes.get(Custom).triple != null)
-				currentHint = MobileData.hitboxModes.get(Custom).triple;
-			if (ClientPrefs.data.extraKeys == 4 && MobileData.hitboxModes.get(Custom).quad != null)
-				currentHint = MobileData.hitboxModes.get(Custom).quad;
-			if (ClientPrefs.data.extraKeys != 0 && MobileData.hitboxModes.get(Custom).test != null)
-				currentHint = MobileData.hitboxModes.get(Custom).test;
+			var currentHint = MobileInputHandler.hitboxModes.get(Custom).hints;
+			if (MobileInputHandler.hitboxModes.get(Custom).none != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).none;
+			if (ClientPrefs.data.extraKeys == 1 && MobileInputHandler.hitboxModes.get(Custom).single != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).single;
+			if (ClientPrefs.data.extraKeys == 2 && MobileInputHandler.hitboxModes.get(Custom).double != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).double;
+			if (ClientPrefs.data.extraKeys == 3 && MobileInputHandler.hitboxModes.get(Custom).triple != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).triple;
+			if (ClientPrefs.data.extraKeys == 4 && MobileInputHandler.hitboxModes.get(Custom).quad != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).quad;
+			if (ClientPrefs.data.extraKeys != 0 && MobileInputHandler.hitboxModes.get(Custom).test != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).test;
 
 			//Extra Key Stuff
-			if (Note.maniaKeys == 1 && MobileData.hitboxModes.get(Custom).mania1 != null)
-				currentHint = MobileData.hitboxModes.get(Custom).mania1;
-			if (Note.maniaKeys == 2 && MobileData.hitboxModes.get(Custom).mania2 != null)
-				currentHint = MobileData.hitboxModes.get(Custom).mania2;
-			if (Note.maniaKeys == 3 && MobileData.hitboxModes.get(Custom).mania3 != null)
-				currentHint = MobileData.hitboxModes.get(Custom).mania3;
-			if (Note.maniaKeys == 4 && MobileData.hitboxModes.get(Custom).mania4 != null)
-				currentHint = MobileData.hitboxModes.get(Custom).mania4;
-			if (Note.maniaKeys == 5 && MobileData.hitboxModes.get(Custom).mania5 != null)
-				currentHint = MobileData.hitboxModes.get(Custom).mania5;
-			if (Note.maniaKeys == 6 && MobileData.hitboxModes.get(Custom).mania6 != null)
-				currentHint = MobileData.hitboxModes.get(Custom).mania6;
-			if (Note.maniaKeys == 7 && MobileData.hitboxModes.get(Custom).mania7 != null)
-				currentHint = MobileData.hitboxModes.get(Custom).mania7;
-			if (Note.maniaKeys == 8 && MobileData.hitboxModes.get(Custom).mania8 != null)
-				currentHint = MobileData.hitboxModes.get(Custom).mania8;
-			if (Note.maniaKeys == 9 && MobileData.hitboxModes.get(Custom).mania9 != null)
-				currentHint = MobileData.hitboxModes.get(Custom).mania9;
-			if (Note.maniaKeys == 20 && MobileData.hitboxModes.get(Custom).mania20 != null)
-				currentHint = MobileData.hitboxModes.get(Custom).mania20;
-			if (Note.maniaKeys == 55 && MobileData.hitboxModes.get(Custom).mania55 != null)
-				currentHint = MobileData.hitboxModes.get(Custom).mania55;
+			if (Note.maniaKeys == 1 && MobileInputHandler.hitboxModes.get(Custom).mania1 != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania1;
+			if (Note.maniaKeys == 2 && MobileInputHandler.hitboxModes.get(Custom).mania2 != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania2;
+			if (Note.maniaKeys == 3 && MobileInputHandler.hitboxModes.get(Custom).mania3 != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania3;
+			if (Note.maniaKeys == 4 && MobileInputHandler.hitboxModes.get(Custom).mania4 != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania4;
+			if (Note.maniaKeys == 5 && MobileInputHandler.hitboxModes.get(Custom).mania5 != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania5;
+			if (Note.maniaKeys == 6 && MobileInputHandler.hitboxModes.get(Custom).mania6 != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania6;
+			if (Note.maniaKeys == 7 && MobileInputHandler.hitboxModes.get(Custom).mania7 != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania7;
+			if (Note.maniaKeys == 8 && MobileInputHandler.hitboxModes.get(Custom).mania8 != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania8;
+			if (Note.maniaKeys == 9 && MobileInputHandler.hitboxModes.get(Custom).mania9 != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania9;
+			if (Note.maniaKeys == 20 && MobileInputHandler.hitboxModes.get(Custom).mania20 != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania20;
+			if (Note.maniaKeys == 55 && MobileInputHandler.hitboxModes.get(Custom).mania55 != null)
+				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania55;
 
 			for (buttonData in currentHint)
 			{

@@ -22,15 +22,15 @@ class MobilePadExtended extends MobilePad {
 	override public function createVirtualButton(buttonIDs:Array<String>, x:Float, y:Float, framePath:String, ?scale:Float = 1, ?ColorS:Int = 0xFFFFFF):MobileButton {
 		var frames:FlxGraphic;
 
-		final path:String = Paths.getPreloadPath() + 'mobile/MobilePad/Textures/$Frames.png';
+		final path:String = MobileInputHandler.mobileFolderPath + 'MobilePad/Textures/$framePath.png';
 		#if MODS_ALLOWED
-		final modsPath:String = Paths.modFolders('mobile/MobilePad/Textures/$Frames.png');
+		final modsPath:String = Paths.modFolders('mobile/MobilePad/Textures/$framePath.png');
 		if(sys.FileSystem.exists(modsPath))
 			frames = FlxGraphic.fromBitmapData(BitmapData.fromFile(modsPath));
 		else #end if(Assets.exists(path))
 			frames = FlxGraphic.fromBitmapData(Assets.getBitmapData(path));
 		else
-			frames = FlxGraphic.fromBitmapData(Assets.getBitmapData(Paths.getPreloadPath() + 'mobile/MobilePad/Textures/default.png'));
+			frames = FlxGraphic.fromBitmapData(Assets.getBitmapData(MobileInputHandler.mobileFolderPath + 'MobilePad/Textures/default.png'));
 
 		var button = new MobileButton(x, y);
 		button.scale.set(scale, scale);

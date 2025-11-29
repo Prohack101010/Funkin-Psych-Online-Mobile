@@ -560,7 +560,17 @@ class PlayState extends MusicBeatState
 		ClientPrefs.reloadKeyColors();
 
 		//Load Mobile Shit (Makes Testing The Hitboxes Easier)
-		MobileData.init();
+		MobileInputHandler.init('MobileControls', CoolUtil.getSavePath(), null,
+			[
+				'MobilePad/DPadModes',
+				'MobilePad/ActionModes',
+				'Hitbox/HitboxModes',
+			], [
+				DPAD,
+				ACTION,
+				HITBOX
+			]
+		);
 
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
