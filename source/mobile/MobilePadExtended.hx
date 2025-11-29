@@ -2,6 +2,15 @@ package mobile;
 
 import mobile.MobilePad;
 
+import flixel.util.FlxSignal.FlxTypedSignal;
+import flixel.graphics.frames.FlxTileFrames;
+import flixel.graphics.FlxGraphic;
+import openfl.display.BitmapData;
+import openfl.utils.Assets;
+import flixel.math.FlxPoint;
+import flixel.util.FlxColor;
+import flixel.FlxCamera;
+
 class MobilePadExtended extends MobilePad {
 	public var onButtonDown:FlxTypedSignal<(MobileButton, Array<String>) -> Void> = new FlxTypedSignal<(MobileButton, Array<String>) -> Void>();
 	public var onButtonUp:FlxTypedSignal<(MobileButton, Array<String>) -> Void> = new FlxTypedSignal<(MobileButton, Array<String>) -> Void>();

@@ -2,6 +2,14 @@ package mobile;
 
 import mobile.Hitbox;
 
+import flixel.util.FlxSignal.FlxTypedSignal;
+import flixel.graphics.FlxGraphic;
+import openfl.display.BitmapData;
+import openfl.display.Shape;
+import openfl.geom.Matrix;
+import flixel.util.FlxColor;
+import flixel.FlxCamera;
+
 class HitboxExtended extends Hitbox
 {
 	public var extraKey1 = ClientPrefs.data.extraKeyReturn1.toUpperCase();
