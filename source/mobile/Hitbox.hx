@@ -1,5 +1,6 @@
 package mobile;
 
+import objects.Note;
 import flixel.util.FlxSignal.FlxTypedSignal;
 import flixel.graphics.FlxGraphic;
 import openfl.display.BitmapData;
@@ -86,46 +87,46 @@ class Hitbox extends MobileInputHandler
 			else
 			{
 				var Custom:String = Mode != null ? Mode : ClientPrefs.data.hitboxmode;
-				if (!MobileData.hitboxModes.exists(Custom))
+				if (!MobileInputHandler.hitboxModes.exists(Custom))
 					throw 'The Custom Hitbox File doesn\'t exists.';
 	
-				var currentHint = MobileData.hitboxModes.get(Custom).hints;
-				if (MobileData.hitboxModes.get(Custom).none != null)
-					currentHint = MobileData.hitboxModes.get(Custom).none;
-				if (ClientPrefs.data.extraKeys == 1 && MobileData.hitboxModes.get(Custom).single != null)
-					currentHint = MobileData.hitboxModes.get(Custom).single;
-				if (ClientPrefs.data.extraKeys == 2 && MobileData.hitboxModes.get(Custom).double != null)
-					currentHint = MobileData.hitboxModes.get(Custom).double;
-				if (ClientPrefs.data.extraKeys == 3 && MobileData.hitboxModes.get(Custom).triple != null)
-					currentHint = MobileData.hitboxModes.get(Custom).triple;
-				if (ClientPrefs.data.extraKeys == 4 && MobileData.hitboxModes.get(Custom).quad != null)
-					currentHint = MobileData.hitboxModes.get(Custom).quad;
-				if (ClientPrefs.data.extraKeys != 0 && MobileData.hitboxModes.get(Custom).test != null)
-					currentHint = MobileData.hitboxModes.get(Custom).test;
+				var currentHint = MobileInputHandler.hitboxModes.get(Custom).hints;
+				if (MobileInputHandler.hitboxModes.get(Custom).none != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).none;
+				if (ClientPrefs.data.extraKeys == 1 && MobileInputHandler.hitboxModes.get(Custom).single != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).single;
+				if (ClientPrefs.data.extraKeys == 2 && MobileInputHandler.hitboxModes.get(Custom).double != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).double;
+				if (ClientPrefs.data.extraKeys == 3 && MobileInputHandler.hitboxModes.get(Custom).triple != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).triple;
+				if (ClientPrefs.data.extraKeys == 4 && MobileInputHandler.hitboxModes.get(Custom).quad != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).quad;
+				if (ClientPrefs.data.extraKeys != 0 && MobileInputHandler.hitboxModes.get(Custom).test != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).test;
 	
 				//Extra Key Stuff
-				if (Note.maniaKeys == 1 && MobileData.hitboxModes.get(Custom).mania1 != null)
-					currentHint = MobileData.hitboxModes.get(Custom).mania1;
-				if (Note.maniaKeys == 2 && MobileData.hitboxModes.get(Custom).mania2 != null)
-					currentHint = MobileData.hitboxModes.get(Custom).mania2;
-				if (Note.maniaKeys == 3 && MobileData.hitboxModes.get(Custom).mania3 != null)
-					currentHint = MobileData.hitboxModes.get(Custom).mania3;
-				if (Note.maniaKeys == 4 && MobileData.hitboxModes.get(Custom).mania4 != null)
-					currentHint = MobileData.hitboxModes.get(Custom).mania4;
-				if (Note.maniaKeys == 5 && MobileData.hitboxModes.get(Custom).mania5 != null)
-					currentHint = MobileData.hitboxModes.get(Custom).mania5;
-				if (Note.maniaKeys == 6 && MobileData.hitboxModes.get(Custom).mania6 != null)
-					currentHint = MobileData.hitboxModes.get(Custom).mania6;
-				if (Note.maniaKeys == 7 && MobileData.hitboxModes.get(Custom).mania7 != null)
-					currentHint = MobileData.hitboxModes.get(Custom).mania7;
-				if (Note.maniaKeys == 8 && MobileData.hitboxModes.get(Custom).mania8 != null)
-					currentHint = MobileData.hitboxModes.get(Custom).mania8;
-				if (Note.maniaKeys == 9 && MobileData.hitboxModes.get(Custom).mania9 != null)
-					currentHint = MobileData.hitboxModes.get(Custom).mania9;
-				if (Note.maniaKeys == 20 && MobileData.hitboxModes.get(Custom).mania20 != null)
-					currentHint = MobileData.hitboxModes.get(Custom).mania20;
-				if (Note.maniaKeys == 55 && MobileData.hitboxModes.get(Custom).mania55 != null)
-					currentHint = MobileData.hitboxModes.get(Custom).mania55;
+				if (Note.maniaKeys == 1 && MobileInputHandler.hitboxModes.get(Custom).mania1 != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).mania1;
+				if (Note.maniaKeys == 2 && MobileInputHandler.hitboxModes.get(Custom).mania2 != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).mania2;
+				if (Note.maniaKeys == 3 && MobileInputHandler.hitboxModes.get(Custom).mania3 != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).mania3;
+				if (Note.maniaKeys == 4 && MobileInputHandler.hitboxModes.get(Custom).mania4 != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).mania4;
+				if (Note.maniaKeys == 5 && MobileInputHandler.hitboxModes.get(Custom).mania5 != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).mania5;
+				if (Note.maniaKeys == 6 && MobileInputHandler.hitboxModes.get(Custom).mania6 != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).mania6;
+				if (Note.maniaKeys == 7 && MobileInputHandler.hitboxModes.get(Custom).mania7 != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).mania7;
+				if (Note.maniaKeys == 8 && MobileInputHandler.hitboxModes.get(Custom).mania8 != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).mania8;
+				if (Note.maniaKeys == 9 && MobileInputHandler.hitboxModes.get(Custom).mania9 != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).mania9;
+				if (Note.maniaKeys == 20 && MobileInputHandler.hitboxModes.get(Custom).mania20 != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).mania20;
+				if (Note.maniaKeys == 55 && MobileInputHandler.hitboxModes.get(Custom).mania55 != null)
+					currentHint = MobileInputHandler.hitboxModes.get(Custom).mania55;
 	
 				for (buttonData in currentHint)
 				{
@@ -166,7 +167,7 @@ class Hitbox extends MobileInputHandler
 						if (buttonData.button == buttonString && buttonReturn == null)
 							buttonReturn = Reflect.getProperty(ClientPrefs.data, 'extraKeyReturn${i}');
 					}
-					addHint(buttonData.button, buttonIDs, buttonX, buttonY, buttonWidth, buttonHeight, Util.colorFromString(buttonColor), buttonReturn);
+					addHint(buttonData.button, buttonData.buttonIDs, buttonX, buttonY, buttonWidth, buttonHeight, Util.colorFromString(buttonColor), buttonReturn);
 				}
 			}
 		}
