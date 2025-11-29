@@ -13,7 +13,7 @@ import flixel.input.mouse.FlxMouseButton;
  * A simple button class that calls a function when clicked by the touch.
  * @author: KralOyuncu2010x (ArkoseLabs)
  */
-class MobileButtonExtended extends TypedMobileButton<FlxSprite>
+class MobileButtonExtended extends TypedMobileButtonExtended<FlxSprite>
 {
 	/**
 	 * Used with public variable status, means not highlighted or pressed.
@@ -51,7 +51,7 @@ class MobileButtonExtended extends TypedMobileButton<FlxSprite>
 	public var bounds:FlxSprite = new FlxSprite();
 
 	/**
-	 * Creates a new `MobileButton` object
+	 * Creates a new `MobileButtonExtended` object
 	 * and a callback function on the UI thread.
 	 *
 	 * @param   X		 The x position of the button.
@@ -84,7 +84,7 @@ class MobileButtonExtended extends TypedMobileButton<FlxSprite>
 #if !display
 @:generic
 #end
-class TypedMobileButton<T:FlxSprite> extends FlxSprite implements IFlxInput
+class TypedMobileButtonExtended<T:FlxSprite> extends FlxSprite implements IFlxInput
 {
 	/**
 	 * The label that appears on the button. Can be any `FlxSprite`.
@@ -135,22 +135,22 @@ class TypedMobileButton<T:FlxSprite> extends FlxSprite implements IFlxInput
 	/**
 	 * The properties of this button's `onUp` event (callback function, sound).
 	 */
-	public var onUp(default, null):MobileButtonEvent;
+	public var onUp(default, null):MobileButtonExtendedEvent;
 
 	/**
 	 * The properties of this button's `onDown` event (callback function, sound).
 	 */
-	public var onDown(default, null):MobileButtonEvent;
+	public var onDown(default, null):MobileButtonExtendedEvent;
 
 	/**
 	 * The properties of this button's `onOver` event (callback function, sound).
 	 */
-	public var onOver(default, null):MobileButtonEvent;
+	public var onOver(default, null):MobileButtonExtendedEvent;
 
 	/**
 	 * The properties of this button's `onOut` event (callback function, sound).
 	 */
-	public var onOut(default, null):MobileButtonEvent;
+	public var onOut(default, null):MobileButtonExtendedEvent;
 
 	/**
 	 * The alpha's the button should use depednging on the status.
@@ -227,10 +227,10 @@ class TypedMobileButton<T:FlxSprite> extends FlxSprite implements IFlxInput
 
 		loadDefaultGraphic();
 
-		onUp = new MobileButtonEvent();
-		onDown = new MobileButtonEvent();
-		onOver = new MobileButtonEvent();
-		onOut = new MobileButtonEvent();
+		onUp = new MobileButtonExtendedEvent();
+		onDown = new MobileButtonExtendedEvent();
+		onOver = new MobileButtonExtendedEvent();
+		onOut = new MobileButtonExtendedEvent();
 
 		status = multiTouch ? MobileButtonExtended.NORMAL : MobileButtonExtended.HIGHLIGHT;
 
@@ -644,7 +644,7 @@ class TypedMobileButton<T:FlxSprite> extends FlxSprite implements IFlxInput
 /** 
  * Helper function for `MobileButtonExtended` which handles its events.
  */
-private class MobileButtonEvent implements IFlxDestroyable
+private class MobileButtonExtendedEvent implements IFlxDestroyable
 {
 	/**
 	 * The callback function to call when this even fires.
