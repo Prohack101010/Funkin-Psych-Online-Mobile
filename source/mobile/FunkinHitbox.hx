@@ -5,13 +5,14 @@ import openfl.display.BitmapData;
 import openfl.display.Shape;
 import openfl.geom.Matrix;
 import flixel.util.FlxColor;
+import objects.Note;
 
 class FunkinHitbox extends OGHitbox {
 	public var extraKey1 = ClientPrefs.data.extraKeyReturn1.toUpperCase();
 	public var extraKey2 = ClientPrefs.data.extraKeyReturn2.toUpperCase();
 	public var extraKey3 = ClientPrefs.data.extraKeyReturn3.toUpperCase();
 	public var extraKey4 = ClientPrefs.data.extraKeyReturn4.toUpperCase();
-	public function new(Mode:String, globalAlpha:Float = 0.7, ?disableCreation:Bool):Void
+	public function new(Mode:String, globalAlpha:Float = 0.7, ?disableCreation:Bool = false):Void
 	{
 		super(Mode, globalAlpha, true);
 		if ((ClientPrefs.data.hitboxmode == 'V Slice' && Mode == null) || Mode == 'V Slice')
@@ -36,46 +37,46 @@ class FunkinHitbox extends OGHitbox {
 		else
 		{
 			var Custom:String = Mode != null ? Mode : ClientPrefs.data.hitboxmode;
-			if (!MobileInputHandler.hitboxModes.exists(Custom))
+			if (!MobileConfig.hitboxModes.exists(Custom))
 				throw 'The Custom Hitbox File doesn\'t exists.';
 
-			var currentHint = MobileInputHandler.hitboxModes.get(Custom).hints;
-			if (MobileInputHandler.hitboxModes.get(Custom).none != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).none;
-			if (ClientPrefs.data.extraKeys == 1 && MobileInputHandler.hitboxModes.get(Custom).single != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).single;
-			if (ClientPrefs.data.extraKeys == 2 && MobileInputHandler.hitboxModes.get(Custom).double != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).double;
-			if (ClientPrefs.data.extraKeys == 3 && MobileInputHandler.hitboxModes.get(Custom).triple != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).triple;
-			if (ClientPrefs.data.extraKeys == 4 && MobileInputHandler.hitboxModes.get(Custom).quad != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).quad;
-			if (ClientPrefs.data.extraKeys != 0 && MobileInputHandler.hitboxModes.get(Custom).hints != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).hints;
+			var currentHint = MobileConfig.hitboxModes.get(Custom).hints;
+			if (MobileConfig.hitboxModes.get(Custom).none != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).none;
+			if (ClientPrefs.data.extraKeys == 1 && MobileConfig.hitboxModes.get(Custom).single != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).single;
+			if (ClientPrefs.data.extraKeys == 2 && MobileConfig.hitboxModes.get(Custom).double != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).double;
+			if (ClientPrefs.data.extraKeys == 3 && MobileConfig.hitboxModes.get(Custom).triple != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).triple;
+			if (ClientPrefs.data.extraKeys == 4 && MobileConfig.hitboxModes.get(Custom).quad != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).quad;
+			if (ClientPrefs.data.extraKeys != 0 && MobileConfig.hitboxModes.get(Custom).hints != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).hints;
 
 			//Extra Key Stuff
-			if (Note.maniaKeys == 1 && MobileInputHandler.hitboxModes.get(Custom).mania1 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania1;
-			if (Note.maniaKeys == 2 && MobileInputHandler.hitboxModes.get(Custom).mania2 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania2;
-			if (Note.maniaKeys == 3 && MobileInputHandler.hitboxModes.get(Custom).mania3 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania3;
-			if (Note.maniaKeys == 4 && MobileInputHandler.hitboxModes.get(Custom).mania4 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania4;
-			if (Note.maniaKeys == 5 && MobileInputHandler.hitboxModes.get(Custom).mania5 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania5;
-			if (Note.maniaKeys == 6 && MobileInputHandler.hitboxModes.get(Custom).mania6 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania6;
-			if (Note.maniaKeys == 7 && MobileInputHandler.hitboxModes.get(Custom).mania7 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania7;
-			if (Note.maniaKeys == 8 && MobileInputHandler.hitboxModes.get(Custom).mania8 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania8;
-			if (Note.maniaKeys == 9 && MobileInputHandler.hitboxModes.get(Custom).mania9 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania9;
-			if (Note.maniaKeys == 20 && MobileInputHandler.hitboxModes.get(Custom).mania20 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania20;
-			if (Note.maniaKeys == 55 && MobileInputHandler.hitboxModes.get(Custom).mania55 != null)
-				currentHint = MobileInputHandler.hitboxModes.get(Custom).mania55;
+			if (Note.maniaKeys == 1 && MobileConfig.hitboxModes.get(Custom).mania1 != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).mania1;
+			if (Note.maniaKeys == 2 && MobileConfig.hitboxModes.get(Custom).mania2 != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).mania2;
+			if (Note.maniaKeys == 3 && MobileConfig.hitboxModes.get(Custom).mania3 != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).mania3;
+			if (Note.maniaKeys == 4 && MobileConfig.hitboxModes.get(Custom).mania4 != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).mania4;
+			if (Note.maniaKeys == 5 && MobileConfig.hitboxModes.get(Custom).mania5 != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).mania5;
+			if (Note.maniaKeys == 6 && MobileConfig.hitboxModes.get(Custom).mania6 != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).mania6;
+			if (Note.maniaKeys == 7 && MobileConfig.hitboxModes.get(Custom).mania7 != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).mania7;
+			if (Note.maniaKeys == 8 && MobileConfig.hitboxModes.get(Custom).mania8 != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).mania8;
+			if (Note.maniaKeys == 9 && MobileConfig.hitboxModes.get(Custom).mania9 != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).mania9;
+			if (Note.maniaKeys == 20 && MobileConfig.hitboxModes.get(Custom).mania20 != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).mania20;
+			if (Note.maniaKeys == 55 && MobileConfig.hitboxModes.get(Custom).mania55 != null)
+				currentHint = MobileConfig.hitboxModes.get(Custom).mania55;
 
 			for (buttonData in currentHint)
 			{
@@ -177,7 +178,7 @@ class FunkinHitbox extends OGHitbox {
 		return bitmap;
 	}
 
-	override public function createHint(Name:Array<String>, X:Float, Y:Float, Width:Int, Height:Int, Color:Int = 0xFFFFFF, ?Return:String):MobileButton
+	override public function createHint(Name:Array<String>, X:Float, Y:Float, Width:Int, Height:Int, Color:Int = 0xFFFFFF, ?Return:String, ?Map:String):MobileButton
 	{
 		var hint:MobileButton = new MobileButton(X, Y);
 		hint.loadGraphic(createHintGraphic(Width, Height, Color));

@@ -120,7 +120,7 @@ class TitleState extends MusicBeatState
 			}
 			persistentUpdate = true;
 			persistentDraw = true;
-			MobileInputHandler.init('MobileControls', CoolUtil.getSavePath(), 'assets/mobile/',
+			MobileConfig.init('MobileControls', CoolUtil.getSavePath(), 'assets/mobile/',
 				[
 					'MobilePad/DPadModes',
 					'MobilePad/ActionModes',
