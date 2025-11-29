@@ -52,20 +52,23 @@ class MobileInputHandler extends FlxTypedSpriteGroup<MobileButton>
 				case ACTION:
 					readDirectoryPart1(mobileFolderPath + i, actionModes, ACTION);
 					#if MODS_ALLOWED
-					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'MobilePad/'))
-						readDirectory(Path.join([folder, 'DPadModes']), actionModes);
+					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'MobilePad/')) {
+						readDirectoryPart1(Path.join([folder, 'DPadModes']), actionModes);
+					}
 					#end
 				case DPAD:
 					readDirectoryPart1(mobileFolderPath + i, dpadModes, DPAD);
 					#if MODS_ALLOWED
-					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'MobilePad/'))
-						readDirectory(Path.join([folder, 'DPadModes']), dpadModes);
+					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'MobilePad/')) {
+						readDirectoryPart1(Path.join([folder, 'DPadModes']), dpadModes);
+					}
 					#end
 				case HITBOX:
 					readDirectoryPart1(mobileFolderPath + i, hitboxModes, HITBOX);
 					#if MODS_ALLOWED
-					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'Hitbox/'))
-						readDirectory(Path.join([folder, 'DPadModes']), hitboxModes);
+					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'Hitbox/')) {
+						readDirectoryPart1(Path.join([folder, 'DPadModes']), hitboxModes);
+					}
 					#end
 			}
 		}
