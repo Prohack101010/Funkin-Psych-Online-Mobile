@@ -1,6 +1,10 @@
 package mobile;
 
 import mobile.Hitbox as OGHitbox;
+import openfl.display.BitmapData;
+import openfl.display.Shape;
+import openfl.geom.Matrix;
+import flixel.util.FlxColor;
 
 class FunkinHitbox extends OGHitbox {
 	public var extraKey1 = ClientPrefs.data.extraKeyReturn1.toUpperCase();
