@@ -56,6 +56,7 @@
   "hints": [
     {
       "button": "buttonLeft",
+      "buttonIDs": ["NOTE_1 = 0"],
       "x": 0,
       "y": 0,
       "width": 320,
@@ -64,6 +65,7 @@
     },
     {
       "button": "buttonDown",
+      "buttonIDs": ["NOTE_2 = 1"],
       "x": 320,
       "y": 0,
       "width": 320,
@@ -72,6 +74,7 @@
     },
     {
       "button": "buttonUp",
+      "buttonIDs": ["NOTE_3 = 2"],
       "x": 640,
       "y": 0,
       "width": 320,
@@ -80,6 +83,7 @@
     },
     {
       "button": "buttonRight",
+      "buttonIDs": ["NOTE_4 = 3"],
       "x": 960,
       "y": 0,
       "width": 320,

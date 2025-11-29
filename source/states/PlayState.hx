@@ -560,7 +560,7 @@ class PlayState extends MusicBeatState
 		ClientPrefs.reloadKeyColors();
 
 		//Load Mobile Shit (Makes Testing The Hitboxes Easier)
-		MobileInputHandler.init('MobileControls', CoolUtil.getSavePath(), null,
+		MobileInputHandler.init('MobileControls', CoolUtil.getSavePath(), 'assets/mobile',
 			[
 				'MobilePad/DPadModes',
 				'MobilePad/ActionModes',

@@ -133,7 +133,7 @@ class HitboxExtended extends Hitbox
 		#if FLX_DEBUG
 		hint.ignoreDrawDebug = true;
 		#end
-		if (customReturn != null) hint.returnedKey = Return;
+		if (Return != null) hint.returnedKey = Return;
 		return hint;
 	}
 }
