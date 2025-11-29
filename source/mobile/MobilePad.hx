@@ -109,10 +109,8 @@ class MobilePad extends MobileInputHandler {
 				var button:MobileButton = new MobileButton(0, 0);
 				CoolUtil.showPopUp('Line 110', "Test");
 				button = createVirtualButton(buttonIDs, buttonX, buttonY, buttonGraphic, buttonScale, Util.colorFromString(buttonColor));
-				CoolUtil.showPopUp('Line 112', "Test");
 				button.name = buttonName;
 				Actions.push(button);
-				CoolUtil.showPopUp('Line 115' + Actions, "Test");
 				add(button);
 				getButtonFromName.set(buttonName, button);
 				getButtonIndexFromName.set(buttonName, countedIndex);
@@ -139,6 +137,7 @@ class MobilePad extends MobileInputHandler {
 			frames = FlxGraphic.fromBitmapData(Assets.getBitmapData(path));
 		else
 			frames = FlxGraphic.fromBitmapData(Assets.getBitmapData(MobileInputHandler.mobileFolderPath + 'MobilePad/Textures/default.png'));
+		CoolUtil.showPopUp('FrameShit ' + frames, "Test");
 
 		var button = new MobileButton(x, y);
 		button.scale.set(scale, scale);
