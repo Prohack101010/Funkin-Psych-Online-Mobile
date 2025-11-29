@@ -56,13 +56,13 @@ class Hitbox extends MobileInputHandler
 	/**
 	 * Create the zone.
 	 */
-	public function new(Mode:String, globalAlpha:Float = 0.7, ?disableCreation:Bool):Void
+	public function new(?Mode:String, ?globalAlpha:Float = 0.7, ?disableCreation:Bool):Void
 	{
 		instance = this;
 		super();
 		this.globalAlpha = globalAlpha;
 
-		if (!disableCreation)
+		if (!disableCreation && Mode != null)
 		{
 			if (!MobileInputHandler.hitboxModes.exists(Mode))
 				throw 'The Hitbox File doesn\'t exists.';
