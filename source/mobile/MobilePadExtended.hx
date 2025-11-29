@@ -1,5 +1,7 @@
 package mobile;
 
+import mobile.MobilePad;
+
 class MobilePadExtended extends MobilePad {
 	public var onButtonDown:FlxTypedSignal<(MobileButton, Array<String>) -> Void> = new FlxTypedSignal<(MobileButton, Array<String>) -> Void>();
 	public var onButtonUp:FlxTypedSignal<(MobileButton, Array<String>) -> Void> = new FlxTypedSignal<(MobileButton, Array<String>) -> Void>();

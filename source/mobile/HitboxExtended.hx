@@ -1,5 +1,7 @@
 package mobile;
 
+import mobile.Hitbox;
+
 class HitboxExtended extends Hitbox
 {
 	public var extraKey1 = ClientPrefs.data.extraKeyReturn1.toUpperCase();
