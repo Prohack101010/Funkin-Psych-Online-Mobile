@@ -73,8 +73,7 @@ import online.backend.Deflection;
 
 // Mobile Controls
 import mobile.*;
-import mobile.MobileButtonExtended;
-import mobile.MobileButtonExtended as MobileButton;
+import mobile.MobileButton;
 import mobile.MobilePadExtended as MobilePad;
 import mobile.HitboxExtended as Hitbox;
 import mobile.backend.TouchUtil;

@@ -199,6 +199,7 @@ typedef CustomHitboxData =
 typedef HitboxData =
 {
 	button:String, // what Hitbox Button should be used, must be a valid Hitbox Button var from Hitbox as a string.
+	buttonIDs:Array<String>, // what Hitbox Button Iad should be used, If you're using a the library for PsychEngine 0.7 Versions, This is useful.
 	//if custom ones isn't setted these will be used
 	x:Dynamic, // the button's X position on screen.
 	y:Dynamic, // the button's Y position on screen.
@@ -236,9 +237,11 @@ typedef HitboxData =
 typedef ButtonsData =
 {
 	button:String, // what MobileButton should be used, must be a valid MobileButton var from MobilePad as a string.
+	buttonIDs:Array<String>, // what MobileButton Button Iad should be used, If you're using a the library for PsychEngine 0.7 Versions, This is useful.
 	graphic:String, // the graphic of the button, usually can be located in the MobilePad xml.
 	x:Float, // the button's X position on screen.
 	y:Float, // the button's Y position on screen.
 	color:String, // the button color, default color is white.
-	bg:String // the button background for MobilePad, default background is `bg`.
+	bg:String, // the button background for MobilePad, default background is `bg`.
+	scale:Float // the button scale, default scale is 1.
 }

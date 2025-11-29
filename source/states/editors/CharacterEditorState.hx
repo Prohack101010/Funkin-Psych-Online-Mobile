@@ -1295,7 +1295,7 @@ class CharacterEditorState extends MusicBeatState {
 					camFollow.x += addToCam;
 			}
 
-			mobilePad.forEachAlive((button:MobileButtonExtended) ->
+			mobilePad.forEachAlive((button:MobileButton) ->
 			{
 				if (button.justPressed || button.pressed)
 					overlapsToButton = true;
