@@ -6654,7 +6654,7 @@ class PlayState extends MusicBeatState
 
 	//I don't need this anymore because Hitboxes can returnable to any keys
 	public static function checkHBoxPress(button:String, type = 'justPressed') {
-		var buttonObject:MobileButton;
+		var buttonObject:MobileButton = null;
 		if (MusicBeatState.getState().hitbox != null) buttonObject = MusicBeatState.getState().hitbox.getButtonFromName(button);
 		if (buttonObject != null) return Reflect.getProperty(buttonObject, type);
 		return false;
