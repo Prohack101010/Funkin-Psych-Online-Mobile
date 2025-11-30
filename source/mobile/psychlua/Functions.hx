@@ -42,7 +42,7 @@ class MobileFunctions
 
 		Lua_helper.add_callback(lua, 'mobilePadJustPressed', function(button:String):Bool
 		{
-			return PlayState.checkMPadPress(button 'justPressed');
+			return PlayState.checkMPadPress(button, 'justPressed');
 		});
 
 		Lua_helper.add_callback(lua, 'mobilePadReleased', function(button:String):Bool
