@@ -8,10 +8,10 @@ import flixel.util.FlxColor;
 import objects.Note;
 
 class FunkinHitbox extends OGHitbox {
-	public function new(?Mode:String, ?globalAlpha:Float = 0.7):Void
+	public function new(?mode:String, ?globalAlpha:Float = 0.7):Void
 	{
-		super(Mode, globalAlpha, true);
-		if ((ClientPrefs.data.hitboxmode == 'V Slice' && Mode == null) || Mode == 'V Slice')
+		super(mode, globalAlpha, true); //true means basically-mobilecontrols's hitbox creation is disabled
+		if ((ClientPrefs.data.hitboxmode == 'V Slice' && mode == null) || mode == 'V Slice')
 		{
 			var mania = Note.maniaKeys;
 			if (mania == 4) {
@@ -33,7 +33,7 @@ class FunkinHitbox extends OGHitbox {
 		}
 		else
 		{
-			var Custom:String = Mode != null ? Mode : ClientPrefs.data.hitboxmode;
+			var Custom:String = mode != null ? mode : ClientPrefs.data.hitboxmode;
 			if (!MobileConfig.hitboxModes.exists(Custom))
 				throw 'The Custom Hitbox File doesn\'t exists.';
 

@@ -128,6 +128,7 @@
 	<haxelib name="flixel-addons" />
 	<!-- Add Mobile Controls (Made by me -ArkoseLabs) -->
 	<haxelib name="basically-mobilecontrols"/>
+	<haxedef name="BMC_FILE_SUPPORT"/>
 
 	<!--Psych stuff needed-->
 	<haxelib name="linc_luajit" if="LUA_ALLOWED" />
