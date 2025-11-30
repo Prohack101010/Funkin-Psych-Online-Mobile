@@ -14,45 +14,45 @@ class MobileFunctions
 		var lua:State = funk.lua;
 
 		//Use them for 8k charts or something
-		Lua_helper.add_callback(lua, 'HitboxPressed', function(button:String):Bool
+		Lua_helper.add_callback(lua, 'hitboxPressed', function(button:String):Bool
 		{
 			return PlayState.checkHBoxPress(button, 'pressed');
 		});
 
-		Lua_helper.add_callback(lua, 'HitboxJustPressed', function(button:String):Bool
+		Lua_helper.add_callback(lua, 'hitboxJustPressed', function(button:String):Bool
 		{
 			return PlayState.checkHBoxPress(button, 'justPressed');
 		});
 
-		Lua_helper.add_callback(lua, 'HitboxReleased', function(button:String):Bool
+		Lua_helper.add_callback(lua, 'hitboxReleased', function(button:String):Bool
 		{
 			return PlayState.checkHBoxPress(button, 'released');
 		});
 
-		Lua_helper.add_callback(lua, 'HitboxJustReleased', function(button:String):Bool
+		Lua_helper.add_callback(lua, 'hitboxJustReleased', function(button:String):Bool
 		{
 			return PlayState.checkHBoxPress(button, 'justReleased');
 		});
 
 		//OMG
-		Lua_helper.add_callback(lua, 'mobilePadPressed', function(buttonPostfix:String):Bool
+		Lua_helper.add_callback(lua, 'mobilePadPressed', function(button:String):Bool
 		{
-			return PlayState.checkMPadPress(buttonPostfix, 'pressed');
+			return PlayState.checkMPadPress(button, 'pressed');
 		});
 
-		Lua_helper.add_callback(lua, 'mobilePadJustPressed', function(buttonPostfix:String):Bool
+		Lua_helper.add_callback(lua, 'mobilePadJustPressed', function(button:String):Bool
 		{
-			return PlayState.checkMPadPress(buttonPostfix, 'justPressed');
+			return PlayState.checkMPadPress(button 'justPressed');
 		});
 
-		Lua_helper.add_callback(lua, 'mobilePadReleased', function(buttonPostfix:String):Bool
+		Lua_helper.add_callback(lua, 'mobilePadReleased', function(button:String):Bool
 		{
-			return PlayState.checkMPadPress(buttonPostfix, 'released');
+			return PlayState.checkMPadPress(button, 'released');
 		});
 
-		Lua_helper.add_callback(lua, 'mobilePadJustReleased', function(buttonPostfix:String):Bool
+		Lua_helper.add_callback(lua, 'mobilePadJustReleased', function(button:String):Bool
 		{
-			return PlayState.checkMPadPress(buttonPostfix, 'justReleased');
+			return PlayState.checkMPadPress(button, 'justReleased');
 		});
 
 		Lua_helper.add_callback(lua, 'addMobilePad', function(DPad:String, Action:String, ?addToCustomSubstate:Bool = false, ?posAtCustomSubstate:Int = -1):Void
@@ -123,9 +123,9 @@ class MobileFunctions
 			return Haptic.vibrate(period, duration);
 		});
 
-		Lua_helper.add_callback(lua, "touchJustPressed", TouchUtil.touchJustPressed);
-		Lua_helper.add_callback(lua, "touchPressed", TouchUtil.touchPressed);
-		Lua_helper.add_callback(lua, "touchJustReleased", TouchUtil.touchJustReleased);
+		Lua_helper.add_callback(lua, "touchJustPressed", TouchUtil.justPressed);
+		Lua_helper.add_callback(lua, "touchPressed", TouchUtil.pressed);
+		Lua_helper.add_callback(lua, "touchJustReleased", TouchUtil.justReleased);
 		Lua_helper.add_callback(lua, "touchPressedObject", function(object:String):Bool
 		{
 			var obj = PlayState.instance.getLuaObject(object);

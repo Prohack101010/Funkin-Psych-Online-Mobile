@@ -6646,17 +6646,17 @@ class PlayState extends MusicBeatState
 		}
 	}
 
-	public static function checkMPadPress(buttonPostfix:String, type = 'justPressed') {
-		var buttonName = "button" + buttonPostfix;
-		var button = PlayState.instance.luaMobilePad.getButtonFromName(button); //Access Spesific Button Name From Array
+	public static function checkMPadPress(buttonName:String, type = 'justPressed') {
+		var button = PlayState.instance.luaMobilePad.getButtonFromName(buttonName); //Access Spesific Button Name From Array
 		return Reflect.getProperty(button, type);
 		return false;
 	}
 
 	//I don't need this anymore because Hitboxes can returnable to any keys
 	public static function checkHBoxPress(button:String, type = 'justPressed') {
-		if (MusicBeatState.getState().hitbox != null) button = MusicBeatState.getState().hitbox.getButtonFromName(button);
-		if (button != null) return Reflect.getProperty(button, type);
+		var buttonObject:MobileButton;
+		if (MusicBeatState.getState().hitbox != null) buttonObject = MusicBeatState.getState().hitbox.getButtonFromName(button);
+		if (buttonObject != null) return Reflect.getProperty(buttonObject, type);
 		return false;
 	}
 
