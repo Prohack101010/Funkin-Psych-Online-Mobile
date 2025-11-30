@@ -201,12 +201,11 @@ class ReplayRecorder extends FlxBasic {
 	}
 
 	public function recordKeyMobileC(time:Float, IDs:Array<String>, move:Int) {
-		trace('' + IDs);
 		if (IDs == null || IDs.length < 0)
 			return;
 
-		trace('' + REGISTER_BINDS);
-		if(IDs.length == 1 && !REGISTER_BINDS.contains(IDs[0].toLowerCase()))
+		var fixedID:String = IDs[0].toLowerCase().replace(" ", "").split("=")[0];
+		if(IDs.length == 1 && !REGISTER_BINDS.contains(fixedID))
 		{
 			switch(IDs[0])
 			{

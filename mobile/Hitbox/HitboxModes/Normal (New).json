@@ -151,7 +151,7 @@
     },
     {
       "button": "EXTRA_1",
-      "buttonIDs": ["EXTRA_1 = 9"],
+      "buttonIDs": ["EXTRA_1"],
       "x": 0,
       "middleX": 512,
       "y": 576,
@@ -166,7 +166,7 @@
     },
     {
       "button": "EXTRA_1",
-      "buttonIDs": ["EXTRA_1 = 9"],
+      "buttonIDs": ["EXTRA_1"],
       "x": 0,
       "middleX": 512,
       "y": 576,
@@ -181,7 +181,7 @@
     },
     {
       "button": "EXTRA_2",
-      "buttonIDs": ["EXTRA_2 = 10"],
+      "buttonIDs": ["EXTRA_2"],
       "x": 640,
       "middleX": 512,
       "y": 576,
@@ -196,7 +196,7 @@
     },
     {
       "button": "EXTRA_1",
-      "buttonIDs": ["EXTRA_1 = 9"],
+      "buttonIDs": ["EXTRA_1"],
       "x": 0,
       "middleX": 512,
       "y": 576,
@@ -211,7 +211,7 @@
     },
     {
       "button": "EXTRA_2",
-      "buttonIDs": ["EXTRA_2 = 10"],
+      "buttonIDs": ["EXTRA_2"],
       "x": 427,
       "middleX": 512,
       "y": 576,
@@ -226,7 +226,7 @@
     },
     {
       "button": "EXTRA_3",
-      "buttonIDs": ["EXTRA_3 = 11"],
+      "buttonIDs": ["EXTRA_3"],
       "x": 853,
       "middleX": 512,
       "y": 576,
@@ -241,7 +241,7 @@
     },
     {
       "button": "EXTRA_1",
-      "buttonIDs": ["EXTRA_1 = 9"],
+      "buttonIDs": ["EXTRA_1"],
       "x": 0,
       "middleX": 512,
       "y": 576,
@@ -256,7 +256,7 @@
     },
     {
       "button": "EXTRA_2",
-      "buttonIDs": ["EXTRA_2 = 10"],
+      "buttonIDs": ["EXTRA_2"],
       "x": 320,
       "middleX": 512,
       "y": 576,
@@ -271,7 +271,7 @@
     },
     {
       "button": "EXTRA_3",
-      "buttonIDs": ["EXTRA_3 = 11"],
+      "buttonIDs": ["EXTRA_3"],
       "x": 640,
       "middleX": 512,
       "y": 576,
@@ -286,7 +286,7 @@
     },
     {
       "button": "EXTRA_4",
-      "buttonIDs": ["EXTRA_4 = 12"],
+      "buttonIDs": ["EXTRA_4"],
       "x": 960,
       "middleX": 512,
       "y": 576,

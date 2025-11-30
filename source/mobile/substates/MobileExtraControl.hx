@@ -49,7 +49,7 @@ class MobileExtraControl extends MusicBeatSubstate
 		titleTeam = new FlxTypedGroup<ChooseButton>();
 		add(titleTeam);
 
-		for (i in 1...9){
+		for (i in 1...5){
 			var bro = i;
 			if (bro > 4) bro -= 4;
 			var data:String = Reflect.field(ClientPrefs.data, "extraKeyReturn" + i);
@@ -149,14 +149,6 @@ class MobileExtraControl extends MusicBeatSubstate
 						ClientPrefs.data.extraKeyReturn3 = returnArray[typeNum][chooseNum];
 					case 4:
 						ClientPrefs.data.extraKeyReturn4 = returnArray[typeNum][chooseNum];
-					case 5:
-						ClientPrefs.data.extraKeyReturn5 = returnArray[typeNum][chooseNum];
-					case 6:
-						ClientPrefs.data.extraKeyReturn6 = returnArray[typeNum][chooseNum];
-					case 7:
-						ClientPrefs.data.extraKeyReturn7 = returnArray[typeNum][chooseNum];
-					case 8:
-						ClientPrefs.data.extraKeyReturn8 = returnArray[typeNum][chooseNum];
 				}
 				ClientPrefs.saveSettings();
 				updateTitle(titleNum + 1, false, 2, true);
@@ -182,10 +174,6 @@ class MobileExtraControl extends MusicBeatSubstate
 			ClientPrefs.data.extraKeyReturn2 = ClientPrefs.defaultData.extraKeyReturn2;
 			ClientPrefs.data.extraKeyReturn3 = ClientPrefs.defaultData.extraKeyReturn3;
 			ClientPrefs.data.extraKeyReturn4 = ClientPrefs.defaultData.extraKeyReturn4;
-			ClientPrefs.data.extraKeyReturn5 = ClientPrefs.defaultData.extraKeyReturn5;
-			ClientPrefs.data.extraKeyReturn6 = ClientPrefs.defaultData.extraKeyReturn6;
-			ClientPrefs.data.extraKeyReturn7 = ClientPrefs.defaultData.extraKeyReturn7;
-			ClientPrefs.data.extraKeyReturn8 = ClientPrefs.defaultData.extraKeyReturn8;
 			resetTitle();
 		}
 	}

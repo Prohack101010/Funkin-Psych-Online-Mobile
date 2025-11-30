@@ -1,4 +1,4 @@
-package mobile;
+package mobile.objects;
 
 import mobile.MobilePad as OGMobilePad;
 import flixel.graphics.frames.FlxTileFrames;

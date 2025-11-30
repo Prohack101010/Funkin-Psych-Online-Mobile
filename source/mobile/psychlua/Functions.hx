@@ -2,7 +2,7 @@ package mobile.psychlua;
 
 import lime.ui.Haptic;
 import flixel.util.FlxSave;
-import mobile.backend.TouchFunctions;
+import mobile.backend.TouchUtil;
 import psychlua.CustomSubstate;
 import psychlua.FunkinLua;
 
@@ -82,13 +82,6 @@ class MobileFunctions
 			MusicBeatState.getState().hitbox.visible = enabled;
 		});
 
-		//Backwards Compability
-		Lua_helper.add_callback(lua, 'getCurMobilecMode', function():String
-		{
-			var curMode:String = 'HITBOX';
-			return curMode;
-		});
-
 		//better support
 		Lua_helper.add_callback(lua, "changeMobileControls", function(?mode:String):Void
 		{
@@ -130,9 +123,9 @@ class MobileFunctions
 			return Haptic.vibrate(period, duration);
 		});
 
-		Lua_helper.add_callback(lua, "touchJustPressed", TouchFunctions.touchJustPressed);
-		Lua_helper.add_callback(lua, "touchPressed", TouchFunctions.touchPressed);
-		Lua_helper.add_callback(lua, "touchJustReleased", TouchFunctions.touchJustReleased);
+		Lua_helper.add_callback(lua, "touchJustPressed", TouchUtil.touchJustPressed);
+		Lua_helper.add_callback(lua, "touchPressed", TouchUtil.touchPressed);
+		Lua_helper.add_callback(lua, "touchJustReleased", TouchUtil.touchJustReleased);
 		Lua_helper.add_callback(lua, "touchPressedObject", function(object:String):Bool
 		{
 			var obj = PlayState.instance.getLuaObject(object);
@@ -141,7 +134,7 @@ class MobileFunctions
 				funk.luaTrace('touchPressedObject: $object does not exist.');
 				return false;
 			}
-			return TouchFunctions.touchOverlapObject(obj) && TouchFunctions.touchPressed;
+			return TouchUtil.overlaps(obj) && TouchUtil.pressed;
 		});
 
 		Lua_helper.add_callback(lua, "touchJustPressedObject", function(object:String):Bool
@@ -152,7 +145,7 @@ class MobileFunctions
 				funk.luaTrace('touchJustPressedObject: $object does not exist.');
 				return false;
 			}
-			return TouchFunctions.touchOverlapObject(obj) && TouchFunctions.touchJustPressed;
+			return TouchUtil.overlaps(obj) && TouchUtil.justPressed;
 		});
 
 		Lua_helper.add_callback(lua, "touchJustReleasedObject", function(object:String):Bool
@@ -163,7 +156,7 @@ class MobileFunctions
 				funk.luaTrace('touchJustPressedObject: $object does not exist.');
 				return false;
 			}
-			return TouchFunctions.touchOverlapObject(obj) && TouchFunctions.touchJustReleased;
+			return TouchUtil.overlaps(obj) && TouchUtil.justReleased;
 		});
 
 		Lua_helper.add_callback(lua, "touchOverlapsObject", function(object:String):Bool
@@ -174,7 +167,7 @@ class MobileFunctions
 				funk.luaTrace('touchOverlapsObject: $object does not exist.');
 				return false;
 			}
-			return TouchFunctions.touchOverlapObject(obj);
+			return TouchUtil.overlaps(obj);
 		});
 		#end
 	}

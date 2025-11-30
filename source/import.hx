@@ -74,14 +74,12 @@ import online.backend.Deflection;
 // Mobile Controls
 
 // FNF Spesific
-import mobile.FunkinMobilePad as MobilePad;
-import mobile.FunkinHitbox as Hitbox;
+import mobile.objects.FunkinMobilePad as MobilePad;
+import mobile.objects.FunkinHitbox as Hitbox;
 // Others
 import mobile.*;
-import mobile.MobileButton;
 import mobile.backend.TouchUtil;
 import mobile.backend.PsychJNI;
-import mobile.backend.TouchFunctions;
 import mobile.backend.StorageUtil;
 import mobile.states.CopyState;
 import mobile.substates.MobileExtraControl;

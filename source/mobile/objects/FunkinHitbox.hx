@@ -1,4 +1,4 @@
-package mobile;
+package mobile.objects;
 
 import mobile.Hitbox as OGHitbox;
 import openfl.display.BitmapData;
@@ -13,21 +13,22 @@ class FunkinHitbox extends OGHitbox {
 		super(Mode, globalAlpha, true);
 		if ((ClientPrefs.data.hitboxmode == 'V Slice' && Mode == null) || Mode == 'V Slice')
 		{
-			if (Note.maniaKeys == 4) {
-				addHint('NOTE_1', ["NOTE_1 = 0"], 0, 0, 140, Std.int(FlxG.height), 0xFFC24B99);
-				addHint('NOTE_2', ["NOTE_2 = 1"], 0, 0, 140, Std.int(FlxG.height), 0xFF00FFFF);
-				addHint('NOTE_3', ["NOTE_3 = 2"], 0, 0, 140, Std.int(FlxG.height), 0xFF12FA05);
-				addHint('NOTE_4', ["NOTE_4 = 3"], 0, 0, 140, Std.int(FlxG.height), 0xFFF9393F);
+			var mania = Note.maniaKeys;
+			if (mania == 4) {
+				addHint('NOTE_1', ["NOTE_LEFT = 0"], 0, 0, 140, Std.int(FlxG.height), 0xFFC24B99);
+				addHint('NOTE_2', ["NOTE_DOWN = 1"], 0, 0, 140, Std.int(FlxG.height), 0xFF00FFFF);
+				addHint('NOTE_3', ["NOTE_UP = 2"], 0, 0, 140, Std.int(FlxG.height), 0xFF12FA05);
+				addHint('NOTE_4', ["NOTE_RIGHT = 3"], 0, 0, 140, Std.int(FlxG.height), 0xFFF9393F);
 			} else {
-				if (Note.maniaKeys >= 1) addHint('NOTE_1', ["NOTE_1 = 0"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
-				if (Note.maniaKeys >= 2) addHint('NOTE_2', ["NOTE_2 = 1"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
-				if (Note.maniaKeys >= 3) addHint('NOTE_3', ["NOTE_3 = 2"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
-				if (Note.maniaKeys >= 4) addHint('NOTE_4', ["NOTE_4 = 3"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
-				if (Note.maniaKeys >= 5) addHint('NOTE_5', ["NOTE_5 = 4"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
-				if (Note.maniaKeys >= 6) addHint('NOTE_6', ["NOTE_6 = 5"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
-				if (Note.maniaKeys >= 7) addHint('NOTE_7', ["NOTE_7 = 6"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
-				if (Note.maniaKeys >= 8) addHint('NOTE_8', ["NOTE_8 = 7"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
-				if (Note.maniaKeys >= 9) addHint('NOTE_9', ["NOTE_9 = 8"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+				if (mania >= 1) addHint('NOTE_1', ["NOTE_1 = 0", "${mania}K_NOTE_1 = 0"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+				if (mania >= 2) addHint('NOTE_2', ["NOTE_2 = 1", "${mania}K_NOTE_2 = 1"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+				if (mania >= 3) addHint('NOTE_3', ["NOTE_3 = 2", "${mania}K_NOTE_3 = 2"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+				if (mania >= 4) addHint('NOTE_4', ["NOTE_4 = 3", "${mania}K_NOTE_4 = 3"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+				if (mania >= 5) addHint('NOTE_5', ["NOTE_5 = 4", "${mania}K_NOTE_5 = 4"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+				if (mania >= 6) addHint('NOTE_6', ["NOTE_6 = 5", "${mania}K_NOTE_6 = 5"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+				if (mania >= 7) addHint('NOTE_7', ["NOTE_7 = 6", "${mania}K_NOTE_7 = 6"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+				if (mania >= 8) addHint('NOTE_8', ["NOTE_8 = 7", "${mania}K_NOTE_8 = 7"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
+				if (mania >= 9) addHint('NOTE_9', ["NOTE_9 = 8", "${mania}K_NOTE_9 = 8"], 0, 0, 110, Std.int(FlxG.height), 0xFFFFFFFF);
 			}
 		}
 		else
