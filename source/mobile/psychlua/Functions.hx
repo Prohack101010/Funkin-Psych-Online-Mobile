@@ -2,7 +2,7 @@ package mobile.psychlua;
 
 import lime.ui.Haptic;
 import flixel.util.FlxSave;
-import mobile.backend.TouchUtil;
+import mobile.TouchUtil;
 import psychlua.CustomSubstate;
 import psychlua.FunkinLua;
 
