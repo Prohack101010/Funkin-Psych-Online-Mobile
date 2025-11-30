@@ -240,6 +240,7 @@
 	
 	<!-- Lime Fix -->
 	<haxedef name="lime_use_old_deltatime" />
+	<haxedef name="lime_disable_motion_sensors" />
 
 	<!-- _________________________________ Custom _______________________________ -->
 
