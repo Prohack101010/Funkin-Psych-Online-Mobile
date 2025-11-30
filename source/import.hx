@@ -78,7 +78,6 @@ import mobile.objects.FunkinMobilePad as MobilePad;
 import mobile.objects.FunkinHitbox as Hitbox;
 // Others
 import mobile.*;
-import mobile.backend.TouchUtil;
 import mobile.backend.PsychJNI;
 import mobile.backend.StorageUtil;
 import mobile.states.CopyState;
