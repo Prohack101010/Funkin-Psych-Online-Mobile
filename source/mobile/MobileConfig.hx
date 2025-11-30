@@ -35,21 +35,24 @@ class MobileConfig {
 				case ACTION:
 					readDirectoryPart1(mobileFolderPath + i, actionModes, ACTION);
 					#if MODS_ALLOWED
-					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'MobilePad/')) {
+					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), 'mobile/MobilePad/')) {
+						trace('called');
 						readDirectoryPart1(Path.join([folder, 'ActionModes']), actionModes, ACTION);
 					}
 					#end
 				case DPAD:
 					readDirectoryPart1(mobileFolderPath + i, dpadModes, DPAD);
 					#if MODS_ALLOWED
-					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'MobilePad/')) {
+					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), 'mobile/MobilePad/')) {
+						trace('called');
 						readDirectoryPart1(Path.join([folder, 'DPadModes']), dpadModes, DPAD);
 					}
 					#end
 				case HITBOX:
 					readDirectoryPart1(mobileFolderPath + i, hitboxModes, HITBOX);
 					#if MODS_ALLOWED
-					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), mobileFolderPath + 'Hitbox/')) {
+					for (folder in Mods.directoriesWithFile(Paths.getPreloadPath(), 'mobile/Hitbox/')) {
+						trace('called');
 						readDirectoryPart1(Path.join([folder, 'HitboxModes']), hitboxModes, HITBOX);
 					}
 					#end
@@ -59,6 +62,7 @@ class MobileConfig {
 
 	static function readDirectoryPart1(folder:String, map:Dynamic, mode:ButtonsModes)
 	{
+		trace('' + folder);
 		folder = folder.contains(':') ? folder.split(':')[1] : folder;
 
 		#if BMC_FILE_SUPPORT if (FileSystem.exists(folder)) #end

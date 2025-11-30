@@ -37,6 +37,8 @@ class MobileExtraControl extends MusicBeatSubstate
 	var optionWidth:Int = 80;
 	var optionHeight:Int = 30;
 
+	var optionCount:Int = 4;
+
 	override function create()
 	{
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
@@ -49,7 +51,7 @@ class MobileExtraControl extends MusicBeatSubstate
 		titleTeam = new FlxTypedGroup<ChooseButton>();
 		add(titleTeam);
 
-		for (i in 1...5){
+		for (i in 1...optionCount+1){
 			var bro = i;
 			if (bro > 4) bro -= 4;
 			var data:String = Reflect.field(ClientPrefs.data, "extraKeyReturn" + i);
@@ -67,7 +69,9 @@ class MobileExtraControl extends MusicBeatSubstate
 			var _length:Int = returnArray[type].length;
 			for (number in 0..._length){
 				var _x = FlxG.width / 2 + optionWidth * (number - _length / 2);
-				var titleObject = new ChooseButton(_x, 450 + (optionHeight + 20) * type, optionWidth, optionHeight, displayArray[type][number]);
+				var mainYShit:Int = 300;
+				if (optionCount > 4) mainYShit = 450;
+				var titleObject = new ChooseButton(_x, mainYShit + (optionHeight + 20) * type, optionWidth, optionHeight, displayArray[type][number]);
 				optionTeam.add(titleObject);
 			}
 		}
@@ -101,9 +105,9 @@ class MobileExtraControl extends MusicBeatSubstate
 				if (titleNum < 0 && !isDown)
 					titleNum = 3;
 
-				if (titleNum > 7 && isDown)
+				if (titleNum > 7 && isDown && optionCount > 4)
 					titleNum = 4;
-				if (titleNum < 4 && isDown)
+				if (titleNum < 4 && isDown && optionCount > 4)
 					titleNum = 7;
 				updateTitle(titleNum + 1, true, 1);
 			} else {
@@ -117,7 +121,7 @@ class MobileExtraControl extends MusicBeatSubstate
 		}
 
 		if (up || down){
-			if (isMain){
+			if (isMain && optionCount > 4) {
 				if (up && isDown) titleNum += -4;
 				if (down && !isDown) titleNum += 4;
 				if (down && !isDown) isDown = true;

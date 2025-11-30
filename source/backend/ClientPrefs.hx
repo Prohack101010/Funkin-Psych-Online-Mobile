@@ -37,10 +37,6 @@ import states.TitleState;
 	public var extraKeyReturn2:String = 'SPACE';
 	public var extraKeyReturn3:String = 'Q';
 	public var extraKeyReturn4:String = 'E';
-	public var extraKeyReturn5:String = 'W';
-	public var extraKeyReturn6:String = 'A';
-	public var extraKeyReturn7:String = 'S';
-	public var extraKeyReturn8:String = 'D';
 
 	// Mobile Releated
 	public var screensaver:Bool = false;

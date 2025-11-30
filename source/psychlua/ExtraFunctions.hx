@@ -346,8 +346,10 @@ class ExtraFunctions
 		//Custom return thing
 		for (num in 1...31) {
 			if (MusicBeatState.getState().hitbox != null) {
-				var hitbox:Dynamic = MusicBeatState.getState().hitbox.getButtonFromName('EXTRA_' + num);
+				var hitbox:Dynamic = MusicBeatState.getState().hitbox.getButtonFromName('buttonExtra' + num);
+				trace(hitbox.returnedKey);
 				if (key.toUpperCase() == hitbox.returnedKey) {
+					trace('' + Reflect.getProperty(hitbox, type));
 					if (Reflect.getProperty(hitbox, type)) {
 						return true;
 					}
@@ -358,8 +360,10 @@ class ExtraFunctions
 		//For mobilePad, this is useful if you're using the V-Slice Mobile Control (Not Added Yet)
 		for (num in 1...31) {
 			if (MusicBeatState.getState().mobilePad != null) {
-				var mobilePad:Dynamic = MusicBeatState.getState().mobilePad.getButtonFromName('EXTRA_' + num);
+				var mobilePad:Dynamic = MusicBeatState.getState().mobilePad.getButtonFromName('buttonExtra' + num);
+				trace(mobilePad.returnedKey);
 				if (key.toUpperCase() == mobilePad.returnedKey) {
+					trace('' + Reflect.getProperty(mobilePad, type));
 					if (Reflect.getProperty(mobilePad, type)) {
 						return true;
 					}
