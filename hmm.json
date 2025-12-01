@@ -164,7 +164,7 @@
       "name": "mobile-controls",
       "type": "haxelib",
       "version": "0.1.0"
-    }
+    },
     {
       "name": "extension-androidtools",
       "type": "git",
