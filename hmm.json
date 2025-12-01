@@ -8,7 +8,7 @@
     {
       "name": "lime",
       "type": "git",
-      "ref": "main",
+      "ref": "mobile/main",
       "url": "https://github.com/FunkinCrew/lime"
     },
     {
