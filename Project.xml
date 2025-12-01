@@ -126,7 +126,8 @@
 	<haxelib name="flixel" />
 	<haxelib name="flixel-ui" />
 	<haxelib name="flixel-addons" />
-	<!-- Add Mobile Controls (Made by me -ArkoseLabs) -->
+	<!-- Mobile Libraries -->
+	<haxelib name="extension-androidtools" if="android"/>
 	<haxelib name="mobile-controls"/>
 	<haxedef name="mobile_controls_file_support"/>
 
