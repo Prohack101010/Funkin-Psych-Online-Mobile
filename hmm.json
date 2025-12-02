@@ -8,8 +8,8 @@
     {
       "name": "lime",
       "type": "git",
-      "ref": "mobile/main",
-      "url": "https://github.com/FunkinCrew/lime"
+      "ref": "main",
+      "url": "https://github.com/HomuHomu833-haxe-stuff/lime"
     },
     {
       "name": "openfl",
@@ -41,8 +41,8 @@
       "name": "hxcpp",
       "type": "git",
       "dir": null,
-      "ref": "master",
-      "url": "https://github.com/HaxeFoundation/hxcpp"
+      "ref": null,
+      "url": "https://github.com/AlafandyPorting/hxcpp"
     },
     {
       "name": "tjson",
@@ -64,8 +64,8 @@
       "name": "linc_luajit",
       "type": "git",
       "dir": null,
-      "ref": "master",
-      "url": "https://github.com/superpowers04/linc_luajit"
+      "ref": "main",
+      "url": "https://github.com/th2l-devs/linc_luajit"
     },
     {
       "name": "colyseus",
@@ -164,13 +164,6 @@
       "name": "mobile-controls",
       "type": "haxelib",
       "version": "0.1.0"
-    },
-    {
-      "name": "extension-androidtools",
-      "type": "git",
-      "dir": null,
-      "ref": "main",
-      "url": "https://github.com/MAJigsaw77/extension-androidtools"
     }
   ]
 }

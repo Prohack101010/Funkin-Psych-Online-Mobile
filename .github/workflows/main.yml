@@ -13,7 +13,6 @@ jobs:
             buildArgs: "android -D ONLY_ARM64"
             artifactName: androidBuild
             artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
-            hmmName: hmm-legacy.json
     uses: ./.github/workflows/build.yml
     with:
         name: ${{ matrix.name }}
@@ -22,4 +21,3 @@ jobs:
         assetType: ${{ matrix.assetType }}
         artifactName: ${{ matrix.artifactName }}
         artifactPath: ${{ matrix.artifactPath }}
-        hmmName: ${{ matrix.hmmName }}
