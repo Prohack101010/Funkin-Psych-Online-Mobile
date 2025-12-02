@@ -22,3 +22,4 @@ jobs:
         assetType: ${{ matrix.assetType }}
         artifactName: ${{ matrix.artifactName }}
         artifactPath: ${{ matrix.artifactPath }}
+        hmmName: ${{ matrix. }}
