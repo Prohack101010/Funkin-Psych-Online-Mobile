@@ -21,6 +21,9 @@ on:
       artifactPath:
         required: true
         type: string
+      hmmName:
+        required: true
+        type: string
 
 env:
   HAXE_VERSION: 4.3.6
@@ -54,8 +57,8 @@ jobs:
 
       - name: Install Libraries
         run: |
-          haxelib install hmm --quiet
-          haxelib run hmm install --quiet
+          haxelib git hmm https://github.com/Prohack101010/hmm --quiet
+          haxelib run hmm ${{ inputs.hmmName }} install --quiet
 
       - name: Configure Android
         if: inputs.name == 'Android'
